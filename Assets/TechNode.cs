@@ -31,7 +31,11 @@ public class TechNode : MonoBehaviour
 
     public void Select()
     {
-        TechTree.instance.FinishNode(this);
+        if (TechTree.instance.currentlyResearching != null)
+        {
+            return;
+        }
+        TechTree.instance.StartResearch(this);
     }
 
 }

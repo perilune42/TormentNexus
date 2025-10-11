@@ -69,13 +69,25 @@ public class TechTree : MonoBehaviour
 
     public void StartResearch(TechNode targetNode)
     {
-        // ..
+
+        currentlyResearching = targetNode;
+        UpdateText();
     }
 
     public void AddResearchPoints(float points)
     {
-        accumulatedPoints += points;
-        // ..
+        if (currentlyResearching != null)
+        {
+            accumulatedPoints += points;
+
+        }
+        if (currentlyResearching != null && accumulatedPoints >= currentlyResearching.cost)
+        {
+            accumulatedPoints -= currentlyResearching.cost;
+            FinishNode(currentlyResearching);
+            currentlyResearching = null;
+            accumulatedPoints = 0;
+        }
         UpdateText();
     }
 

@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prereqs: []
+  cost: 5
 --- !u!1 &6398760744677282825
 GameObject:
   m_ObjectHideFlags: 0
