@@ -6,6 +6,7 @@ public class TechNode : MonoBehaviour
 {
     public List<TechNode> prereqs;
     Button button;
+    public float cost;
 
     private void Awake()
     {

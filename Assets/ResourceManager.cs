@@ -19,7 +19,9 @@ public class ResourceManager : MonoBehaviour
 
     private void GainResearchPoint()
     {
-        researchPoints++;
+        researchPoints += 1.5f;
+        TechTree.instance.AddResearchPoints(researchPoints);
+        researchPoints = 0;
     }
 
 

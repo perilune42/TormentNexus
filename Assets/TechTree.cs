@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -14,6 +15,11 @@ public class TechTree : MonoBehaviour
     public static TechTree instance;
     public Dictionary<TechNode, TechNodeStatus> techNodeStatuses = new();
     public TechNode firstNode;
+
+    public TechNode currentlyResearching;
+    public float accumulatedPoints;
+
+    [SerializeField] TMP_Text progressText;
 
     private void Awake()
     {
@@ -59,6 +65,30 @@ public class TechTree : MonoBehaviour
         }
 
         targetNode.Finish();
+    }
+
+    public void StartResearch(TechNode targetNode)
+    {
+        // ..
+    }
+
+    public void AddResearchPoints(float points)
+    {
+        accumulatedPoints += points;
+        // ..
+        UpdateText();
+    }
+
+    private void UpdateText()
+    {
+        if (currentlyResearching != null)
+        {
+            progressText.text = $"Progress: {accumulatedPoints} / {currentlyResearching.cost}";
+        }
+        else
+        {
+            progressText.text = "No research selected";
+        }
     }
 
 }
