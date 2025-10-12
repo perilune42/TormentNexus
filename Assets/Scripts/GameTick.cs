@@ -47,6 +47,13 @@ public class GameTick : MonoBehaviour
         {
             TogglePause();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameUI.instance.techTreeCanvas.enabled)
+            {
+                GameUI.instance.ToggleTechTree();
+            }
+        }
 
 
         if (currSpeed != GameSpeed.Paused) timeToNextTick -= Time.deltaTime * speedPresets[(int)currSpeed];
