@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class CameraController : MonoBehaviour
 {
     public float MovementKeySensitivity;
-    public float DragSensitivity;
     public float ScrollSensitivity;
 
     public Vector2 ScrollRange;
@@ -12,8 +11,6 @@ public class CameraController : MonoBehaviour
     private Vector2 playerInput;
     private Vector3 dragOrigin;
     private Vector3 lastCamPos;
-
-    private Vector2 scrollDelta;
 
     private void Update()
     {
@@ -26,14 +23,12 @@ public class CameraController : MonoBehaviour
         }
         if (Input.GetMouseButton(0)) 
         {
-            transform.position = lastCamPos - (Camera.main.ScreenToViewportPoint(Input.mousePosition) - dragOrigin) * 10;
+            Vector3 dragVec = Camera.main.ScreenToViewportPoint(Input.mousePosition) - dragOrigin;
+            dragVec = new Vector2(dragVec.x * Camera.main.orthographicSize * 2 * Camera.main.aspect, dragVec.y * Camera.main.orthographicSize * 2);
+            transform.position = lastCamPos - dragVec;
         }
 
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - Input.mouseScrollDelta.y, ScrollRange.x, ScrollRange.y);
-    }
-
-    private void FixedUpdate()
-    {
-        transform.position += (Vector3)playerInput * MovementKeySensitivity;
+        transform.position += (Vector3)playerInput * MovementKeySensitivity * Time.deltaTime;
     }
 }
