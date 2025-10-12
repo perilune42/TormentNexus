@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,5 +38,11 @@ public class Map : MonoBehaviour
         {
             node.DrawNode();
         }
+    }
+
+    private void OnValidate()
+    {
+        Nodes = GetComponentsInChildren<MapNode>().ToList();
+        DrawMap();
     }
 }

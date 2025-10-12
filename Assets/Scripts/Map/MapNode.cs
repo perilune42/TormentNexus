@@ -22,14 +22,15 @@ public class MapNode : MonoBehaviour
 
     private void Awake()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        AssignOwnRefs();
     }
 
     // TODO - Double draws, fix
     // TODO - Also draw in editor
     public void DrawNode()
     {
+        AssignOwnRefs(); 
+
         // Name text
         NameTextMeshPro.text = Name;
 
@@ -72,5 +73,9 @@ public class MapNode : MonoBehaviour
         spriteRenderer.color = FactionManager.instance.playerFaction.FactionColor;
     }
 
-
+    private void AssignOwnRefs()
+    {
+        lineRenderer = GetComponent<LineRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 }
