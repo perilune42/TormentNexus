@@ -6,7 +6,7 @@ public class MapNode : MonoBehaviour
 {
     // Info
     public string Name;
-    public Country Owner;
+    public Faction Owner;
 
     // Editor Refs
     public List<MapNode> Neighbors;
