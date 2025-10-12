@@ -14,7 +14,7 @@ public class TechTree : MonoBehaviour
 {
     public static TechTree instance;
     public Dictionary<TechNode, TechNodeStatus> techNodeStatuses = new();
-    public List<TechNode> techNodes;
+    public List<TechNode> startNodes;
 
     public TechNode currentlyResearching;
     public float accumulatedPoints;
@@ -30,7 +30,7 @@ public class TechTree : MonoBehaviour
             techNodeStatuses.Add(node, TechNodeStatus.Locked);
             node.Lock();
         }
-        foreach (TechNode n in techNodes)
+        foreach (TechNode n in startNodes)
         {
             n.Unlock();
         }
