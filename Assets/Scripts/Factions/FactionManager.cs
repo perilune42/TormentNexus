@@ -8,6 +8,7 @@ public class FactionManager : MonoBehaviour
     public static FactionManager instance;
     [HideInInspector] public Faction playerFaction;
 
+    [SerializeField] ResourceManager resourceManagerTemplate;
 
     private void Awake()
     {
@@ -22,7 +23,17 @@ public class FactionManager : MonoBehaviour
             }
         }
 
+        InitFactions();
 
+    }
 
+    private void InitFactions()
+    {
+        foreach (var faction in factions)
+        {
+            ResourceManager rm = Instantiate(resourceManagerTemplate, faction.transform);
+            faction.Resource = rm;
+            rm.Faction = faction;
+        }
     }
 }

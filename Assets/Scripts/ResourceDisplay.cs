@@ -7,16 +7,15 @@ public class ResourceDisplay : MonoBehaviour
     
     private void Awake()
     {
-        GameTick.onDay += UpdateDisplay;
+        GameTick.onTick += UpdateDisplay;
     }
 
     
-    // dummy test function
 
 
     private void UpdateDisplay()
     {
-        text.text = $"Resource: {ResourceManager.Instance.Resource}";
+        text.text = $"Resource: {FactionManager.instance.playerFaction.Resource.ResourceAmount}";
     }
 
 }

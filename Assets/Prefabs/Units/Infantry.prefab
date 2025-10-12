@@ -151,6 +151,7 @@ MonoBehaviour:
   Damage: 0.1
   Health: 100
   MaxHealth: 100
+  Cost: 5
 --- !u!1 &4317909414952174542
 GameObject:
   m_ObjectHideFlags: 0

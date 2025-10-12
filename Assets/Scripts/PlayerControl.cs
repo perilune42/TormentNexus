@@ -16,8 +16,10 @@ public class PlayerControl : MonoBehaviour
 
     public void SelectNode(MapNode node)
     {
+        if (SelectedNode != null) SelectedNode.ToggleSelectHighlight(false);
         SelectedNode = node;
         onSelectNode?.Invoke(node);
+        if (node != null) node.ToggleSelectHighlight(true);
     }
 
 
@@ -40,6 +42,11 @@ public class PlayerControl : MonoBehaviour
         SelectedUnit = unit;
         onSelectUnit?.Invoke(unit);
         if (unit != null) unit.Display.ToggleSelectHighlight(true);
+    }
+
+    public void BuildUnit(Unit unit)
+    {
+        Builder.BuildUnit(FactionManager.instance.playerFaction, SelectedNode, unit);
     }
 
 

@@ -18,6 +18,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     // Self Refs
     private LineRenderer lineRenderer;
     private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer selector;
 
     public Unit ContainedUnit = null;
 
@@ -89,5 +90,10 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     public bool IsAdjacent(MapNode neighbor)
     {
         return Neighbors.Contains(neighbor);
+    }
+
+    public void ToggleSelectHighlight(bool toggle)
+    {
+        selector.enabled = toggle;
     }
 }

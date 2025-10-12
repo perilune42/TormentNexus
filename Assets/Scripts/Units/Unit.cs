@@ -9,6 +9,7 @@ public class Unit : MonoBehaviour
     public float Damage;    
     public float Health;
     public float MaxHealth;
+    public float Cost;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Unit : MonoBehaviour
     {
         CurrentNode = node;
         node.ContainedUnit = this;
+        transform.SetParent(node.transform, false);
         Health = MaxHealth;
         GameTick.onTick += TickDamage;
         Display = GetComponentInChildren<UnitDisplay>();
