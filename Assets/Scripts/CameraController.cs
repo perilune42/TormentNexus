@@ -3,12 +3,17 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
-    public float Sensitivity;
+    public float MovementKeySensitivity;
+    public float DragSensitivity;
+    public float ScrollSensitivity;
+
+    public Vector2 ScrollRange;
 
     private Vector2 playerInput;
     private Vector3 dragOrigin;
     private Vector3 lastCamPos;
-    private bool isDragging;
+
+    private Vector2 scrollDelta;
 
     private void Update()
     {
@@ -18,18 +23,17 @@ public class CameraController : MonoBehaviour
         {
             dragOrigin = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             lastCamPos = transform.position;
-
-            isDragging = true;
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButton(0)) 
         {
-            isDragging = false;
+            transform.position = lastCamPos - (Camera.main.ScreenToViewportPoint(Input.mousePosition) - dragOrigin) * 10;
         }
-        if (isDragging) transform.position = lastCamPos - (Camera.main.ScreenToViewportPoint(Input.mousePosition) - dragOrigin) * 10;
+
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - Input.mouseScrollDelta.y, ScrollRange.x, ScrollRange.y);
     }
 
     private void FixedUpdate()
     {
-        transform.position += (Vector3)playerInput * Sensitivity;
+        transform.position += (Vector3)playerInput * MovementKeySensitivity;
     }
 }
