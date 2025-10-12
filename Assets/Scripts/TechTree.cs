@@ -24,6 +24,10 @@ public class TechTree : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
         var nodes = GetComponentsInChildren<TechNode>();
         foreach (var node in nodes)
         {
@@ -34,7 +38,6 @@ public class TechTree : MonoBehaviour
         {
             n.Unlock();
         }
-
     }
 
     public void UnlockNode(TechNode targetNode) 
