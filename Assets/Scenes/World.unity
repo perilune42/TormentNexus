@@ -2171,6 +2171,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7066787260906213961, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
   m_PrefabInstance: {fileID: 4489228366012093605}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1542249826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7653460629085792741, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+  m_PrefabInstance: {fileID: 4489228366012093605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766f2f71b4fd00e4595caf63d564d8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1557398858 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4055139618361917105, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
@@ -3023,7 +3034,7 @@ PrefabInstance:
     - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: startNode1
       value: 
-      objectReference: {fileID: 1330706343}
+      objectReference: {fileID: 0}
     - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: startNode2
       value: 
@@ -3035,7 +3046,7 @@ PrefabInstance:
     - target: {fileID: 5576987148080536647, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1465734772}
+      objectReference: {fileID: 1542249826}
     - target: {fileID: 5576987148080536647, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Select
