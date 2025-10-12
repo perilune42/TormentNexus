@@ -1,12 +1,11 @@
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MapNode : MonoBehaviour
+public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public static MapNode Hovered;
-    public static MapNode Selected;
 
     // Info
     public string Name;
@@ -57,22 +56,29 @@ public class MapNode : MonoBehaviour
 
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        Hovered = null;
+        PlayerControl.Instance.HoverNode(null);
     }
 
-    private void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        Hovered = this;
+        PlayerControl.Instance.HoverNode(this);
     }
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        Selected = this;
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            PlayerControl.Instance.SelectNode(this);
 
-        // Debug
-        spriteRenderer.color = FactionManager.instance.playerFaction.FactionColor;
+            // Debug
+            // spriteRenderer.color = FactionManager.instance.playerFaction.FactionColor;
+        }
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            PlayerControl.Instance.RClickNode(this);
+        }
     }
 
     private void AssignOwnRefs()
@@ -84,6 +90,4 @@ public class MapNode : MonoBehaviour
     {
         return Neighbors.Contains(neighbor);
     }
-
-
 }

@@ -1,27 +1,33 @@
+using Mono.Cecil;
 using System.Security.Cryptography;
 using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
 {
-    public static ResourceManager instance;
+    // replace with per-faction tracker
+    public static ResourceManager Instance;
 
-    public float researchPoints;
+    public float ResearchPoints;
 
+    public float Resource = 0;
 
     private void Awake()
     {
-        instance = this;
+        Instance = this;
 
         GameTick.onDay += GainResearchPoint;
-
+        GameTick.onDay += GenerateResource;
     }
-
+    private void GenerateResource()
+    {
+        Resource += 2.5f;
+    }
 
     private void GainResearchPoint()
     {
-        researchPoints += 1.5f;
-        TechTree.instance.AddResearchPoints(researchPoints);
-        researchPoints = 0;
+        ResearchPoints += 1.5f;
+        TechTree.instance.AddResearchPoints(ResearchPoints);
+        ResearchPoints = 0;
     }
 
 

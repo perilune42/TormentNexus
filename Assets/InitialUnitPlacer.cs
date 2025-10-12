@@ -8,7 +8,7 @@ public class InitialUnitPlacer : MonoBehaviour
         foreach (var unit in foundUnits)
         {
             var node = unit.transform.parent.GetComponent<MapNode>();
-            UnitController.instance.SpawnUnit(unit, node, node.Owner);
+            UnitController.Instance.SpawnUnit(unit, node, node.Owner);
         }
     }
 }

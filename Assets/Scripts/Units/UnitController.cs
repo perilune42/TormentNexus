@@ -3,20 +3,25 @@ using UnityEngine;
 // Manages spawning and moving units globally
 public class UnitController : MonoBehaviour
 {
-    public static UnitController instance;
+    public static UnitController Instance;
 
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
 
     public void MoveUnit(Unit unit, MapNode destination)
     {
-        if (destination.ContainedUnit != null || destination.IsAdjacent(unit.CurrentNode))
+        if (!IsValidMove(unit,destination))
         {
             Debug.LogError("Invalid move");
         }
         unit.Move(destination);
+    }
+
+    public bool IsValidMove(Unit unit, MapNode destination)
+    {
+        return destination.ContainedUnit == null && destination.IsAdjacent(unit.CurrentNode);
     }
 
     public void SpawnUnit(Unit unit, MapNode destination, Faction owner) 

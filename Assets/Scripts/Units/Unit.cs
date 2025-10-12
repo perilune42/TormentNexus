@@ -4,6 +4,7 @@ public class Unit : MonoBehaviour
 {
     public Faction Owner;
     public MapNode CurrentNode;
+    public UnitDisplay Display;
 
     public float Damage;    
     public float Health;
@@ -20,7 +21,8 @@ public class Unit : MonoBehaviour
         node.ContainedUnit = this;
         Health = MaxHealth;
         GameTick.onTick += TickDamage;
-        GetComponentInChildren<UnitDisplay>().AttachTo(this);
+        Display = GetComponentInChildren<UnitDisplay>();
+        Display.AttachTo(this);
     }
 
     public void Move(MapNode node)
@@ -28,6 +30,7 @@ public class Unit : MonoBehaviour
         CurrentNode.ContainedUnit = null;
         CurrentNode = node;
         node.ContainedUnit = this;
+        transform.SetParent(node.transform, false);
     }
 
     public void TickDamage()
@@ -46,7 +49,15 @@ public class Unit : MonoBehaviour
         Health -= damage;
         if (Health < 0)
         {
-            Destroy(gameObject);
+            TriggerDeath();
         }
     }
+
+    public void TriggerDeath()
+    {
+        GameTick.onTick -= TickDamage;
+        Destroy(gameObject);
+    }
+
+
 }

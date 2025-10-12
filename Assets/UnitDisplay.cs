@@ -1,12 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class UnitDisplay : MonoBehaviour
+public class UnitDisplay : MonoBehaviour, IPointerDownHandler
 {
 
     Unit unit;
 
     [SerializeField] SpriteRenderer icon;
+    [SerializeField] SpriteRenderer selector;
     [SerializeField] TMP_Text healthText;
 
     public void AttachTo(Unit unit)
@@ -16,9 +18,22 @@ public class UnitDisplay : MonoBehaviour
         GameTick.onTick += UpdateHealth;
     }
 
-    void UpdateHealth()
+    private void UpdateHealth()
     {
-        healthText.text = $"{unit.Health} / {unit.MaxHealth}";
+        healthText.text = $"{(int)unit.Health} / {(int)unit.MaxHealth}";
     }
 
+    public void ToggleSelectHighlight(bool toggle)
+    {
+        selector.enabled = toggle;
+    }
+
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            PlayerControl.Instance.SelectUnit(unit);
+        }
+    }
 }

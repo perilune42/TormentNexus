@@ -7,20 +7,16 @@ public class ResourceDisplay : MonoBehaviour
     
     private void Awake()
     {
-        GameTick.onDay += GenerateResource;
         GameTick.onDay += UpdateDisplay;
     }
 
-    float resource = 0;
+    
     // dummy test function
-    private void GenerateResource()
-    {
-        resource += 2.5f;
-    }
+
 
     private void UpdateDisplay()
     {
-        text.text = $"Resource: {resource}";
+        text.text = $"Resource: {ResourceManager.Instance.Resource}";
     }
 
 }
