@@ -1,9 +1,13 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MapNode : MonoBehaviour
 {
+    public static MapNode Hovered;
+    public static MapNode Selected;
+
     // Info
     public string Name;
     public Faction Owner;
@@ -14,10 +18,12 @@ public class MapNode : MonoBehaviour
 
     // Self Refs
     private LineRenderer lineRenderer;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // TODO - Double draws, fix
@@ -26,6 +32,9 @@ public class MapNode : MonoBehaviour
     {
         // Name text
         NameTextMeshPro.text = Name;
+
+        // Faction color
+        if (Owner != null) spriteRenderer.color = Owner.FactionColor;
 
         // Lines, currently scuffed
         lineRenderer.positionCount = Neighbors.Count * 2 + 1;
@@ -44,4 +53,24 @@ public class MapNode : MonoBehaviour
     {
 
     }
+
+    private void OnMouseExit()
+    {
+        Hovered = null;
+    }
+
+    private void OnMouseEnter()
+    {
+        Hovered = this;
+    }
+
+    private void OnMouseDown()
+    {
+        Selected = this;
+
+        // Debug
+        spriteRenderer.color = FactionManager.instance.playerFaction.FactionColor;
+    }
+
+
 }

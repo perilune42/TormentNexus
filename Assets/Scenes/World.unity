@@ -588,6 +588,10 @@ PrefabInstance:
       value: Hello
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 1990980821}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Neighbors.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -760,6 +764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FactionName: USSR
+  FactionColor: {r: 1, g: 0.051886797, b: 0.051886797, a: 1}
   isPlayer: 0
 --- !u!1001 &547429235
 PrefabInstance:
@@ -817,6 +822,18 @@ PrefabInstance:
       propertyPath: Name
       value: World
       objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 446305768}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Neighbors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: 'Neighbors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1262590059}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1729,6 +1746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FactionName: Mongolia
+  FactionColor: {r: 0.8207547, g: 0.47913185, b: 0.24390352, a: 1}
   isPlayer: 1
 --- !u!1 &2072139154
 GameObject:
