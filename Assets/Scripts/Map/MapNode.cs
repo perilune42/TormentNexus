@@ -20,6 +20,8 @@ public class MapNode : MonoBehaviour
     private LineRenderer lineRenderer;
     private SpriteRenderer spriteRenderer;
 
+    public Unit ContainedUnit = null;
+
     private void Awake()
     {
         AssignOwnRefs();
@@ -78,4 +80,10 @@ public class MapNode : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+    public bool IsAdjacent(MapNode neighbor)
+    {
+        return Neighbors.Contains(neighbor);
+    }
+
+
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FactionManager : MonoBehaviour
 {
-    public List<Faction> factions;
+    [HideInInspector] public List<Faction> factions;
     public static FactionManager instance;
-    public Faction playerFaction;
+    [HideInInspector] public Faction playerFaction;
 
 
     private void Awake()
