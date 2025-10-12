@@ -11,6 +11,8 @@ public class FactionManager : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+
         foreach (var faction in GetComponentsInChildren<Faction>())
         {
             factions.Add(faction);
