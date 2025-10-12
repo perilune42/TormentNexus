@@ -1722,6 +1722,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018974133}
   m_CullTransparentMesh: 1
+--- !u!114 &1064966477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6009930462391822016, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+  m_PrefabInstance: {fileID: 4489228366012093605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766f2f71b4fd00e4595caf63d564d8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1103448052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3448,6 +3459,18 @@ PrefabInstance:
       propertyPath: progressText
       value: 
       objectReference: {fileID: 232206815}
+    - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: startNodes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: 'startNodes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1103448054}
+    - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: 'startNodes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1064966477}
     - target: {fileID: 5576987148080536647, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
