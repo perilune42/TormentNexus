@@ -11,6 +11,8 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
     [SerializeField] SpriteRenderer selector;
     [SerializeField] TMP_Text healthText;
 
+    [SerializeField] TMP_Text moveProgressText;
+
     public void AttachTo(Unit unit)
     {
         this.unit = unit;
@@ -35,5 +37,15 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
         {
             PlayerControl.Instance.SelectUnit(unit);
         }
+    }
+
+    public void DisplayMove(MapNode target, int ticks)
+    {
+        moveProgressText.text = $"Moving to {target.Name}: {ticks}";
+    }
+
+    public void StopMove()
+    {
+        moveProgressText.text = "";
     }
 }

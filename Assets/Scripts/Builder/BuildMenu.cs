@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BuildMenu : MonoBehaviour
 {
+    
     [SerializeField] UnitBuildButton buttonTemplate;
     private void Awake()
     {
@@ -9,6 +10,7 @@ public class BuildMenu : MonoBehaviour
         {
             CreateButtonForUnit(unit);
         }
+        
     }
 
     private void CreateButtonForUnit(Unit unit)
@@ -16,4 +18,6 @@ public class BuildMenu : MonoBehaviour
         var newButton = Instantiate(buttonTemplate, transform);
         newButton.SetUnit(unit);
     }
+
+
 }

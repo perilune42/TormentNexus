@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 // Manages spawning and moving units globally
@@ -12,16 +14,23 @@ public class UnitController : MonoBehaviour
 
     public void MoveUnit(Unit unit, MapNode destination)
     {
-        if (!IsValidMove(unit,destination))
+        //if (!IsValidMove(unit,destination))
+        //{
+        //    Debug.LogError("Invalid move");
+        //})
+        if (unit.MoveOrder == unit.CurrentNode)
         {
-            Debug.LogError("Invalid move");
+            unit.CancelMove();
         }
-        unit.Move(destination);
+        else
+        {
+            unit.StartMove(destination);
+        }
     }
 
-    public bool IsValidMove(Unit unit, MapNode destination)
+    public bool IsValidMove(Unit unit, MapNode destination, bool ignoreOccupied = false)
     {
-        return destination.ContainedUnit == null && destination.IsAdjacent(unit.CurrentNode);
+        return (destination.ContainedUnit == null || ignoreOccupied) && destination.IsAdjacent(unit.CurrentNode);
     }
 
     public void SpawnUnit(Unit unit, MapNode destination, Faction owner) 

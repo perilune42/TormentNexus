@@ -14,12 +14,25 @@ public class PlayerControl : MonoBehaviour
         Instance = this;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SelectUnit(null);
+            SelectNode(null);
+        }
+    }
+
     public void SelectNode(MapNode node)
     {
         if (SelectedNode != null) SelectedNode.ToggleSelectHighlight(false);
         SelectedNode = node;
         onSelectNode?.Invoke(node);
-        if (node != null) node.ToggleSelectHighlight(true);
+        if (node != null)
+        {
+            node.ToggleSelectHighlight(true);
+            SelectUnit(null);
+        }
     }
 
 
@@ -30,9 +43,12 @@ public class PlayerControl : MonoBehaviour
 
     public void RClickNode(MapNode node)
     {
-        if (SelectedUnit != null && UnitController.Instance.IsValidMove(SelectedUnit,node)) 
+        if (SelectedUnit != null) 
         {
-            UnitController.Instance.MoveUnit(SelectedUnit, node);
+            if (UnitController.Instance.IsValidMove(SelectedUnit, node, ignoreOccupied:true))
+            {
+                UnitController.Instance.MoveUnit(SelectedUnit, node);
+            }
         }
     }
 
@@ -41,7 +57,11 @@ public class PlayerControl : MonoBehaviour
         if (SelectedUnit != null) SelectedUnit.Display.ToggleSelectHighlight(false);
         SelectedUnit = unit;
         onSelectUnit?.Invoke(unit);
-        if (unit != null) unit.Display.ToggleSelectHighlight(true);
+        if (unit != null)
+        {
+            unit.Display.ToggleSelectHighlight(true);
+            SelectNode(null);
+        }
     }
 
     public void BuildUnit(Unit unit)
