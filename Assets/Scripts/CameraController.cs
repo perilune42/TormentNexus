@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
         leftCam.transform.localPosition = Vector3.right * (Camera.main.orthographicSize * Camera.main.aspect + camMapDiffX) * 2;
         leftCam.transform.localPosition = Vector3.left * (Camera.main.orthographicSize * Camera.main.aspect + camMapDiffX) * 2;
     }
-
+    
     private void Update()
     {
         leftCam.orthographicSize = Camera.main.orthographicSize;
