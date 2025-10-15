@@ -6,7 +6,7 @@ public class BuildMenu : MonoBehaviour
     [SerializeField] UnitBuildButton buttonTemplate;
     private void Awake()
     {
-        foreach (Unit unit in FactionManager.instance.playerFaction.BuildableUnits)
+        foreach (Unit unit in FactionManager.instance.playerFaction.BuildableUnits) 
         {
             CreateButtonForUnit(unit);
         }
