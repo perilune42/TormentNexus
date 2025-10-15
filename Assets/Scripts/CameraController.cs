@@ -1,6 +1,10 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
+// Assumptions:
+// Main camera is at max orthographic size
+// Map background bounds >= camera bounds
 public class CameraController : MonoBehaviour
 {
     public float MovementKeySensitivity;
@@ -11,24 +15,96 @@ public class CameraController : MonoBehaviour
     private Vector2 playerInput;
     private Vector3 dragOrigin;
     private Vector3 lastCamPos;
+    private float camMapDiffX;
+
+    private List<BoxCollider2D> nodeColliders;
+    private List<Transform> nodeStartTransforms;
+
+    [SerializeField] private SpriteRenderer backgroundSR;
+    [SerializeField] private Camera leftCam;
+    [SerializeField] private Camera rightCam;
+    [SerializeField] private Transform mapNodeHolder;
+
+    private void Start()
+    {
+        // TODO - optimize
+        nodeColliders = mapNodeHolder.GetComponentsInChildren<BoxCollider2D>().ToList();
+
+        camMapDiffX = backgroundSR.sprite.bounds.max.x - Camera.main.orthographicSize * Camera.main.aspect;
+        leftCam.transform.localPosition = Vector3.right * (Camera.main.orthographicSize * Camera.main.aspect + camMapDiffX) * 2;
+        leftCam.transform.localPosition = Vector3.left * (Camera.main.orthographicSize * Camera.main.aspect + camMapDiffX) * 2;
+    }
 
     private void Update()
     {
+        leftCam.orthographicSize = Camera.main.orthographicSize;
+        rightCam.orthographicSize = Camera.main.orthographicSize;
+
+        // WASD
         playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        transform.position += MovementKeySensitivity * Time.deltaTime * (Vector3)playerInput;
         
-        if (Input.GetMouseButtonDown(0))
+        // Scroll
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - Input.mouseScrollDelta.y, ScrollRange.x, ScrollRange.y);
+
+        // Dragging
+        if (Input.GetMouseButtonDown(2))
         {
-            dragOrigin = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            lastCamPos = transform.position;
+            DragStart();
         }
-        if (Input.GetMouseButton(0)) 
+        if (Input.GetMouseButton(2))
         {
             Vector3 dragVec = Camera.main.ScreenToViewportPoint(Input.mousePosition) - dragOrigin;
             dragVec = new Vector2(dragVec.x * Camera.main.orthographicSize * 2 * Camera.main.aspect, dragVec.y * Camera.main.orthographicSize * 2);
             transform.position = lastCamPos - dragVec;
         }
 
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - Input.mouseScrollDelta.y, ScrollRange.x, ScrollRange.y);
-        transform.position += (Vector3)playerInput * MovementKeySensitivity * Time.deltaTime;
+        // Wrapping
+        float wrapX = backgroundSR.sprite.bounds.max.x;
+        if (transform.position.x > wrapX)
+        {
+            transform.position = new Vector3(-wrapX, transform.position.y, transform.position.z);
+            DragStart();
+        }
+        else if (transform.position.x < -wrapX)
+        {
+            transform.position = new Vector3(wrapX, transform.position.y, transform.position.z);
+            DragStart();
+        }
+
+        // "Mouse Wrapping"
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (mouseWorldPos.x > wrapX)
+        {
+            for (int i =  0; i < nodeColliders.Count; i++)
+            {
+                nodeColliders[i].offset = Vector3.right * wrapX * 2;
+            }
+        }
+        else if (mouseWorldPos.x < -wrapX)
+        {
+            for (int i = 0; i < nodeColliders.Count; i++)
+            {
+                nodeColliders[i].offset = Vector3.left * wrapX * 2;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < nodeColliders.Count; i++)
+            {
+                nodeColliders[i].offset = Vector3.zero;
+            }
+        }
+
+        // Clamp Y
+        float maxY = backgroundSR.sprite.bounds.max.y - Camera.main.orthographicSize;
+        float clampedY = Mathf.Clamp(transform.position.y, -maxY, maxY);
+        Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, clampedY, Camera.main.transform.position.z);
+    }
+
+    private void DragStart()
+    {
+        dragOrigin = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        lastCamPos = transform.position;
     }
 }
