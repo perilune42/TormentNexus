@@ -1,12 +1,16 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FactionManager : MonoBehaviour
 {
     [HideInInspector] public List<Faction> factions;
+
+    public List<SuperFaction> superFactions => factions.Where((Faction f) => f is SuperFaction).Cast<SuperFaction>().ToList();
+
     public static FactionManager instance;
-    [HideInInspector] public Faction playerFaction;
+    [HideInInspector] public SuperFaction playerFaction;
 
     [SerializeField] ResourceManager resourceManagerTemplate;
 
@@ -29,11 +33,11 @@ public class FactionManager : MonoBehaviour
 
     private void InitFactions()
     {
-        foreach (var faction in factions)
+        foreach (SuperFaction sf in superFactions)
         {
-            ResourceManager rm = Instantiate(resourceManagerTemplate, faction.transform);
-            faction.Resource = rm;
-            rm.Faction = faction;
+            ResourceManager rm = Instantiate(resourceManagerTemplate, sf.transform);
+            sf.Resource = rm;
+            rm.Faction = sf;
         }
     }
 }

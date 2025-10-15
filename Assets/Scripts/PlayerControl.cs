@@ -9,6 +9,11 @@ public class PlayerControl : MonoBehaviour
     public Unit SelectedUnit;
     public Action<MapNode> onSelectNode;
     public Action<Unit> onSelectUnit;
+    public Action<Ability> onPrimeAbility;
+
+    Ability primedAbility;
+    
+
     private void Awake()
     {
         Instance = this;
@@ -25,6 +30,15 @@ public class PlayerControl : MonoBehaviour
 
     public void SelectNode(MapNode node)
     {
+        if (primedAbility != null)
+        {
+            if (node != null)
+            {
+                LaunchAbility(primedAbility, node);
+                return;
+            }
+        }
+
         if (SelectedNode != null) SelectedNode.ToggleSelectHighlight(false);
         SelectedNode = node;
         onSelectNode?.Invoke(node);
@@ -69,5 +83,18 @@ public class PlayerControl : MonoBehaviour
         Builder.BuildUnit(FactionManager.instance.playerFaction, SelectedNode, unit);
     }
 
+    public void PrimeAbility(Ability ability)
+    {
+        SelectUnit(null);
+        SelectNode(null);
+        primedAbility = ability;
+        onPrimeAbility?.Invoke(ability);
+    }
+
+    public void LaunchAbility(Ability ability, MapNode target)
+    {
+        ability.Launch(target);
+        PrimeAbility(null);
+    }
 
 }
