@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
     private Vector3 lastCamPos;
     private float camMapDiffX;
 
-    private List<BoxCollider2D> nodeColliders;
+    private List<Collider2D> nodeColliders = new();
     private List<Transform> nodeStartTransforms;
 
     [SerializeField] private SpriteRenderer backgroundSR;
@@ -25,10 +25,16 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Camera rightCam;
     [SerializeField] private Transform mapNodeHolder;
 
+    private void Awake()
+    {
+        UnitController.Instance.OnAddUnit += AddUnitCollider;
+        UnitController.Instance.OnRemoveUnit += RemoveUnitCollider;
+    }
+
     private void Start()
     {
-        // TODO - optimize
-        nodeColliders = mapNodeHolder.GetComponentsInChildren<BoxCollider2D>().ToList();
+        AddNodeColliders(Map.Instance.Nodes);
+
 
         camMapDiffX = backgroundSR.sprite.bounds.max.x - Camera.main.orthographicSize * Camera.main.aspect;
         leftCam.transform.localPosition = Vector3.right * (Camera.main.orthographicSize * Camera.main.aspect + camMapDiffX) * 2;
@@ -100,6 +106,24 @@ public class CameraController : MonoBehaviour
         float maxY = backgroundSR.sprite.bounds.max.y - Camera.main.orthographicSize;
         float clampedY = Mathf.Clamp(transform.position.y, -maxY, maxY);
         Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, clampedY, Camera.main.transform.position.z);
+    }
+
+    private void AddNodeColliders(List<MapNode> nodes)
+    {
+        foreach (MapNode node in nodes)
+        {
+            nodeColliders.Add(node.GetComponent<Collider2D>());
+        }
+    }
+
+    public void AddUnitCollider(Unit unit)
+    {
+        nodeColliders.Add(unit.GetComponentInChildren<Collider2D>());
+    }
+
+    public void RemoveUnitCollider(Unit unit)
+    {
+        nodeColliders.Remove(unit.GetComponentInChildren<Collider2D>());
     }
 
     private void DragStart()

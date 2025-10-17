@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -68,6 +69,14 @@ public class PlayerControl : MonoBehaviour
 
     public void SelectUnit(Unit unit)
     {
+        if (primedAbility != null)
+        {
+            if (unit != null)
+            {
+                LaunchAbility(primedAbility, unit.CurrentNode);
+                return;
+            }
+        }
         if (SelectedUnit != null) SelectedUnit.Display.ToggleSelectHighlight(false);
         SelectedUnit = unit;
         onSelectUnit?.Invoke(unit);

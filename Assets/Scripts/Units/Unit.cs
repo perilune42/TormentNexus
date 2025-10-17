@@ -23,6 +23,7 @@ public class Unit : MonoBehaviour
 
     List<Action> onTickActions;
 
+
     private void Awake()
     {
         onTickActions = new() { TickDamage, TickMove };
@@ -76,7 +77,7 @@ public class Unit : MonoBehaviour
         {
             GameTick.onTick -= action;
         }
-        Destroy(gameObject);
+        UnitController.Instance.RemoveUnit(this);
     }
 
     public void StartMove(MapNode target)

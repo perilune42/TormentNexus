@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Map : MonoBehaviour
 {
+    public static Map Instance;
     public List<MapNode> Nodes;
 
     // Undirected edges, order doesn't matter for our purposes (but does for the pair structure so check both directions)
@@ -12,6 +13,7 @@ public class Map : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         Edges = new List<(MapNode, MapNode)> ();
     }
 
