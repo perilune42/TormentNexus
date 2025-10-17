@@ -5,6 +5,8 @@ public class NodeInfoUI : MonoBehaviour
 {
     Canvas canvas;
     [SerializeField] TMP_Text nodeNameText;
+
+
     private void Awake()
     {
         canvas = GetComponent<Canvas>();
@@ -16,6 +18,8 @@ public class NodeInfoUI : MonoBehaviour
                 nodeNameText.text = node.Name;
             }
         };
+
+
     }
 
     private void SetVisible(bool visible)

@@ -14,6 +14,7 @@ public class Unit : MonoBehaviour
     public float GarrisonDamage = 0.1f;
     public float InfrastructureDamage = 0.1f;
 
+    public int BuildTime = 100;
 
     public float Health = 100f;
     public float MaxHealth = 100f;

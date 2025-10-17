@@ -34,12 +34,14 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     private float garrisonHealSpeed = 0.03f;
     private float infrastructureHealSpeed = 0.01f;
 
+    public Builder Builder;
 
     [SerializeField] TMP_Text garrisonHPText;
     [SerializeField] TMP_Text infrastructureHPText;
 
     private void Awake()
     {
+        Builder = new(this);
         AssignOwnRefs();
 
         GameTick.onTick += () =>

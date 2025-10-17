@@ -89,7 +89,7 @@ public class PlayerControl : MonoBehaviour
 
     public void BuildUnit(Unit unit)
     {
-        Builder.BuildUnit(FactionManager.instance.playerFaction, SelectedNode, unit);
+        SelectedNode.Builder.BuildUnit(unit);
     }
 
     public void PrimeAbility(Ability ability)
