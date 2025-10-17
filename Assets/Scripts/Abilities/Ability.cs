@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class Ability : MonoBehaviour
 {
-    Faction owner;
+    protected Faction owner;
     public int CurrentCharges;
     public int MaxCharges = 3;
     public int CurrentCooldown = 0;

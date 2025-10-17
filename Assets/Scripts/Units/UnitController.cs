@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine;
 public class UnitController : MonoBehaviour
 {
     public static UnitController Instance;
+    public Action<Unit> OnAddUnit, OnRemoveUnit;
+
 
     private void Awake()
     {
@@ -41,5 +44,12 @@ public class UnitController : MonoBehaviour
         }
         unit.Owner = owner;
         unit.Place(destination);
+        OnAddUnit?.Invoke(unit);
+    }
+
+    public void RemoveUnit(Unit unit)
+    {
+        OnRemoveUnit?.Invoke(unit);
+        Destroy(unit.gameObject);
     }
 }
