@@ -22,6 +22,7 @@ public class GameUI : MonoBehaviour
                 primedAbilityText.text = "";
             }
         };
+        // techTreeCanvas.enabled = false;
     }
 
     public void ToggleTechTree()
