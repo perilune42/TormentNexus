@@ -9,24 +9,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
-      propertyPath: Flag
-      value: 
-      objectReference: {fileID: -8857962439880434103, guid: bbfdf6a8a7837b544bc50698f03b6efd, type: 3}
-    - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionName
-      value: East African Federation
+      value: Macronesia
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.b
-      value: 0.7647059
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.g
-      value: 0.5327559
+      value: 0.8187744
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.r
-      value: 0
+      value: 0.3254717
       objectReference: {fileID: 0}
     - target: {fileID: 5153060797771955450, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8008127408713420992, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: m_Name
-      value: East African Federation
+      value: Macronesia
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
