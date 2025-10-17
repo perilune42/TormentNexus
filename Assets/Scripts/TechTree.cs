@@ -29,27 +29,20 @@ public class TechTree : MonoBehaviour
     private void Start()
     {
         var nodes = GetComponentsInChildren<TechNode>();
-        foreach (var node in nodes)
+        foreach (TechNode node in nodes)
         {
-            techNodeStatuses.Add(node, TechNodeStatus.Locked);
-            node.Lock();
+            LockNode(node);
         }
-        foreach (TechNode n in startNodes)
+        foreach (TechNode node in startNodes)
         {
-            n.Unlock();
+            UnlockNode(node);
         }
-    }
-
-    public void UnlockNode(TechNode targetNode) 
-    {
-        techNodeStatuses[targetNode] = TechNodeStatus.Unlocked;
-        targetNode.Unlock();
     }
 
     public void FinishNode(TechNode targetNode)
     {
         techNodeStatuses[targetNode] = TechNodeStatus.Finished;
-        
+
         foreach (var node in techNodeStatuses.Keys.ToList())
         {
             if (techNodeStatuses[node] != TechNodeStatus.Locked)
@@ -70,6 +63,14 @@ public class TechTree : MonoBehaviour
             }
         }
 
+        foreach (TechNode node in startNodes)
+        {
+            if (techNodeStatuses[node] != TechNodeStatus.Finished)
+            {
+                UnlockNode(node);
+            }
+        }
+
         targetNode.Finish();
     }
 
@@ -77,6 +78,17 @@ public class TechTree : MonoBehaviour
     {
 
         currentlyResearching = targetNode;
+        var nodes = GetComponentsInChildren<TechNode>();
+        foreach (TechNode node in nodes)
+        {
+            if (techNodeStatuses[node] == TechNodeStatus.Unlocked)
+            {
+                LockNode(node);
+            }
+        }
+        UnlockNode(targetNode);
+        targetNode.setInteractable(false);
+        targetNode.setButtonColor(Color.yellow);
         UpdateText();
     }
 
@@ -107,6 +119,19 @@ public class TechTree : MonoBehaviour
         {
             progressText.text = "No research selected";
         }
+    }
+    //Interactable to true, status to unlocked
+    public void UnlockNode(TechNode targetNode)
+    {
+        techNodeStatuses[targetNode] = TechNodeStatus.Unlocked;
+        targetNode.Unlock();
+    }
+    
+    //Interactable to false, status to locked
+    public void LockNode(TechNode targetNode) 
+    {
+        techNodeStatuses[targetNode] = TechNodeStatus.Locked;
+        targetNode.Lock();
     }
 
 }

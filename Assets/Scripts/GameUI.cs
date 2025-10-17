@@ -25,6 +25,11 @@ public class GameUI : MonoBehaviour
         // techTreeCanvas.enabled = false;
     }
 
+    private void Start()
+    {
+        techTreeCanvas.enabled = false;
+    }
+
     public void ToggleTechTree()
     {
         techTreeCanvas.enabled = !techTreeCanvas.enabled;
