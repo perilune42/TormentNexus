@@ -1,6 +1,5 @@
 public class Nuke : Ability
 {
-    public int Damage = 50;
     public override void Launch(MapNode target)
     {
         base.Launch(target);
@@ -8,6 +7,9 @@ public class Nuke : Ability
         {
             target.ContainedUnit.TakeDamage(Damage);
         }
+
+        target.TakeGarrisonDamage(GarrisonDamage);
+        target.TakeInfrastructureDamage(InfrastructureDamage);
         
     }
 }

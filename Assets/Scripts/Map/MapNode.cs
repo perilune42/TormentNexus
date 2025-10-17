@@ -22,9 +22,55 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     public Unit ContainedUnit = null;
 
+    public float GarrisonHealth = 50;
+    public float MaxGarrisonHealth = 50;
+
+    public float InfrastructureHealth = 100;
+    public float MaxInfrastructureHealth = 100;
+
+    private const int healCooldown = 200;
+    private int healTimer = 0;
+
+    private float garrisonHealSpeed = 0.03f;
+    private float infrastructureHealSpeed = 0.01f;
+
+
+    [SerializeField] TMP_Text garrisonHPText;
+    [SerializeField] TMP_Text infrastructureHPText;
+
     private void Awake()
     {
         AssignOwnRefs();
+
+        GameTick.onTick += () =>
+        {
+            if (GarrisonHealth >= MaxGarrisonHealth)
+            {
+                garrisonHPText.text = "";
+            }
+            else
+            {
+                garrisonHPText.text = $"G: {GarrisonHealth} / {MaxGarrisonHealth}";
+            }
+            if (InfrastructureHealth >= MaxInfrastructureHealth)
+            {
+                infrastructureHPText.text = "";
+            }
+            else
+            {
+                infrastructureHPText.text = $"I: {InfrastructureHealth} / {MaxInfrastructureHealth}";
+            }
+
+            if (healTimer == 0)
+            {
+                GarrisonHealth += garrisonHealSpeed;
+                InfrastructureHealth += infrastructureHealSpeed;
+            }
+            else
+            {
+                healTimer--;
+            }
+        };
     }
 
     // TODO - Double draws, fix
@@ -52,10 +98,6 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         }
     }
 
-    public void OnCapture()
-    {
-
-    }
 
     public void OnPointerExit(PointerEventData eventData)
     {
@@ -95,5 +137,36 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     public void ToggleSelectHighlight(bool toggle)
     {
         selector.enabled = toggle;
+    }
+
+    public void TakeGarrisonDamage(float damage)
+    {
+        if (ContainedUnit != null) damage *= 0.5f;
+        if (InfrastructureHealth <= 0.5f * MaxInfrastructureHealth)
+        {
+            damage *= 2f;
+        }
+        GarrisonHealth -= damage;
+        healTimer = healCooldown;
+        if (GarrisonHealth < 0) GarrisonHealth = 0;
+    }
+
+    public void TakeInfrastructureDamage(float damage)
+    {
+        InfrastructureHealth -= damage;
+        healTimer = healCooldown;
+        if (InfrastructureHealth < 0) InfrastructureHealth = 0;
+    }
+
+    public void Capture(Faction newOwner)
+    {
+        Owner = newOwner;
+        spriteRenderer.color = Owner.FactionColor;
+        GarrisonHealth = 0.5f * MaxGarrisonHealth;
+    }
+    
+    public bool IsCapturable()
+    {
+        return GarrisonHealth <= 0;
     }
 }

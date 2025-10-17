@@ -11,6 +11,10 @@ public class Unit : MonoBehaviour
     public UnitDisplay Display;
 
     public float Damage = 0.1f; // damage per tick   
+    public float GarrisonDamage = 0.1f;
+    public float InfrastructureDamage = 0.1f;
+
+
     public float Health = 100f;
     public float MaxHealth = 100f;
     public float Cost = 5f;
@@ -59,6 +63,14 @@ public class Unit : MonoBehaviour
             {
                 neighbor.ContainedUnit.TakeDamage(Damage);
             }
+            if (neighbor.Owner != Owner)
+            {
+                neighbor.TakeGarrisonDamage(GarrisonDamage);
+                if (neighbor.GarrisonHealth > 0)
+                {
+                    neighbor.TakeInfrastructureDamage(InfrastructureDamage);
+                }
+            }
         }
     }
 
@@ -93,7 +105,7 @@ public class Unit : MonoBehaviour
         Display.DisplayMove(MoveOrder, MoveTicksRemaining);
         if (MoveTicksRemaining <= 0)
         {
-            if (UnitController.Instance.IsValidMove(this, MoveOrder))
+            if (UnitController.Instance.IsValidMove(this, MoveOrder) && (MoveOrder.Owner == Owner || MoveOrder.IsCapturable()))
             {
                 FinishMove();
             }
@@ -115,6 +127,10 @@ public class Unit : MonoBehaviour
     public void FinishMove()
     {
         Move(MoveOrder);
+        if (MoveOrder.Owner != Owner)
+        {
+            MoveOrder.Capture(Owner);
+        }
         CancelMove();
     }
 

@@ -7,6 +7,10 @@ public abstract class Ability : MonoBehaviour
     public int MaxCharges = 3;
     public int CurrentCooldown = 0;
     public int Cooldown = 100;
+
+    public int Damage = 50;
+    public int GarrisonDamage = 50;
+    public int InfrastructureDamage = 50;
     
     public void GiveToFaction(Faction faction)
     {

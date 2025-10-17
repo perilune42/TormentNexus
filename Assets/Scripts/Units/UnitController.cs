@@ -21,7 +21,7 @@ public class UnitController : MonoBehaviour
         //{
         //    Debug.LogError("Invalid move");
         //})
-        if (unit.MoveOrder == unit.CurrentNode)
+        if (destination == unit.CurrentNode)
         {
             unit.CancelMove();
         }
