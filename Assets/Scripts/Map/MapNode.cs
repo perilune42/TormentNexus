@@ -90,7 +90,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         // Lines, currently scuffed
         lineRenderer.positionCount = Neighbors.Count * 2 + 1;
         lineRenderer.SetPosition(0, transform.position);
-
+    
         int i = 1;
         foreach (MapNode neighbor in Neighbors)
         {
