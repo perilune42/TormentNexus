@@ -15,15 +15,18 @@ public class TechTree : MonoBehaviour
     public static TechTree instance;
     public Dictionary<TechNode, TechNodeStatus> techNodeStatuses = new();
     public List<TechNode> startNodes;
+    public TechLineRenderer techLineRenderer;
 
     public TechNode currentlyResearching;
     public float accumulatedPoints;
+    
 
     [SerializeField] TMP_Text progressText;
 
     private void Awake()
     {
         instance = this;
+        techLineRenderer = GetComponentInChildren<TechLineRenderer>();
     }
 
     private void Start()
@@ -32,12 +35,20 @@ public class TechTree : MonoBehaviour
         foreach (TechNode node in nodes)
         {
             LockNode(node);
+            foreach (var prereq in node.prereqs)
+            {
+                TechLineRenderer clone = Instantiate(techLineRenderer, transform);
+                clone.CreateLine(node.transform.position, prereq.transform.position, Color.magenta);
+            }
         }
         foreach (TechNode node in startNodes)
         {
             UnlockNode(node);
         }
+        drawConnections();
     }
+
+
 
     public void FinishNode(TechNode targetNode)
     {
@@ -107,6 +118,10 @@ public class TechTree : MonoBehaviour
             accumulatedPoints = 0;
         }
         UpdateText();
+    }
+
+    private void drawConnections()
+    {
     }
 
     private void UpdateText()
