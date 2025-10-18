@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -28,6 +29,10 @@ public class Unit : MonoBehaviour
 
     List<Action> onTickActions;
 
+    public MapNode AttackingNode;
+    public MapNode DefendingAgainstNode;
+
+    [SerializeField] Transform moveIndicator;
 
     private void Awake()
     {
@@ -46,14 +51,18 @@ public class Unit : MonoBehaviour
         }
         Display = GetComponentInChildren<UnitDisplay>();
         Display.AttachTo(this);
+        node.onUnitEnter?.Invoke(this);
     }
 
     public void Move(MapNode node)
     {
+        
         CurrentNode.ContainedUnit = null;
         CurrentNode = node;
         node.ContainedUnit = this;
         transform.SetParent(node.transform, false);
+        CurrentNode.onUnitEnter?.Invoke(null);
+        node.onUnitEnter?.Invoke(this);
     }
 
     public void TickDamage()
@@ -135,4 +144,29 @@ public class Unit : MonoBehaviour
         CancelMove();
     }
 
+    public void StartAttacking(MapNode node)
+    {
+        AttackingNode = node;
+        DefendingAgainstNode = null;
+    }
+
+    public void OnAttackedBy(MapNode node)
+    {
+        if (AttackingNode == null && DefendingAgainstNode == null) DefendingAgainstNode = node;
+    }
+
+    public void StopBeingAttackedBy(MapNode node)
+    {
+        if (AttackingNode == null && DefendingAgainstNode == node)
+        {
+            // search for another node to defend against
+        }
+    }
+
+    private void ShowMoveIndicator()
+    {
+        Vector2 moveDirection = MoveOrder.transform.position - CurrentNode.transform.position;
+        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x);
+        moveIndicator.eulerAngles = new Vector3(0, 0, angle);
+    }
 }

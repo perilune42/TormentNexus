@@ -18,7 +18,7 @@ public class ResourceManager : MonoBehaviour
     }
     private void GenerateResource()
     {
-        ResourceAmount += 2.5f;
+        ResourceAmount += 0f;
     }
 
     public void ConsumeResource(float amount)

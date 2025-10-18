@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -38,6 +39,8 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     [SerializeField] TMP_Text garrisonHPText;
     [SerializeField] TMP_Text infrastructureHPText;
+
+    public Action<Unit> onUnitEnter;
 
     private void Awake()
     {

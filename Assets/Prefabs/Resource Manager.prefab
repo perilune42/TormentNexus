@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4b1d4ead777c14584729ce4036d978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Faction: {fileID: 0}
   ResearchPoints: 0
-  Resource: 0
+  ResourceAmount: 50
