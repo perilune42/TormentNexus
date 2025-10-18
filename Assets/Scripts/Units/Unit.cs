@@ -6,6 +6,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.RuleTile.TilingRuleOutput;
+using Random = UnityEngine.Random;
 
 public class Unit : MonoBehaviour
 {
@@ -130,7 +131,11 @@ public class Unit : MonoBehaviour
             for (int i = attackerCount - 1; i >= 0; i--)
             {
                 MapNode attacker = DefendingAgainstNodes[i];
-                if (attacker.ContainedUnit == null) Debug.LogError("Being attacked by empty node"); 
+                if (attacker.ContainedUnit == null)
+                {
+                    Debug.LogError("Being attacked by empty node");
+                    DefendingAgainstNodes.Remove(attacker);
+                }
                 DamageNode(attacker, attackerCount);
             }
         }
@@ -143,16 +148,17 @@ public class Unit : MonoBehaviour
 
     private void DamageNode(MapNode node, int split = 1)
     {
+        float randFactor = Random.Range(0.9f, 1.1f);
         healTimer = healCooldown;
         if (node.ContainedUnit != null)
         {
-            node.ContainedUnit.TakeDamage(Damage / split);
+            node.ContainedUnit.TakeDamage((Damage / split) * randFactor );
         }
 
-        node.TakeGarrisonDamage(GarrisonDamage / split);
+        node.TakeGarrisonDamage((GarrisonDamage / split) * randFactor);
         if (node.GarrisonHealth > 0)
         {
-            node.TakeInfrastructureDamage(InfrastructureDamage / split);
+            node.TakeInfrastructureDamage((InfrastructureDamage / split) * randFactor);
         }
     }
 

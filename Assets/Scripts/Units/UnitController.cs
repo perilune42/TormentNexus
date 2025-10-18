@@ -44,12 +44,14 @@ public class UnitController : MonoBehaviour
         }
         unit.Owner = owner;
         unit.Place(destination);
+        unit.Owner.AllUnits.Add(unit);
         OnAddUnit?.Invoke(unit);
     }
 
     public void RemoveUnit(Unit unit)
     {
         OnRemoveUnit?.Invoke(unit);
+        unit.Owner.AllUnits.Remove(unit);
         Destroy(unit.gameObject);
     }
 }

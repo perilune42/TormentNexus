@@ -13,12 +13,22 @@ public class Faction : MonoBehaviour
     [HideInInspector] public List<Ability> Abilities;
     [SerializeField] Transform abilitiesList;
 
+    public List<Unit> AllUnits;
+
+    [HideInInspector] public AIControl AIControl;
+
     private void Awake()
     {
         Abilities = abilitiesList.GetComponentsInChildren<Ability>().ToList();
         foreach (Ability ability in Abilities)
         {
             ability.GiveToFaction(this);
+        }
+
+        AIControl = GetComponentInChildren<AIControl>();
+        if (AIControl != null)
+        {
+            AIControl.SetToFaction(this);
         }
 
     }
