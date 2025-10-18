@@ -55,7 +55,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
             }
             else
             {
-                garrisonHPText.text = $"G: {GarrisonHealth} / {MaxGarrisonHealth}";
+                garrisonHPText.text = $"G: {(int)GarrisonHealth} / {MaxGarrisonHealth}";
             }
             if (InfrastructureHealth >= MaxInfrastructureHealth)
             {
@@ -63,18 +63,10 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
             }
             else
             {
-                infrastructureHPText.text = $"I: {InfrastructureHealth} / {MaxInfrastructureHealth}";
+                infrastructureHPText.text = $"I: {(int)InfrastructureHealth} / {MaxInfrastructureHealth}";
             }
+            Heal();
 
-            if (healTimer == 0)
-            {
-                GarrisonHealth += garrisonHealSpeed;
-                InfrastructureHealth += infrastructureHealSpeed;
-            }
-            else
-            {
-                healTimer--;
-            }
         };
     }
 
@@ -161,6 +153,21 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         InfrastructureHealth -= damage;
         healTimer = healCooldown;
         if (InfrastructureHealth < 0) InfrastructureHealth = 0;
+    }
+
+    private void Heal()
+    {
+        if (healTimer == 0)
+        {
+            GarrisonHealth += garrisonHealSpeed;
+            if (GarrisonHealth > MaxGarrisonHealth) GarrisonHealth = MaxGarrisonHealth;
+            InfrastructureHealth += infrastructureHealSpeed;
+            if (InfrastructureHealth > MaxInfrastructureHealth) InfrastructureHealth = MaxInfrastructureHealth;
+        }
+        else
+        {
+            healTimer--;
+        }
     }
 
     public void Capture(Faction newOwner)

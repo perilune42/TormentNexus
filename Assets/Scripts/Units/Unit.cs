@@ -2,8 +2,10 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Unit : MonoBehaviour
 {
@@ -23,20 +25,24 @@ public class Unit : MonoBehaviour
     public float Speed = 1.0f; // speed 1.0 = 100 ticks to move 1 node
 
     private const int baseMoveTicks = 100;
+    private int moveTicks => (int)(baseMoveTicks / Speed);
 
     public MapNode MoveOrder;
-    public int MoveTicksRemaining = -1;
+    [HideInInspector] public int MoveTicksRemaining = -1;
 
     List<Action> onTickActions;
 
-    public MapNode AttackingNode;
-    public MapNode DefendingAgainstNode;
+    [HideInInspector] public MapNode AttackingNode;
+    [HideInInspector] public List<MapNode> DefendingAgainstNodes;
 
-    [SerializeField] Transform moveIndicator;
+    private const int healCooldown = 100;
+    private int healTimer = 0;
+
+    public float healSpeed = 0.05f;
 
     private void Awake()
     {
-        onTickActions = new() { TickDamage, TickMove };
+        onTickActions = new() { TickDamage, TickMove, Heal };
     }
 
     public void Place(MapNode node)
@@ -52,21 +58,52 @@ public class Unit : MonoBehaviour
         Display = GetComponentInChildren<UnitDisplay>();
         Display.AttachTo(this);
         node.onUnitEnter?.Invoke(this);
+
+        foreach (MapNode neighbor in CurrentNode.Neighbors)
+        {
+            if (neighbor.ContainedUnit != null && neighbor.ContainedUnit.AttackingNode == CurrentNode)
+            {
+                OnAttackedBy(neighbor);
+            }
+        }
     }
 
     public void Move(MapNode node)
     {
-        
+        DefendingAgainstNodes.Clear();
+        StopAttacking();
+
         CurrentNode.ContainedUnit = null;
         CurrentNode = node;
         node.ContainedUnit = this;
         transform.SetParent(node.transform, false);
         CurrentNode.onUnitEnter?.Invoke(null);
         node.onUnitEnter?.Invoke(this);
+
+        foreach (MapNode neighbor in CurrentNode.Neighbors)
+        {
+            if (neighbor.ContainedUnit != null && neighbor.ContainedUnit.AttackingNode == CurrentNode)
+            {
+                if (neighbor.ContainedUnit.Owner == Owner)
+                {
+                    // should only happen on capture
+                    neighbor.ContainedUnit.StopAttacking();
+                }
+                else
+                {
+                    OnAttackedBy(neighbor);
+                }
+                    
+            }
+        }
+
+
     }
 
     public void TickDamage()
     {
+        /* OLD ATTACK CODE
+         
         foreach (MapNode neighbor in CurrentNode.Neighbors)
         {
             if (neighbor.ContainedUnit != null && neighbor.ContainedUnit.Owner != Owner)
@@ -82,19 +119,69 @@ public class Unit : MonoBehaviour
                 }
             }
         }
+        */
+
+        if (AttackingNode == null)
+        {
+            // Defending mode, split damage
+            int attackerCount = DefendingAgainstNodes.Count;
+            if (attackerCount == 0) return;
+
+            for (int i = attackerCount - 1; i >= 0; i--)
+            {
+                MapNode attacker = DefendingAgainstNodes[i];
+                if (attacker.ContainedUnit == null) Debug.LogError("Being attacked by empty node"); 
+                DamageNode(attacker, attackerCount);
+            }
+        }
+        else
+        {
+            // Attacking mode
+            DamageNode(AttackingNode, 1);
+        }
+    }
+
+    private void DamageNode(MapNode node, int split = 1)
+    {
+        healTimer = healCooldown;
+        if (node.ContainedUnit != null)
+        {
+            node.ContainedUnit.TakeDamage(Damage / split);
+        }
+
+        node.TakeGarrisonDamage(GarrisonDamage / split);
+        if (node.GarrisonHealth > 0)
+        {
+            node.TakeInfrastructureDamage(InfrastructureDamage / split);
+        }
     }
 
     public void TakeDamage(float damage)
     {
         Health -= damage;
+        healTimer = healCooldown;
         if (Health <= 0)
         {
             TriggerDeath();
         }
     }
 
+    private void Heal()
+    {
+        if (healTimer == 0)
+        {
+            Health += healSpeed;
+            if (Health > MaxHealth) Health = MaxHealth;
+        }
+        else
+        {
+            healTimer--;
+        }
+    }
+
     public void TriggerDeath()
     {
+        if (AttackingNode != null) StopAttacking();
         foreach (Action action in onTickActions)
         {
             GameTick.onTick -= action;
@@ -104,20 +191,26 @@ public class Unit : MonoBehaviour
 
     public void StartMove(MapNode target)
     {
+        if (target == MoveOrder) return;
+        StopAttacking();
         MoveOrder = target;
-        MoveTicksRemaining = (int)(baseMoveTicks / Speed);
-        Display.DisplayMove(target, MoveTicksRemaining);
+        MoveTicksRemaining = moveTicks;
+        Display.DisplayMove(target, MoveTicksRemaining, moveTicks);
     }
 
     private void TickMove()
     {
         if (MoveOrder == null) return;
-        Display.DisplayMove(MoveOrder, MoveTicksRemaining);
+        Display.DisplayMove(MoveOrder, MoveTicksRemaining, moveTicks);
         if (MoveTicksRemaining <= 0)
         {
             if (UnitController.Instance.IsValidMove(this, MoveOrder) && (MoveOrder.Owner == Owner || MoveOrder.IsCapturable()))
             {
                 FinishMove();
+            }
+            else if (AttackingNode == null && MoveOrder.Owner != Owner)
+            {
+                StartAttacking(MoveOrder);
             }
         }
         else
@@ -129,6 +222,7 @@ public class Unit : MonoBehaviour
 
     public void CancelMove()
     {
+        StopAttacking();
         MoveOrder = null;
         MoveTicksRemaining = -1;
         Display.StopMove();
@@ -146,27 +240,33 @@ public class Unit : MonoBehaviour
 
     public void StartAttacking(MapNode node)
     {
+        StopAttacking();
         AttackingNode = node;
-        DefendingAgainstNode = null;
+        if (node.ContainedUnit != null)
+        {
+            node.ContainedUnit.OnAttackedBy(CurrentNode);
+        }
+    }
+
+    public void StopAttacking()
+    {
+        if (AttackingNode == null) return;
+        if (AttackingNode.ContainedUnit != null)
+        {
+            AttackingNode.ContainedUnit.StopBeingAttackedBy(CurrentNode);
+        }
+        AttackingNode = null;
     }
 
     public void OnAttackedBy(MapNode node)
     {
-        if (AttackingNode == null && DefendingAgainstNode == null) DefendingAgainstNode = node;
+        DefendingAgainstNodes.Add(node);
     }
 
     public void StopBeingAttackedBy(MapNode node)
     {
-        if (AttackingNode == null && DefendingAgainstNode == node)
-        {
-            // search for another node to defend against
-        }
+        DefendingAgainstNodes.Remove(node);
     }
 
-    private void ShowMoveIndicator()
-    {
-        Vector2 moveDirection = MoveOrder.transform.position - CurrentNode.transform.position;
-        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x);
-        moveIndicator.eulerAngles = new Vector3(0, 0, angle);
-    }
+
 }

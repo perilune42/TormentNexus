@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UnitDisplay : MonoBehaviour, IPointerDownHandler
 {
@@ -12,6 +13,7 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
     [SerializeField] TMP_Text healthText;
 
     [SerializeField] TMP_Text moveProgressText;
+    [SerializeField] Image moveIndicator;
 
     public void AttachTo(Unit unit)
     {
@@ -39,13 +41,20 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
         }
     }
 
-    public void DisplayMove(MapNode target, int ticks)
+    public void DisplayMove(MapNode target, int ticks, int maxTicks)
     {
-        moveProgressText.text = $"Moving to {target.Name}: {ticks}";
+        // moveProgressText.text = $"Moving to {target.Name}: {ticks}";
+        Vector2 moveDirection = target.transform.position - unit.transform.position;
+        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+        moveIndicator.transform.parent.eulerAngles = new Vector3(0, 0, angle);
+        moveIndicator.enabled = true;
+        moveIndicator.fillAmount = (maxTicks - ticks) / (float)maxTicks;
     }
+
 
     public void StopMove()
     {
         moveProgressText.text = "";
+        moveIndicator.enabled = false;
     }
 }

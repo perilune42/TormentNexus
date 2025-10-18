@@ -49,9 +49,9 @@ public class Builder
     private Unit FinishBuild()
     {
         Unit newUnit = GameObject.Instantiate(PendingBuild);
-        UnitController.Instance.SpawnUnit(newUnit, node, node.Owner);
         PendingBuild = null;
         usedResource = 0;
+        UnitController.Instance.SpawnUnit(newUnit, node, node.Owner);
         GameTick.onTick -= TickBuild;
         return newUnit;
     }
