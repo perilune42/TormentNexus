@@ -588,6 +588,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 5.391
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Hawaii
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -780,6 +784,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Davenport
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -974,6 +982,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 4.047
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Babylon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1146,6 +1158,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: -3.99
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Santiago
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1222,7 +1238,7 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 5116294466566222587}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1231,11 +1247,6 @@ PrefabInstance:
 --- !u!4 &2600838211911313140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 606745824918651322}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &5116294466566222587 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
   m_PrefabInstance: {fileID: 606745824918651322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &627709985448566477
@@ -1405,6 +1416,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 4.468
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Da Ming
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1579,6 +1594,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 5.391
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Dreux
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1751,6 +1770,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 2.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Vadodara
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1945,6 +1968,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 3.121
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Algiers
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2120,6 +2147,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 5.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Magadan
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2313,6 +2344,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 4.724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Chicagou
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2545,6 +2580,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 1.647
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Tegucigalpa
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2718,6 +2757,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: -0.58
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Guinea
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2886,6 +2929,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 2.217
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Tenochtitlan
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3080,6 +3127,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 1.24
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Panay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3273,6 +3324,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 4.273
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Nagqu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3446,6 +3501,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: -9.43
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Concordia
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3522,7 +3581,7 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 6439991144984738045}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3531,11 +3590,6 @@ PrefabInstance:
 --- !u!4 &4199540631489244402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 1599995552680528828}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &6439991144984738045 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
   m_PrefabInstance: {fileID: 1599995552680528828}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1897403038691211121
@@ -3709,6 +3763,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 3.121
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Riyadh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3910,6 +3968,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 2.288
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Tassili
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4102,6 +4164,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 2.651
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Ranchi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4296,6 +4362,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 1.848
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Porto Novo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4487,6 +4557,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: -0.818
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Natal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4701,6 +4775,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[10].y
       value: 4.667
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Constantinople
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4873,6 +4951,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 5.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Madurai
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5050,6 +5132,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: -1.527
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Benguela
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5240,6 +5326,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 5.447
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Summit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5415,6 +5505,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 5.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Tomsk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5609,6 +5703,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 3.121
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Tripoli
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5688,7 +5786,7 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 7315000655796329821}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5697,11 +5795,6 @@ PrefabInstance:
 --- !u!4 &476440860300986706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 3093754133451042332}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &7315000655796329821 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
   m_PrefabInstance: {fileID: 3093754133451042332}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3117846720486933766
@@ -5855,6 +5948,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: -8.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Erebus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6048,6 +6145,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: -8.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Terra Nova
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6262,6 +6363,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[10].y
       value: 5.502
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Vienna
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6430,6 +6535,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Dominica
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6604,6 +6713,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 5.347
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Naples
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6777,6 +6890,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 2.478
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Pyay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6949,6 +7066,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 5.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Myeik
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7138,6 +7259,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 5.867
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Calgary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7332,6 +7457,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: -1.732
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Lusaka
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7524,6 +7653,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: -3.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Cape Town
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7718,6 +7851,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 3.121
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Tehran
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7889,6 +8026,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 3.803
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Tianshimen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8099,6 +8240,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[10].y
       value: 5.703
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Astana
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8275,6 +8420,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 2.597
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Guangzhou
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8469,6 +8618,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 6.898
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Petrograd
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8545,17 +8698,12 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 723337682577163932}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
---- !u!23 &723337682577163932 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 4999819545799112157}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7570970905857168019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
@@ -8795,6 +8943,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 5.371
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Geneva
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9011,6 +9163,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[10].y
       value: 3.059
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Cairo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9223,6 +9379,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[10].y
       value: 4.201
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Baisha
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9415,6 +9575,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 0.809
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Bangui
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9609,6 +9773,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 3.121
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Iberia
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9785,6 +9953,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 0.74
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Juba
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9958,6 +10130,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 5.649
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Winnipeg
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10126,6 +10302,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: -3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Rio
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10316,6 +10496,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 5.447
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Reykjavik
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -10496,6 +10680,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 3.897
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Osaka
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10668,6 +10856,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 5.347
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Svalbard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10878,6 +11070,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[10].y
       value: 6.074
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Almaty
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11070,6 +11266,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 5.179
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Montreal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11268,6 +11468,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 5.105
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Urga
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11460,6 +11664,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 3.681
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Delhi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11696,6 +11904,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 3.971
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Lanzhou
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11772,17 +11984,12 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 1365686488407518014}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
---- !u!23 &1365686488407518014 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 6744358184327518335}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8208749883882028849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
@@ -11976,6 +12183,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[10].y
       value: 6.074
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Georgia
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12168,6 +12379,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[8].y
       value: 3.108
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Sahara
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12365,6 +12580,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 0.804
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Monrovia
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12533,6 +12752,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: -1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Picchu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12707,6 +12930,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 5.391
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Fiji
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12783,17 +13010,12 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 3082854595421786821}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
---- !u!23 &3082854595421786821 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 7323799959374422404}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5318977438406821578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
@@ -12950,6 +13172,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 5.391
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Dachata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13119,6 +13345,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: -1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Brasilia
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13293,6 +13523,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: -2.165
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Antananarivo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13369,17 +13603,12 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 2872240708966815073}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
---- !u!23 &2872240708966815073 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 7545531714456626720}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4955241156031512942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
@@ -13572,6 +13801,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[10].y
       value: 6.074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Orenburg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13766,6 +13999,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: -0.394
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Mombasa
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13934,6 +14171,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 1.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Panama
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14112,6 +14353,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: 0.93
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Eko
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14289,6 +14534,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: -8.22
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Solveig
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14461,6 +14710,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 0.374
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Yaounde
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14651,6 +14904,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[8].y
       value: 3.838
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Avalon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -14730,17 +14987,12 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 4326106014703878500}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
---- !u!23 &4326106014703878500 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 8314287949761524261}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6850494383995655531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
@@ -14893,6 +15145,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 2.217
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Anchorage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15102,6 +15358,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[10].y
       value: 6.074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Kapisa
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15342,6 +15602,10 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[6].y
       value: -0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Jakarta
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15418,17 +15682,12 @@ PrefabInstance:
     - target: {fileID: 8694093274234702426, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 3817303858098562501}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
---- !u!23 &3817303858098562501 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5722705861667959617, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-  m_PrefabInstance: {fileID: 8904437847813183108}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6332478363889103306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
@@ -15585,6 +15844,10 @@ PrefabInstance:
     - target: {fileID: 5348679297692744650, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_Positions.Array.data[6].y
       value: 4.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379666870010493271, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_text
+      value: Lafayette
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

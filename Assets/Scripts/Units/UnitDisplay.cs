@@ -8,11 +8,9 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
 
     Unit unit;
 
-    [SerializeField] SpriteRenderer icon;
-    [SerializeField] SpriteRenderer selector;
-    [SerializeField] TMP_Text healthText;
-
-    [SerializeField] TMP_Text moveProgressText;
+    [SerializeField] Image icon;
+    [SerializeField] Image selector;
+    [SerializeField] ProgressBar healthBar;
     [SerializeField] Image moveIndicator;
 
     public void AttachTo(Unit unit)
@@ -22,9 +20,22 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
         GameTick.onTick += UpdateHealth;
     }
 
+    private void OnDestroy()
+    {
+        GameTick.onTick -= UpdateHealth;
+    }
+
     private void UpdateHealth()
     {
-        healthText.text = $"{(int)unit.Health} / {(int)unit.MaxHealth}";
+        if (unit.Health == unit.MaxHealth)
+        {
+            healthBar.SetVisible(false);
+        }
+        else
+        {
+            healthBar.SetVisible(true);
+            healthBar.SetLevel(unit.Health / unit.MaxHealth);
+        }
     }
 
     public void ToggleSelectHighlight(bool toggle)
@@ -54,7 +65,6 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
 
     public void StopMove()
     {
-        moveProgressText.text = "";
         moveIndicator.enabled = false;
     }
 }

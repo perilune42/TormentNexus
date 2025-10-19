@@ -14,7 +14,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     // Editor Refs
     public List<MapNode> Neighbors;
-    public TextMeshPro NameTextMeshPro;
+    public TMP_Text NameTextMeshPro;
 
     // Self Refs
     private LineRenderer lineRenderer;
@@ -37,8 +37,8 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     public Builder Builder;
 
-    [SerializeField] TMP_Text garrisonHPText;
-    [SerializeField] TMP_Text infrastructureHPText;
+    [SerializeField] ProgressBar garrisonHPBar;
+    [SerializeField] ProgressBar infrastructureHPBar;
 
     public Action<Unit> onUnitEnter;
 
@@ -52,19 +52,21 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         {
             if (GarrisonHealth >= MaxGarrisonHealth)
             {
-                garrisonHPText.text = "";
+                garrisonHPBar.SetVisible(false);
             }
             else
             {
-                garrisonHPText.text = $"G: {(int)GarrisonHealth} / {MaxGarrisonHealth}";
+                garrisonHPBar.SetVisible(true);
+                garrisonHPBar.SetLevel(GarrisonHealth / MaxGarrisonHealth);
             }
             if (InfrastructureHealth >= MaxInfrastructureHealth)
             {
-                infrastructureHPText.text = "";
+                infrastructureHPBar.SetVisible(false);
             }
             else
             {
-                infrastructureHPText.text = $"I: {(int)InfrastructureHealth} / {MaxInfrastructureHealth}";
+                infrastructureHPBar.SetVisible(true);
+                infrastructureHPBar.SetLevel(InfrastructureHealth / MaxInfrastructureHealth);
             }
             Heal();
 
@@ -81,7 +83,12 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         NameTextMeshPro.text = Name;
 
         // Faction color
-        if (Owner != null) spriteRenderer.color = Owner.FactionColor;
+        if (Owner != null)
+        {
+            SetColor();
+        } 
+            
+
 
         // Lines, currently scuffed
         lineRenderer.positionCount = Neighbors.Count * 2 + 1;
@@ -176,12 +183,18 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         Owner.AllNodes.Remove(this);
         Owner = newOwner;
         newOwner.AllNodes.Add(this);
-        spriteRenderer.color = Owner.FactionColor;
+        SetColor();
         GarrisonHealth = 0.5f * MaxGarrisonHealth;
     }
     
     public bool IsCapturable()
     {
         return GarrisonHealth <= 0;
+    }
+
+    private void SetColor()
+    {
+        spriteRenderer.color = Owner.FactionColor;
+        NameTextMeshPro.color = Color.Lerp(Owner.FactionColor, Color.white, 0.4f);
     }
 }
