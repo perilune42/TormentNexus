@@ -45,10 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentCharges: 0
-  MaxCharges: 3
+  MaxCharges: 1
   CurrentCooldown: 0
-  Cooldown: 100
+  BuildTime: 100
+  Cost: 20
   Damage: 50
   GarrisonDamage: 50
   InfrastructureDamage: 50
+  IsBuilding: 0
   effect: {fileID: -8020354042598343834, guid: 7ca4668cedeb34de4a9d17df98a0a3ef, type: 3}

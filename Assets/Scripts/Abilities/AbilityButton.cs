@@ -9,23 +9,33 @@ public class AbilityButton : MonoBehaviour
     [SerializeField] TMP_Text chargeText;
     [SerializeField] TMP_Text cooldownText;
 
-    Button button;
+    [SerializeField] Button abilityButton, buildButton;
+    [SerializeField] ProgressBar buildProgressBar;
 
     private void Awake()
     {
-        button = GetComponent<Button>();
     }
 
     public void SetAbility(Ability ability)
     {
         this.ability = ability;
         nameText.text = ability.gameObject.name;
-        GameTick.onTick += () =>
-        {
-            chargeText.text = $"Charges: {ability.CurrentCharges}";
-            cooldownText.text = ability.CurrentCooldown.ToString();
-            button.interactable = ability.CanLaunch();
-        };
+
+    }
+
+    private void Update()
+    {
+        chargeText.text = $"Charges: {ability.CurrentCharges}";
+        //cooldownText.text = ability.CurrentCooldown.ToString();
+        buildProgressBar.SetLevel(Mathf.Max(0, 1 - (float)ability.CurrentCooldown / ability.BuildTime));
+        buildProgressBar.SetVisible(ability.IsBuilding);
+        abilityButton.interactable = ability.CanLaunch();
+        buildButton.interactable = ability.CanBuild();
+    }
+
+    public void Build()
+    {
+        ability.BuildNew();
     }
 
     public void Launch()

@@ -9970,6 +9970,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7325654905215402086, guid: 11d45f481563fa0439081572df0e7409, type: 3}
+      propertyPath: CurrentCooldown
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8008127408713420992, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: m_Name
       value: Mongolia

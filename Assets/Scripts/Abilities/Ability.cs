@@ -6,11 +6,17 @@ public abstract class Ability : MonoBehaviour
     public int CurrentCharges;
     public int MaxCharges = 1;
     public int CurrentCooldown = 0;
-    public int Cooldown = 100;
+    public int BuildTime = 100;
+
+    public int Cost;
+    
 
     public int Damage = 50;
     public int GarrisonDamage = 50;
     public int InfrastructureDamage = 50;
+
+    public bool IsBuilding = false;
+    
 
     [SerializeField] AbilityVFX effect;
     
@@ -19,6 +25,20 @@ public abstract class Ability : MonoBehaviour
         owner = faction;
         GameTick.onTick += TickCooldown;
     }
+
+    public void BuildNew()
+    {
+        if (!CanBuild()) Debug.LogError("Invalid ability build");
+        owner.Resource.ResourceAmount -= Cost;
+        IsBuilding = true;
+        CurrentCooldown = BuildTime;
+    }
+
+    public bool CanBuild()
+    {
+        return !IsBuilding && owner.Resource.ResourceAmount >= Cost && CurrentCharges < MaxCharges;
+    }
+
     public virtual void Launch(MapNode target)
     {
         CurrentCharges--;
@@ -33,13 +53,14 @@ public abstract class Ability : MonoBehaviour
 
     public void TickCooldown()
     {
+        if (!IsBuilding) return;
         if (CurrentCharges < MaxCharges)
         {
             CurrentCooldown--;
             if (CurrentCooldown < 0)
             {
                 CurrentCharges++;
-                CurrentCooldown = Cooldown;
+                IsBuilding = false;   
             }
         }
         
