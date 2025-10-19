@@ -29,6 +29,8 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     public float InfrastructureHealth = 100;
     public float MaxInfrastructureHealth = 100;
 
+    public float DefenseDamage = 0.05f;
+
     private const int healCooldown = 200;
     private int healTimer = 0;
 
@@ -69,6 +71,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
                 infrastructureHPBar.SetVisible(true);
                 infrastructureHPBar.SetLevel(InfrastructureHealth / MaxInfrastructureHealth);
             }
+            DamageAttackers();
             Heal();
 
         };
@@ -162,6 +165,26 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         InfrastructureHealth -= damage;
         healTimer = healCooldown;
         if (InfrastructureHealth < 0) InfrastructureHealth = 0;
+    }
+
+    private void DamageAttackers()
+    {
+        // cannot defend if infrastructure is damaged or garrison has 0 health
+        if (InfrastructureHealth <= 0.5f * MaxInfrastructureHealth || GarrisonHealth <= 0) return;
+
+        var neighboringEnemyUnits = Util.GetNeighboringEnemyUnits(this);
+        List<Unit> attackers = new();
+        foreach (Unit attacker in neighboringEnemyUnits)
+        {
+            if (attacker.AttackingNode == this)
+            {
+                attackers.Add(attacker);
+            }
+        }
+        foreach (Unit attacker in attackers)
+        {
+            attacker.TakeDamage(DefenseDamage / attackers.Count);
+        }
     }
 
     private void Heal()

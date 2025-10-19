@@ -4,7 +4,7 @@ public abstract class Ability : MonoBehaviour
 {
     protected Faction owner;
     public int CurrentCharges;
-    public int MaxCharges = 3;
+    public int MaxCharges = 1;
     public int CurrentCooldown = 0;
     public int Cooldown = 100;
 

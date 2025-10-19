@@ -197,10 +197,11 @@ MonoBehaviour:
   NameTextMeshPro: {fileID: 8379666870010493271}
   selector: {fileID: 3598568009049622160}
   ContainedUnit: {fileID: 0}
-  GarrisonHealth: 50
-  MaxGarrisonHealth: 50
-  InfrastructureHealth: 100
-  MaxInfrastructureHealth: 100
+  GarrisonHealth: 150
+  MaxGarrisonHealth: 150
+  InfrastructureHealth: 500
+  MaxInfrastructureHealth: 500
+  DefenseDamage: 0.05
   Builder: {fileID: 1332021329202052323}
   garrisonHPBar: {fileID: 8970047205663667544}
   infrastructureHPBar: {fileID: 2701256239631521120}
@@ -1317,7 +1318,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0.565, y: -0.07}
-  m_SizeDelta: {x: 1.13, y: 0.14}
+  m_SizeDelta: {x: 0, y: 0.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7751668626903067418
 CanvasRenderer:

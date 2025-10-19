@@ -68,19 +68,27 @@ public class AIControl : MonoBehaviour
 
             if (unitAssignments[unit] == null)
             {
-                if (currentDefenders < defenderQuota)
+                if (Faction.isMajorFaction)
                 {
-                    unitAssignments[unit] = new DefendAssignment(unit);
-                    currentDefenders++;
-                } 
-                else if (Random.value < 0.5f)
-                {
-                    unitAssignments[unit] = new CaptureAssignment(unit);
+                    if (currentDefenders < defenderQuota)
+                    {
+                        unitAssignments[unit] = new DefendAssignment(unit);
+                        currentDefenders++;
+                    }
+                    else if (Random.value < 0.5f)
+                    {
+                        unitAssignments[unit] = new CaptureAssignment(unit);
+                    }
+                    else
+                    {
+                        unitAssignments[unit] = new EliminateAssignment(unit);
+                    }
                 }
                 else
                 {
-                    unitAssignments[unit] = new EliminateAssignment(unit);
+                    unitAssignments[unit] = new DefendAssignment(unit);
                 }
+
             }
             ExecuteAssignment(unit);
         }
