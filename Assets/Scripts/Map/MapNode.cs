@@ -44,9 +44,10 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     private void Awake()
     {
-        Builder = new(this);
+        
         AssignOwnRefs();
         Owner.AllNodes.Add(this);
+        Builder.SetNode(this);
 
         GameTick.onTick += () =>
         {

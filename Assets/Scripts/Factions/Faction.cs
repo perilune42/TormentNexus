@@ -17,6 +17,7 @@ public class Faction : MonoBehaviour
     public List<MapNode> AllNodes;
 
     [HideInInspector] public AIControl AIControl;
+    public bool isMajorFaction = false;
 
     private void Awake()
     {

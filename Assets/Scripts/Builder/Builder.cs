@@ -1,19 +1,21 @@
 using UnityEngine;
 
-public class Builder
+public class Builder : MonoBehaviour
 {
-    public Builder(MapNode node)
+    public void SetNode(MapNode node)
     {
         this.node = node;
         node.onUnitEnter += (unit) =>
         {
             if (unit != null) CancelBuild();
         };
+        PendingBuildDisplay.gameObject.SetActive(false);
     }
 
     private MapNode node;
     private float usedResource;
     public Unit PendingBuild;
+    [SerializeField] BuildingUnit PendingBuildDisplay;
     public int TimeRemaining;
 
     public bool CanBuild(Unit template)
@@ -26,12 +28,16 @@ public class Builder
         PendingBuild = template;
         usedResource = template.Cost;
         TimeRemaining = PendingBuild.BuildTime;
+        PendingBuildDisplay.InitiateBuild(template, node.Owner);
+        PendingBuildDisplay.SetBuildProgress(0);
+        PendingBuildDisplay.gameObject.SetActive(true);
         GameTick.onTick += TickBuild;
     }
 
     private void TickBuild()
     {
         TimeRemaining--;
+        PendingBuildDisplay.SetBuildProgress(1 - (float)TimeRemaining / PendingBuild.BuildTime);
         if (TimeRemaining <= 0)
         {
             FinishBuild();
@@ -44,6 +50,7 @@ public class Builder
         usedResource = 0;
         PendingBuild = null;
         GameTick.onTick -= TickBuild;
+        PendingBuildDisplay.gameObject.SetActive(false);
     }
 
     private Unit FinishBuild()
@@ -53,6 +60,7 @@ public class Builder
         usedResource = 0;
         UnitController.Instance.SpawnUnit(newUnit, node, node.Owner);
         GameTick.onTick -= TickBuild;
+        PendingBuildDisplay.gameObject.SetActive(false);
         return newUnit;
     }
 }

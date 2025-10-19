@@ -13,6 +13,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: -4047491817323079948, guid: a03c438fbdd00d04c8bb82e67e452416, type: 3}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Speed
       value: 2
       objectReference: {fileID: 0}

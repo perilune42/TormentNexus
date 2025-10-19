@@ -14,6 +14,9 @@ public class Unit : MonoBehaviour
     public MapNode CurrentNode;
     public UnitDisplay Display;
 
+    public string Name;
+    public Sprite Icon;
+
     public float Damage = 0.1f; // damage per tick   
     public float GarrisonDamage = 0.1f;
     public float InfrastructureDamage = 0.1f;
