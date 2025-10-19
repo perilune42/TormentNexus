@@ -38,7 +38,7 @@ public class CameraController : MonoBehaviour
 
         camMapDiffX = backgroundSR.sprite.bounds.max.x - Camera.main.orthographicSize * Camera.main.aspect;
         leftCam.transform.localPosition = Vector3.right * (Camera.main.orthographicSize * Camera.main.aspect + camMapDiffX) * 2;
-        leftCam.transform.localPosition = Vector3.left * (Camera.main.orthographicSize * Camera.main.aspect + camMapDiffX) * 2;
+        rightCam.transform.localPosition = Vector3.left * (Camera.main.orthographicSize * Camera.main.aspect + camMapDiffX) * 2;
     }
     
     private void Update()
