@@ -17,6 +17,8 @@ public class TechTree : MonoBehaviour
     public List<TechNode> startNodes;
     public TechLineRenderer techLineRenderer;
 
+    Queue<TechLineRenderer> lineList = new();
+
     public TechNode currentlyResearching;
     public float accumulatedPoints;
     
@@ -37,8 +39,20 @@ public class TechTree : MonoBehaviour
             LockNode(node);
             foreach (var prereq in node.prereqs)
             {
-                TechLineRenderer clone = Instantiate(techLineRenderer, transform);
-                clone.CreateLine(node.transform.position, prereq.transform.position, Color.magenta);
+                TechLineRenderer outline = Instantiate(techLineRenderer, transform, false);
+                int siblingIndex = techLineRenderer.transform.GetSiblingIndex();  //Sibling Index of techlinerenderer
+                outline.transform.SetSiblingIndex(siblingIndex); //Makes sure it renders before buttons
+                outline.CreateLine(node.transform.position, prereq.transform.position, Color.black); 
+                RectTransform rt = outline.GetComponent<RectTransform>();
+                rt.sizeDelta = new Vector2(1, 16); //Sets line size to be width 10
+                outline.name = "Line Outline";
+
+
+                TechLineRenderer clone = Instantiate(techLineRenderer, transform, false);
+                lineList.Enqueue(clone);
+                clone.transform.SetSiblingIndex(siblingIndex+1); //Makes sure it renders before buttons and after outline
+                clone.name = "Locked Line";
+                clone.CreateLine(node.transform.position, prereq.transform.position, Color.red);
             }
         }
         foreach (TechNode node in startNodes)
@@ -52,6 +66,8 @@ public class TechTree : MonoBehaviour
 
     public void FinishNode(TechNode targetNode)
     {
+        int lineListLen = lineList.Count;
+
         techNodeStatuses[targetNode] = TechNodeStatus.Finished;
 
         foreach (var node in techNodeStatuses.Keys.ToList())
@@ -71,6 +87,17 @@ public class TechTree : MonoBehaviour
             if (allFinished)
             {
                 UnlockNode(node);
+                foreach (var prereq in node.prereqs)
+                {
+                    int siblingIndex = techLineRenderer.transform.GetSiblingIndex();  //Sibling Index of techlinerenderer
+
+                    TechLineRenderer clone = Instantiate(techLineRenderer, transform, false);
+                    lineList.Enqueue(clone);
+                    clone.transform.SetSiblingIndex(siblingIndex + 1); //Makes sure it renders before buttons and after outline
+                    clone.name = "Unlocked Line";
+                    Color researchBlueColor = new Color(0.21176470588f, 0.57647058823f, 0.95686274509f);
+                    clone.CreateLine(node.transform.position, prereq.transform.position, researchBlueColor);
+                }
             }
         }
 
@@ -83,6 +110,11 @@ public class TechTree : MonoBehaviour
         }
 
         targetNode.Finish();
+
+        for (int i = 0; i < lineListLen; i++)
+        {
+            Destroy(lineList.Dequeue());
+        }
     }
 
     public void StartResearch(TechNode targetNode)

@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 232206814}
   - component: {fileID: 232206816}
   - component: {fileID: 232206815}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Progress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1083,6 +1083,81 @@ Transform:
   - {fileID: 381728041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &332560258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 332560259}
+  - component: {fileID: 332560261}
+  - component: {fileID: 332560260}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &332560259
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332560258}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1535022972}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -960.00006, y: -540}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &332560260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332560258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &332560261
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332560258}
+  m_CullTransparentMesh: 1
 --- !u!1 &340232697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1203,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340232697}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -3390,6 +3465,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tier2 Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5101092915797883377, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398760744677282825, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: cost
       value: 50
@@ -3820,6 +3903,10 @@ PrefabInstance:
       value: Robotics Button
       objectReference: {fileID: 0}
     - target: {fileID: 5101092915797883377, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101092915797883377, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -3834,6 +3921,10 @@ PrefabInstance:
     - target: {fileID: 5571853168910179426, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398760744677282825, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: buttonText
@@ -5540,15 +5631,15 @@ RectTransform:
   m_GameObject: {fileID: 1812710443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1557398858}
+  m_Father: {fileID: 1535022972}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -960.00006, y: -540}
+  m_SizeDelta: {x: 1, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1812710445
 MonoBehaviour:
@@ -6382,6 +6473,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Superconductor Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5101092915797883377, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398760744677282825, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Superconductors
@@ -6416,6 +6515,10 @@ PrefabInstance:
       value: PoweredWeapons Button
       objectReference: {fileID: 0}
     - target: {fileID: 325271054298878430, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 325271054298878430, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -6424,8 +6527,16 @@ PrefabInstance:
       value: NuclearRearmament Button
       objectReference: {fileID: 0}
     - target: {fileID: 980195286719127141, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 980195286719127141, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413026852917162909, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1458282371441514645, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: textToShow
@@ -6458,6 +6569,10 @@ PrefabInstance:
     - target: {fileID: 1475645451239020121, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_UseSpriteMesh
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911169224943041574, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1971070706617037409, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_text
@@ -6539,6 +6654,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -275
       objectReference: {fileID: 0}
+    - target: {fileID: 2805995049149801820, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2903115311425978863, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: textToShow
       value: Powered Weapons
@@ -6547,9 +6666,17 @@ PrefabInstance:
       propertyPath: 'prereqs.Array.data[0]'
       value: 
       objectReference: {fileID: 1103448054}
+    - target: {fileID: 3229068859832606541, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3659661785734705845, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Bioengineering Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659661785734705845, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3659661785734705845, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_IsActive
@@ -6564,6 +6691,10 @@ PrefabInstance:
       value: OrbitalBombardment Button
       objectReference: {fileID: 0}
     - target: {fileID: 4104656836815538340, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104656836815538340, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -6574,6 +6705,10 @@ PrefabInstance:
     - target: {fileID: 4180755144411724851, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: lineCanvas
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: startNode1
@@ -6588,6 +6723,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 232206815}
     - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: techLineRenderer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416102640192878670, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: startNodes.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -6600,12 +6739,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1064966477}
     - target: {fileID: 4582608590750369028, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582608590750369028, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5115238524389439956, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: SwarmTactics
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115238524389439956, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5115238524389439956, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_IsActive
@@ -6649,7 +6796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255068173565531204, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -111
+      value: -182
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411635284784501804, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6629850210036321332, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_text
@@ -6690,6 +6841,10 @@ PrefabInstance:
     - target: {fileID: 6950398146592953678, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_margin.z
       value: 11.243713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037919364355562249, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7066787260906213961, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Pivot.x
@@ -6819,9 +6974,17 @@ PrefabInstance:
       propertyPath: 'prereqs.Array.data[0]'
       value: 
       objectReference: {fileID: 81676425}
+    - target: {fileID: 7694041082350986438, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9200282686719096561, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Aerospace Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200282686719096561, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9200282686719096561, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_IsActive
@@ -6830,11 +6993,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4055139618361917105, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 7066787260906213961, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       insertIndex: 0
+      addedObject: {fileID: 332560259}
+    - targetCorrespondingSourceObject: {fileID: 7066787260906213961, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      insertIndex: 1
       addedObject: {fileID: 1812710444}
     - targetCorrespondingSourceObject: {fileID: 4055139618361917105, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
-      insertIndex: 1
+      insertIndex: 0
       addedObject: {fileID: 1103448053}
     - targetCorrespondingSourceObject: {fileID: 4055139618361917105, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       insertIndex: -1
