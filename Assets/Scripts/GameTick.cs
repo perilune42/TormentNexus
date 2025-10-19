@@ -15,7 +15,7 @@ public class GameTick : MonoBehaviour
     const float baseTPS = 20; // ticks per second
     float timePerTick = 1 / baseTPS;
 
-    static float[] speedPresets = new float[] { 0, 1, 3, 6 };
+    static float[] speedPresets = new float[] { 0, 1, 3, 20 };
     GameSpeed currSpeed = GameSpeed.Normal;
     GameSpeed savedSpeed = GameSpeed.Normal;
 

@@ -46,6 +46,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     {
         Builder = new(this);
         AssignOwnRefs();
+        Owner.AllNodes.Add(this);
 
         GameTick.onTick += () =>
         {
@@ -172,7 +173,9 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     public void Capture(Faction newOwner)
     {
+        Owner.AllNodes.Remove(this);
         Owner = newOwner;
+        newOwner.AllNodes.Add(this);
         spriteRenderer.color = Owner.FactionColor;
         GarrisonHealth = 0.5f * MaxGarrisonHealth;
     }
