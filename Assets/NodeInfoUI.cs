@@ -1,11 +1,12 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NodeInfoUI : MonoBehaviour
 {
     Canvas canvas;
     [SerializeField] TMP_Text nodeNameText;
-
+    [SerializeField] Image nodeFlagImage;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class NodeInfoUI : MonoBehaviour
             if (node != null)
             {
                 nodeNameText.text = node.Name;
+                nodeFlagImage.sprite = node.Owner.Flag;
             }
         };
 
