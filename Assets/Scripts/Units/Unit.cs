@@ -36,10 +36,12 @@ public class Unit : MonoBehaviour
     [HideInInspector] public MapNode AttackingNode;
     [HideInInspector] public List<MapNode> DefendingAgainstNodes;
 
-    private const int healCooldown = 100;
+    private const int healCooldown = 150;
     private int healTimer = 0;
 
-    public float healSpeed = 0.05f;
+    public float healSpeed = 0.03f;
+
+    public Action<MapNode> OnMoved; // arg: node this unit came from; to access where the unit moved to just use CurrentNode
 
     private void Awake()
     {
@@ -74,6 +76,8 @@ public class Unit : MonoBehaviour
         DefendingAgainstNodes.Clear();
         StopAttacking();
 
+        var prevNode = CurrentNode;
+
         CurrentNode.ContainedUnit = null;
         CurrentNode = node;
         node.ContainedUnit = this;
@@ -97,6 +101,8 @@ public class Unit : MonoBehaviour
                     
             }
         }
+
+        OnMoved?.Invoke(prevNode);
 
 
     }
@@ -148,7 +154,7 @@ public class Unit : MonoBehaviour
 
     private void DamageNode(MapNode node, int split = 1)
     {
-        float randFactor = Random.Range(0.9f, 1.1f);
+        float randFactor = Random.Range(0.7f, 1.3f);
         healTimer = healCooldown;
         if (node.ContainedUnit != null)
         {
@@ -236,12 +242,13 @@ public class Unit : MonoBehaviour
 
     public void FinishMove()
     {
-        Move(MoveOrder);
-        if (MoveOrder.Owner != Owner)
-        {
-            MoveOrder.Capture(Owner);
-        }
+        var order = MoveOrder;
         CancelMove();
+        if (order.Owner != Owner)
+        {
+            order.Capture(Owner);
+        }
+        Move(order);
     }
 
     public void StartAttacking(MapNode node)

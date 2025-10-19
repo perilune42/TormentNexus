@@ -36,4 +36,20 @@ public static class ExtensionMethods
             list[n] = value;
         }
     }
+
+    public static List<T> Shuffled<T>(this IList<T> list)
+    {
+        var newList = new List<T>(list);
+        var rng = new System.Random();
+        int n = newList.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            T value = newList[k];
+            newList[k] = newList[n];
+            newList[n] = value;
+        }
+        return newList;
+    }
 }

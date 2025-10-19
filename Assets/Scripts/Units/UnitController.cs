@@ -17,6 +17,7 @@ public class UnitController : MonoBehaviour
 
     public void MoveUnit(Unit unit, MapNode destination)
     {
+        Debug.Log($"Moving {unit} to {destination}");
         //if (!IsValidMove(unit,destination))
         //{
         //    Debug.LogError("Invalid move");

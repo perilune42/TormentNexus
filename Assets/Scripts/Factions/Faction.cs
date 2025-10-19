@@ -14,6 +14,7 @@ public class Faction : MonoBehaviour
     [SerializeField] Transform abilitiesList;
 
     public List<Unit> AllUnits;
+    public List<MapNode> AllNodes;
 
     [HideInInspector] public AIControl AIControl;
 

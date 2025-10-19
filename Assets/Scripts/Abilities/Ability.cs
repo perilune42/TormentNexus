@@ -11,7 +11,9 @@ public abstract class Ability : MonoBehaviour
     public int Damage = 50;
     public int GarrisonDamage = 50;
     public int InfrastructureDamage = 50;
-    
+
+    [SerializeField] AbilityVFX effect;
+     
     public void GiveToFaction(Faction faction)
     {
         owner = faction;
@@ -20,6 +22,7 @@ public abstract class Ability : MonoBehaviour
     public virtual void Launch(MapNode target)
     {
         CurrentCharges--;
+        // Instantiate(effect, target.transform).Play();
     }
 
     public bool CanLaunch()
