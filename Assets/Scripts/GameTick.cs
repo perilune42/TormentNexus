@@ -53,10 +53,7 @@ public class GameTick : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameUI.instance.techTreeCanvas.enabled)
-            {
-                GameUI.instance.ToggleTechTree();
-            }
+            GameUI.instance.ToggleTechTree();
         }
 
 
