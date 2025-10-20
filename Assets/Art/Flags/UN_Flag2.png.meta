@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7a2ef54afd015a640a282590b19e181f
+guid: 08580b39c41cd3c4a879c13b5ed0384d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5825024482406341931
-    second: MughalSultanate_Flag_0
+      213: 8483701267632904700
+    second: UN_Flag2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MughalSultanate_Flag_0
+      name: UN_Flag2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d26736781b592fa0800000000000000
-      internalID: -5825024482406341931
+      spriteID: cf95ac5ba592cb570800000000000000
+      internalID: 8483701267632904700
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MughalSultanate_Flag_0: -5825024482406341931
+      UN_Flag2_0: 8483701267632904700
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,6 +11,10 @@ public class ResourceManager : MonoBehaviour
 
     public float ResourceAmount = 0;
 
+    public float ResourceGeneration => Faction.AllNodes.Count * ResourcePerNode;
+
+    private const float ResourcePerNode = 1f;
+
     private void Awake()
     {
         GameTick.onDay += GainResearchPoint;
@@ -18,7 +22,7 @@ public class ResourceManager : MonoBehaviour
     }
     private void GenerateResource()
     {
-        ResourceAmount += 0f;
+        ResourceAmount += ResourceGeneration;
     }
 
     public void ConsumeResource(float amount)

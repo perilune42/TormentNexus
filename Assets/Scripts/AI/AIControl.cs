@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AIControl : MonoBehaviour
@@ -42,7 +43,51 @@ public class AIControl : MonoBehaviour
 
     private void ReassessStrategy()
     {
+        if (Faction.isMajorFaction)
+        {
+            // chance per day to consider building units
+            if (Random.value < 0.2)
+            {
+                BuildUnits();
+            }
+            
+        }
+
         SetAssignments();
+    }
+
+    private void BuildUnits()
+    {
+        // chance to keep building stuff until find one that it can't afford
+        bool keepBuilding = true;
+        List<MapNode> validBuildNodes = new List<MapNode>();
+        foreach (MapNode node in Faction.AllNodes)
+        {
+            if (node.Builder.CanBuildAny())
+            {
+                validBuildNodes.Add(node);
+            }
+        }
+
+        while (keepBuilding)
+        {
+            if (validBuildNodes.Count == 0) return;
+
+            Unit targetUnit = Faction.BuildableUnits.GetRandom();
+            if (targetUnit == null) Debug.LogError("Tried to build null unit");
+            MapNode targetNode = validBuildNodes.GetRandom();
+            if (targetNode.Builder.CanBuild(targetUnit))
+            {
+                targetNode.Builder.BuildUnit(targetUnit);
+                validBuildNodes.Remove(targetNode);
+                if (Random.value > 0.7f) keepBuilding = false; 
+            }
+            else
+            {
+                return;
+            }
+        }
+
     }
 
     private void SetAssignments()

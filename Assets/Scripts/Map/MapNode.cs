@@ -204,11 +204,17 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     public void Capture(Faction newOwner)
     {
+        Faction oldOwner = Owner;
         Owner.AllNodes.Remove(this);
         Owner = newOwner;
         newOwner.AllNodes.Add(this);
         SetColor();
         GarrisonHealth = 0.5f * MaxGarrisonHealth;
+
+        if (oldOwner.HateMeter != null && newOwner.isPlayer)
+        {
+            oldOwner.HateMeter.AddHate(HateMeter.HatePerCapture);
+        }
     }
     
     public bool IsCapturable()

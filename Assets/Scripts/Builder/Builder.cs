@@ -10,8 +10,10 @@ public class Builder : MonoBehaviour
             if (unit != null) CancelBuild();
         };
         PendingBuildDisplay.gameObject.SetActive(false);
+        GameTick.onTick += TickBuild;
     }
 
+    public bool Enabled = true;
     private MapNode node;
     private float usedResource;
     public Unit PendingBuild;
@@ -20,10 +22,19 @@ public class Builder : MonoBehaviour
 
     public bool CanBuild(Unit template)
     {
-        return PendingBuild == null && node.ContainedUnit == null && node.GarrisonHealth > 0 && template.Cost <= node.Owner.Resource.ResourceAmount;
+        return CanBuildAny() && template.Cost <= node.Owner.Resource.ResourceAmount;
     }
+    public bool CanBuildAny()
+    {
+        return Enabled && PendingBuild == null && node.ContainedUnit == null && node.GarrisonHealth > 0;
+    }
+
     public void BuildUnit(Unit template)
     {
+        if (template == null)
+        {
+            Debug.LogError("tried to build null unit");
+        }
         node.Owner.Resource.ConsumeResource(template.Cost);
         PendingBuild = template;
         usedResource = template.Cost;
@@ -31,17 +42,25 @@ public class Builder : MonoBehaviour
         PendingBuildDisplay.InitiateBuild(template, node.Owner);
         PendingBuildDisplay.SetBuildProgress(0);
         PendingBuildDisplay.gameObject.SetActive(true);
-        GameTick.onTick += TickBuild;
+        
     }
 
     private void TickBuild()
     {
-        TimeRemaining--;
-        PendingBuildDisplay.SetBuildProgress(1 - (float)TimeRemaining / PendingBuild.BuildTime);
-        if (TimeRemaining <= 0)
+        if (PendingBuild != null)
         {
-            FinishBuild();
+            TimeRemaining--;
+            if (PendingBuildDisplay == null || PendingBuild == null)
+            {
+                Debug.LogError($"Build Error at {node.Name}");
+            }
+            PendingBuildDisplay.SetBuildProgress(1 - (float)TimeRemaining / PendingBuild.BuildTime);
+            if (TimeRemaining <= 0)
+            {
+                FinishBuild();
+            }
         }
+
     }
 
     private void CancelBuild()
@@ -49,7 +68,6 @@ public class Builder : MonoBehaviour
         node.Owner.Resource.ConsumeResource(-usedResource); // refund
         usedResource = 0;
         PendingBuild = null;
-        GameTick.onTick -= TickBuild;
         PendingBuildDisplay.gameObject.SetActive(false);
     }
 
@@ -59,7 +77,6 @@ public class Builder : MonoBehaviour
         PendingBuild = null;
         usedResource = 0;
         UnitController.Instance.SpawnUnit(newUnit, node, node.Owner);
-        GameTick.onTick -= TickBuild;
         PendingBuildDisplay.gameObject.SetActive(false);
         return newUnit;
     }

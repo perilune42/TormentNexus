@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class FactionManager : MonoBehaviour
 {
-    [HideInInspector] public List<Faction> factions;
+    [HideInInspector] public List<Faction> Factions;
+    [HideInInspector] public List<Faction> RivalFactions;
+    [HideInInspector] public List<Faction> MinorFactions;
 
-    public List<SuperFaction> superFactions => factions.Where((Faction f) => f is SuperFaction).Cast<SuperFaction>().ToList();
 
     public static FactionManager instance;
-    [HideInInspector] public SuperFaction playerFaction;
+    [HideInInspector] public Faction playerFaction;
 
     [SerializeField] ResourceManager resourceManagerTemplate;
+
+
 
     private void Awake()
     {
@@ -20,24 +23,33 @@ public class FactionManager : MonoBehaviour
 
         foreach (var faction in GetComponentsInChildren<Faction>())
         {
-            factions.Add(faction);
-            if (faction is SuperFaction p && p.isPlayer)
+            Factions.Add(faction);
+            if (faction.isPlayer)
             {
-                playerFaction = p;
+                playerFaction = faction;
+            }
+            else if (faction.isMajorFaction)
+            {
+                RivalFactions.Add(faction);
+            }
+            else
+            {
+                MinorFactions.Add(faction);
             }
         }
 
         InitFactions();
+        
 
     }
 
     private void InitFactions()
     {
-        foreach (SuperFaction sf in superFactions)
+        foreach (Faction faction in Factions)
         {
-            ResourceManager rm = Instantiate(resourceManagerTemplate, sf.transform);
-            sf.Resource = rm;
-            rm.Faction = sf;
+            ResourceManager rm = Instantiate(resourceManagerTemplate, faction.transform);
+            faction.Resource = rm;
+            rm.Faction = faction;
         }
     }
 }

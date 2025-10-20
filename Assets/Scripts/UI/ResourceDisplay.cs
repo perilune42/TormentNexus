@@ -15,7 +15,7 @@ public class ResourceDisplay : MonoBehaviour
 
     private void UpdateDisplay()
     {
-        text.text = $"Resource: {FactionManager.instance.playerFaction.Resource.ResourceAmount}";
+        text.text = $"Resource: {FactionManager.instance.playerFaction.Resource.ResourceAmount} (+{FactionManager.instance.playerFaction.Resource.ResourceGeneration})";
     }
 
 }

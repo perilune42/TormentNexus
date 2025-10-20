@@ -17,7 +17,9 @@ public class Faction : MonoBehaviour
     public List<MapNode> AllNodes;
 
     [HideInInspector] public AIControl AIControl;
+    [HideInInspector] public HateMeter HateMeter;
     public bool isMajorFaction = false;
+    public bool isPlayer = false;
 
     private void Awake()
     {
@@ -28,9 +30,22 @@ public class Faction : MonoBehaviour
         }
 
         AIControl = GetComponentInChildren<AIControl>();
+        HateMeter = GetComponentInChildren<HateMeter>();
+        if (isPlayer)
+        {
+            AIControl.gameObject.SetActive(false);
+            HateMeter.gameObject.SetActive(false);
+            AIControl = null;
+            HateMeter = null;
+        }
+
         if (AIControl != null)
         {
             AIControl.SetToFaction(this);
+        }
+        if (HateMeter != null)
+        {
+            HateMeter.SetToFaction(this);
         }
 
     }

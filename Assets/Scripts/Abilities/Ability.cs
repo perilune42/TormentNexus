@@ -11,9 +11,11 @@ public abstract class Ability : MonoBehaviour
     public int Cost;
     
 
-    public int Damage = 50;
-    public int GarrisonDamage = 50;
-    public int InfrastructureDamage = 50;
+    public float Damage = 50;
+    public float GarrisonDamage = 50;
+    public float InfrastructureDamage = 50;
+
+    public float HateGeneration = 10f;
 
     public bool IsBuilding = false;
     
@@ -43,6 +45,10 @@ public abstract class Ability : MonoBehaviour
     {
         CurrentCharges--;
         Instantiate(effect, target.transform).Play();
+        if (target.Owner.HateMeter != null && owner.isPlayer)
+        {
+            target.Owner.HateMeter.AddHate(HateGeneration);
+        }
     }
 
     public bool CanLaunch()
