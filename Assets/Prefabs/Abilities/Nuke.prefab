@@ -48,9 +48,9 @@ MonoBehaviour:
   MaxCharges: 1
   CurrentCooldown: 0
   BuildTime: 100
-  Cost: 20
-  Damage: 50
-  GarrisonDamage: 50
+  Cost: 50
+  Damage: 80
+  GarrisonDamage: 90
   InfrastructureDamage: 50
   HateGeneration: 25
   IsBuilding: 0

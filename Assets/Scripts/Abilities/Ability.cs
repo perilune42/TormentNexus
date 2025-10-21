@@ -47,8 +47,10 @@ public abstract class Ability : MonoBehaviour
         Instantiate(effect, target.transform).Play();
         if (target.Owner.HateMeter != null && owner.isPlayer)
         {
-            target.Owner.HateMeter.AddHate(HateGeneration);
+            target.Owner.HateMeter.AddHate(HateGeneration, true);
         }
+        WorldTension.Instance.AddTension(HateGeneration);
+        Debug.Log($"{owner.FactionName} launching: {name} to {target.Name}");
     }
 
     public bool CanLaunch()

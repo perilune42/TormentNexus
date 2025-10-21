@@ -13,7 +13,7 @@ public class ResourceManager : MonoBehaviour
 
     public float ResourceGeneration => Faction.AllNodes.Count * ResourcePerNode;
 
-    private const float ResourcePerNode = 1f;
+    private const float ResourcePerNode = 0.1f;
 
     private void Awake()
     {

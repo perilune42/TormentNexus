@@ -191,7 +191,9 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     {
         if (healTimer == 0)
         {
-            GarrisonHealth += garrisonHealSpeed;
+            float garrisonHealFactor = 1;
+            if (InfrastructureHealth < MaxInfrastructureHealth * 0.5f) garrisonHealFactor *= 0.25f;
+            GarrisonHealth += garrisonHealSpeed * garrisonHealFactor;
             if (GarrisonHealth > MaxGarrisonHealth) GarrisonHealth = MaxGarrisonHealth;
             InfrastructureHealth += infrastructureHealSpeed;
             if (InfrastructureHealth > MaxInfrastructureHealth) InfrastructureHealth = MaxInfrastructureHealth;

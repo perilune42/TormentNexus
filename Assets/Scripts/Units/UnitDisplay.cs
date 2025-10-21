@@ -17,6 +17,7 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
     {
         this.unit = unit;
         icon.color = unit.Owner.FactionColor;
+        icon.sprite = unit.Icon;
         GameTick.onTick += UpdateHealth;
     }
 
