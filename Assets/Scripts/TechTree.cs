@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
 using TMPro;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -21,9 +23,6 @@ public class TechTree : MonoBehaviour
 
     public TechNode currentlyResearching;
     public float accumulatedPoints;
-    
-
-    [SerializeField] TMP_Text progressText;
 
     private void Awake()
     {
@@ -44,7 +43,7 @@ public class TechTree : MonoBehaviour
                 outline.transform.SetSiblingIndex(siblingIndex); //Makes sure it renders before buttons
                 outline.CreateLine(node.transform.position, prereq.transform.position, Color.black); 
                 RectTransform rt = outline.GetComponent<RectTransform>();
-                rt.sizeDelta = new Vector2(1, 16); //Sets line size to be width 10
+                rt.sizeDelta = new Vector2(1, 16); //Sets line size to be width 16
                 outline.name = "Line Outline";
 
 
@@ -59,7 +58,6 @@ public class TechTree : MonoBehaviour
         {
             UnlockNode(node);
         }
-        drawConnections();
     }
 
 
@@ -69,6 +67,8 @@ public class TechTree : MonoBehaviour
         int lineListLen = lineList.Count;
 
         techNodeStatuses[targetNode] = TechNodeStatus.Finished;
+
+        currentlyResearching.progressBar.SetVisible(false);
 
         foreach (var node in techNodeStatuses.Keys.ToList())
         {
@@ -95,7 +95,7 @@ public class TechTree : MonoBehaviour
                     lineList.Enqueue(clone);
                     clone.transform.SetSiblingIndex(siblingIndex + 1); //Makes sure it renders before buttons and after outline
                     clone.name = "Unlocked Line";
-                    Color researchBlueColor = new Color(0.21176470588f, 0.57647058823f, 0.95686274509f);
+                    Color researchBlueColor = new Color(0.21176470588f, 0.57647058823f, 0.95686274509f); //Blue
                     clone.CreateLine(node.transform.position, prereq.transform.position, researchBlueColor);
                 }
             }
@@ -130,9 +130,9 @@ public class TechTree : MonoBehaviour
             }
         }
         UnlockNode(targetNode);
-        targetNode.setInteractable(false);
-        targetNode.setButtonColor(Color.yellow);
-        UpdateText();
+        targetNode.button.interactable = false;
+        targetNode.button.image.color = Color.yellow;
+        UpdateBar();
     }
 
     public void AddResearchPoints(float points)
@@ -149,24 +149,18 @@ public class TechTree : MonoBehaviour
             currentlyResearching = null;
             accumulatedPoints = 0;
         }
-        UpdateText();
+        UpdateBar();
     }
 
-    private void drawConnections()
-    {
-    }
-
-    private void UpdateText()
+    private void UpdateBar()
     {
         if (currentlyResearching != null)
         {
-            progressText.text = $"Progress: {accumulatedPoints} / {currentlyResearching.cost}";
-        }
-        else
-        {
-            progressText.text = "No research selected";
+            //currentlyResearching.progressBar.SetLevel(accumulatedPoints / currentlyResearching.cost);
+            currentlyResearching.progressBar.SetLevel(accumulatedPoints / currentlyResearching.cost);
         }
     }
+
     //Interactable to true, status to unlocked
     public void UnlockNode(TechNode targetNode)
     {

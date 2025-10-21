@@ -8,20 +8,24 @@ using UnityEngine.UI;
 public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public List<TechNode> prereqs;
-    Button button;
+    public Button button;
     TMP_Text buttonText;
     Image image;
+    public ProgressBar progressBar;
     public float cost;
     public string textToShow;
-
-
+    public Unit unit;
+    public Faction faction;
 
     private void Awake()
     {
         button = GetComponent<Button>();
         buttonText = GetComponentInChildren<TMP_Text>();
-        image = GetComponent<Image>();
         buttonText.text = textToShow;
+        image = GetComponent<Image>();
+        progressBar.SetVisible(false);
+        progressBar.SetLevel(0);
+        faction = FactionManager.instance.playerFaction;
     }
 
     public void Lock()
@@ -33,13 +37,14 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void Unlock()
     {
         button.interactable = true;
-        image.color = Color.white;
+        image.color = new Color(0.8f, 0.8f, 0.8f);
     }
 
     public void Finish()
     {
         button.interactable = false;
         button.GetComponent<Image>().color = Color.green;
+        faction.BuildableUnits.Add(unit);
     }
 
     public void Select()
@@ -48,6 +53,7 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             return;
         }
+        progressBar.SetVisible(true);
         TechTree.instance.StartResearch(this);
     }
 
@@ -69,13 +75,21 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         buttonText.rectTransform.Translate(Vector3.up * 13);
     }
 
-    public void setInteractable(bool b)
+    public void OnPointerEnter()
     {
-        button.interactable = b;
+        if (button.interactable == false || TechTree.instance.currentlyResearching != null)
+        {
+            return;
+        }
+        image.color = Color.white;
     }
 
-    public void setButtonColor(Color c)
+    public void OnPointerExit()
     {
-        image.color = c;
+        if (button.interactable == false || TechTree.instance.currentlyResearching != null)
+        {
+            return;
+        }
+        image.color = new Color(0.8f, 0.8f, 0.8f);
     }
 }
