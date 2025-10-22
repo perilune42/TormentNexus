@@ -223,6 +223,18 @@ public class Unit : MonoBehaviour
             {
                 FinishMove();
             }
+            else if (MoveOrder.ContainedUnit != null && MoveOrder.ContainedUnit.Owner == Owner 
+                && MoveOrder.ContainedUnit.MoveOrder == CurrentNode && MoveOrder.ContainedUnit.MoveTicksRemaining <= 1)
+            {
+                MapNode originalDest = MoveOrder;
+                Unit toSwap = MoveOrder.ContainedUnit;
+                MoveOrder = MapNode.DummyNode;
+                FinishMove();
+                toSwap.FinishMove();
+                MoveOrder = originalDest;
+                FinishMove();
+
+            }
             else if (AttackingNode == null && MoveOrder.Owner != Owner)
             {
                 StartAttacking(MoveOrder);
@@ -247,7 +259,7 @@ public class Unit : MonoBehaviour
     {
         var order = MoveOrder;
         CancelMove();
-        if (order.Owner != Owner)
+        if (!order.IsDummyNode && order.Owner != Owner)
         {
             order.Capture(Owner);
         }
