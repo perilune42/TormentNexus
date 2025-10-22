@@ -31,6 +31,7 @@ public class TechNode : MonoBehaviour
         // progressBar.SetVisible(false);
         progressBar.SetLevel(0);
         progressText.text = $"0/{cost}";
+        ShowUnlocks();
     }
 
     public void SetFaction(Faction faction)
@@ -76,7 +77,6 @@ public class TechNode : MonoBehaviour
 
     public void Select()
     {
-        Debug.Log("pressed");
         if (TechTree.PlayerTechTree.currentlyResearching != null)
         {
             return;
@@ -140,20 +140,27 @@ public class TechNode : MonoBehaviour
 
     private void ShowUnlocks()
     {
-        if (ability != null)
-        {
-            unlockIcon.sprite = ability.icon;
-            unlockText.text = ability.Name;
-        }
-        else if (unit != null)
-        {
-            unlockIcon.sprite = unit.Icon;
-            unlockText.text = unit.Name;
-        }
-        else
+        if (ability == null && unit == null)
         {
             unlockIcon.enabled = false;
             unlockText.enabled = false;
         }
+        else
+        {
+            unlockIcon.enabled = true;
+            unlockText.enabled = true;
+            if (ability != null)
+            {
+                unlockIcon.sprite = ability.icon;
+                unlockText.text = ability.Name;
+            }
+            else if (unit != null)
+            {
+                unlockIcon.sprite = unit.Icon;
+                unlockText.text = unit.Name;
+            }
+
+        }
+
     }
 }
