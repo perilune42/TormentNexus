@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7073664218950884433
+--- !u!1 &5498475406324181545
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1194547248997744873}
-  - component: {fileID: 7841448690613592598}
+  - component: {fileID: 8318639628387157031}
+  - component: {fileID: -2016474504335691812}
   m_Layer: 0
-  m_Name: Carpet Bombing
+  m_Name: CarpetBombingAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1194547248997744873
+--- !u!4 &8318639628387157031
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7073664218950884433}
+  m_GameObject: {fileID: 5498475406324181545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7841448690613592598
+--- !u!114 &-2016474504335691812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7073664218950884433}
+  m_GameObject: {fileID: 5498475406324181545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40bc83f265f695244bf577edfbf9d7f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 67b7b91155f43e04399f4f11c0d13102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Carpet Bombing
-  icon: {fileID: -1242187556347939975, guid: 8a5a1f4f26fb809499b5487681b4d094, type: 3}
-  CurrentCharges: 0
-  MaxCharges: 1
-  CurrentCooldown: 0
-  BuildTime: 100
-  Cost: 50
-  Damage: 80
-  GarrisonDamage: 90
-  InfrastructureDamage: 50
-  HateGeneration: 25
-  IsBuilding: 0
-  effect: {fileID: -2016474504335691812, guid: 2ed0f66dee042bf4993e42a1ec5e9f41, type: 3}
+  frames: []
+  duration: 10
+  bombCount: 50
+  bombRadius: 0.4
+  bombDelay: 0.01
+  bombScale: 0.5
+  bombPrefab: {fileID: 4583466767391692410, guid: 07e0ff2e3d23c8f4d922caa047c9dd51, type: 3}
