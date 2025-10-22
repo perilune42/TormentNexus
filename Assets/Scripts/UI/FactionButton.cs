@@ -8,6 +8,7 @@ public class FactionButton : MonoBehaviour
     public Faction faction;
     public Image square;
     public TMP_Text factionName;
+    public TMP_Text lore;
     public MainMenu menu;
 
     public void Awake()
@@ -16,6 +17,7 @@ public class FactionButton : MonoBehaviour
         square.color = faction.FactionColor;
         factionName.text = faction.FactionName;
         square.gameObject.SetActive(false);
+        lore.gameObject.SetActive(false);
     }
 
     public void onClick()
@@ -24,8 +26,10 @@ public class FactionButton : MonoBehaviour
         foreach (var faction in menu.instance.factionButtons)
         {
             faction.square.gameObject.SetActive(false);
+            faction.lore.gameObject.SetActive(false);
         }
         square.gameObject.SetActive(true);
-        menu.instance.chosen = faction;
+        lore.gameObject.SetActive(true);
+        menu.instance.chosen = faction; 
     }
 }
