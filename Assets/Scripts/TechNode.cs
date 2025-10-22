@@ -50,17 +50,17 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void Select()
     {
-        if (TechTree.instance.currentlyResearching != null)
+        if (TechTree.PlayerTechTree.currentlyResearching != null)
         {
             return;
         }
         progressBar.SetVisible(true);
-        TechTree.instance.StartResearch(this);
+        TechTree.PlayerTechTree.StartResearch(this);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (button.interactable == false || TechTree.instance.currentlyResearching != null) {
+        if (button.interactable == false || TechTree.PlayerTechTree.currentlyResearching != null) {
             return;
         }; //Play error sound?
         buttonText.rectTransform.Translate(Vector3.down * 13);
@@ -68,7 +68,7 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (button.interactable == false || TechTree.instance.currentlyResearching != null)
+        if (button.interactable == false || TechTree.PlayerTechTree.currentlyResearching != null)
         {
             return;
         }
@@ -78,7 +78,7 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerEnter()
     {
-        if (button.interactable == false || TechTree.instance.currentlyResearching != null)
+        if (button.interactable == false || TechTree.PlayerTechTree.currentlyResearching != null)
         {
             return;
         }
@@ -87,7 +87,7 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerExit()
     {
-        if (button.interactable == false || TechTree.instance.currentlyResearching != null)
+        if (button.interactable == false || TechTree.PlayerTechTree.currentlyResearching != null)
         {
             return;
         }

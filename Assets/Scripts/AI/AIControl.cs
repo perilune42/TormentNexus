@@ -53,6 +53,7 @@ public class AIControl : MonoBehaviour
     {
         if (Faction.isMajorFaction)
         {
+            ChooseResearch();
             // chance per day to consider building units
             if (Random.value < 0.2)
             {
@@ -111,6 +112,15 @@ public class AIControl : MonoBehaviour
 
         SetAssignments();
         if (abilityBoostDays > 0) abilityBoostDays--;
+    }
+
+    private void ChooseResearch()
+    {
+        // random bs go
+        if (Faction.TechTree.currentlyResearching != null) return;
+        var availableNodes = Faction.TechTree.techNodeStatuses.Keys.Where((node) => Faction.TechTree.techNodeStatuses[node] == TechNodeStatus.Unlocked);
+        if (availableNodes.Count() == 0) return;
+        Faction.TechTree.StartResearch(availableNodes.ToList().GetRandom());
     }
 
     private void BuildUnits()

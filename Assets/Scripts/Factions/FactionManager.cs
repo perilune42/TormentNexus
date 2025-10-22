@@ -49,7 +49,7 @@ public class FactionManager : MonoBehaviour
         {
             ResourceManager rm = Instantiate(resourceManagerTemplate, faction.transform);
             faction.Resource = rm;
-            rm.Faction = faction;
+            rm.SetFaction(faction);
         }
     }
 }

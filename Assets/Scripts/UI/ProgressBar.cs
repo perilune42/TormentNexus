@@ -16,6 +16,7 @@ public class ProgressBar : MonoBehaviour
 
     public void SetVisible(bool visible)
     {
+        if (bar == null) bar = GetComponent<Image>();
         if (usingCanvas)
         {
             canvas.enabled = visible;

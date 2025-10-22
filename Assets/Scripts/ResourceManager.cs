@@ -2,6 +2,7 @@ using Mono.Cecil;
 using System.Linq;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ResourceManager : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class ResourceManager : MonoBehaviour
     private const float ResourcePerMilitaryNode = 0.2f;
     private const float ResourcePerCapital = 1f;
 
+    private const float ResearchPerScienceNode = 0.2f;
+    private const float ResearchPerCapital = 1f;
+
     public float ResourceGeneration()
     {
         float gen = 0;
@@ -30,9 +34,17 @@ public class ResourceManager : MonoBehaviour
 
     private void Awake()
     {
+
+    }
+
+    public void SetFaction(Faction faction)
+    {
+        this.Faction = faction;
+        if (!faction.isMajorFaction) return;
         GameTick.onDay += GainResearchPoint;
         GameTick.onDay += GenerateResource;
     }
+
     private void GenerateResource()
     {
         ResourceAmount = Mathf.Round((ResourceGeneration() + ResourceAmount) * 100f) / 100f;
@@ -45,13 +57,13 @@ public class ResourceManager : MonoBehaviour
 
     private void GainResearchPoint()
     {
-        ResearchPoints += 1.5f;
-        // scuffed, per-faction research later
-        if (Faction == FactionManager.instance.playerFaction)
+        ResearchPoints = 0;
+        if (Faction.AllNodes.Where((node) => node.Type == NodeType.Capital).Count() > 0)
         {
-            TechTree.instance.AddResearchPoints(ResearchPoints);
-            ResearchPoints = 0;
+            ResearchPoints += ResearchPerCapital;
         }
+        ResearchPoints += Faction.AllNodes.Where((node) => node.Type == NodeType.Science).Count() * ResearchPerScienceNode;
+        Faction.TechTree.AddResearchPoints(ResearchPoints);
     }
 
 

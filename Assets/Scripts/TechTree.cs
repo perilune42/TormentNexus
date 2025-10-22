@@ -14,7 +14,10 @@ public enum TechNodeStatus
 
 public class TechTree : MonoBehaviour
 {
-    public static TechTree instance;
+    public Faction Faction;
+
+    public static TechTree PlayerTechTree;
+
     public Dictionary<TechNode, TechNodeStatus> techNodeStatuses = new();
     public List<TechNode> startNodes;
     public TechLineRenderer techLineRenderer;
@@ -26,8 +29,15 @@ public class TechTree : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
         techLineRenderer = GetComponentInChildren<TechLineRenderer>();
+        if (Faction.isPlayer) PlayerTechTree = this;
+
+        Faction.TechTree = this;
+
+        if (!Faction.isPlayer)
+        {
+            transform.position = new Vector3(0, 10000, 0);
+        }
     }
 
     private void Start()

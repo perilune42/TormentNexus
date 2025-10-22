@@ -10,6 +10,8 @@ public class Faction : MonoBehaviour
     public MapNode Capital;
 
     public ResourceManager Resource;
+    public TechTree TechTree;
+
     public List<Unit> BuildableUnits;
     [HideInInspector] public List<Ability> Abilities;
     [SerializeField] Transform abilitiesList;
