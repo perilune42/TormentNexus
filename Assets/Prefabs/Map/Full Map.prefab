@@ -492,6 +492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hawaii
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -693,6 +697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Davenport
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -914,6 +922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Babylon
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1138,6 +1150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Santiago
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1401,6 +1417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Da Ming
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1618,6 +1638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dreux
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1819,6 +1843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vadodara
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2020,6 +2048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Algiers
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2244,6 +2276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magadan
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2445,6 +2481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicagou
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2728,6 +2768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tegucigalpa
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2925,6 +2969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guinea
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3126,6 +3174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tenochtitlan
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3323,6 +3375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panay
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3544,6 +3600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nagqu
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3765,6 +3825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concordia
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4032,6 +4096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Riyadh
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4256,6 +4324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tassili
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4481,6 +4553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ranchi
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4702,6 +4778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porto Novo
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4926,6 +5006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natal
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5143,6 +5227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Constantinople
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5384,6 +5472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Madurai
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5585,6 +5677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Benguela
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5790,6 +5886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Summit
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6010,6 +6110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tomsk
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6211,6 +6315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tripoli
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6501,6 +6609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Erebus
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6702,6 +6814,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terra Nova
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6923,6 +7039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vienna
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7164,6 +7284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dominica
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7361,6 +7485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Naples
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7562,6 +7690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pyay
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7763,6 +7895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Myeik
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7964,6 +8100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Calgary
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8181,6 +8321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lusaka
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8402,6 +8546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cape Town
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8623,6 +8771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tehran
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8847,6 +8999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tianshimen
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -9044,6 +9200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Astana
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -9281,6 +9441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guangzhou
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -9486,6 +9650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Petrograd
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -9835,6 +10003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Geneva
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10059,6 +10231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cairo
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10303,6 +10479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baisha
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10540,6 +10720,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bangui
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10761,6 +10945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iberia
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10985,6 +11173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Juba
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -11186,6 +11378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Winnipeg
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -11387,6 +11583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rio
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -11584,6 +11784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reykjavik
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -11804,6 +12008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Osaka
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -12009,6 +12217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Svalbard
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -12210,6 +12422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Almaty
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -12447,6 +12663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Montreal
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -12668,6 +12888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Urga
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -12893,6 +13117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delhi
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13176,6 +13404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lanzhou
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13443,6 +13675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Georgia
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13680,6 +13916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sahara
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13904,6 +14144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monrovia
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -14125,6 +14369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Picchu
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -14322,6 +14570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fiji
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -14589,6 +14841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dachata
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -14790,6 +15046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brasilia
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -14987,6 +15247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antananarivo
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -15254,6 +15518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orenburg
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -15491,6 +15759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mombasa
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -15712,6 +15984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panama
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -15909,6 +16185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eko
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -16114,6 +16394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solveig
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -16319,6 +16603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yaounde
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -16520,6 +16808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avalon
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -16806,6 +17098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anchorage
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -17003,6 +17299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kapisa
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -17302,6 +17602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jakarta
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -17573,6 +17877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lafayette
       objectReference: {fileID: 0}
+    - target: {fileID: 786344564932384413, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -139457250746573964, guid: 960b08bd3ddf9254299d5beffd618a50, type: 3}
     - target: {fileID: 1073582352545212833, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
