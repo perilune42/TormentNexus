@@ -259,6 +259,25 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         {
             oldOwner.HateMeter.AddHate(HateMeter.HatePerCapture);
         }
+
+        if (Type == NodeType.Capital)
+        {
+            if (oldOwner == FactionManager.instance.playerFaction)
+            {
+                GameManager.instance.FactionVictory(newOwner);
+            }
+            else
+            {
+                FactionManager.instance.RemoveMajorStatus(oldOwner);
+                
+                if (FactionManager.instance.RivalFactions.Count <= 0)
+                {
+                    GameManager.instance.FactionVictory(FactionManager.instance.playerFaction);
+                }
+            }
+
+            Type = NodeType.City;
+        }
     }
     
     public bool IsCapturable()
