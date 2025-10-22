@@ -57,10 +57,11 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
     {
         // moveProgressText.text = $"Moving to {target.Name}: {ticks}";
         Vector2 moveDirection = target.transform.position - unit.transform.position;
+        float moveDistance = (target.transform.position - unit.transform.position).magnitude / 2.0f;
         float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
         moveIndicator.transform.parent.eulerAngles = new Vector3(0, 0, angle);
         moveIndicator.enabled = true;
-        moveIndicator.fillAmount = (maxTicks - ticks) / (float)maxTicks;
+        moveIndicator.rectTransform.sizeDelta = new Vector2(Mathf.Lerp(0.25f, moveDistance, (maxTicks - ticks) / (float)maxTicks), moveIndicator.rectTransform.sizeDelta.y);
     }
 
 
