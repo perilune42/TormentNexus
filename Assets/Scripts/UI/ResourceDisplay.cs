@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class ResourceDisplay : MonoBehaviour
 {
-    [SerializeField] TMP_Text text;
+    [SerializeField] TMP_Text resourceText, resourceGainText, researchText;
     
-    private void Awake()
+    private void Update()
     {
-        GameTick.onTick += UpdateDisplay;
+        UpdateDisplay();
     }
 
     
@@ -15,7 +15,9 @@ public class ResourceDisplay : MonoBehaviour
 
     private void UpdateDisplay()
     {
-        text.text = $"Resource: {FactionManager.instance.playerFaction.Resource.ResourceAmount} (+{FactionManager.instance.playerFaction.Resource.ResourceGeneration()})";
+        resourceText.text = $"{FactionManager.instance.playerFaction.Resource.ResourceAmount}";
+        resourceGainText.text = $"(+{FactionManager.instance.playerFaction.Resource.ResourceGeneration()})";
+        researchText.text = $"+{FactionManager.instance.playerFaction.Resource.ResearchPoints}";
     }
 
 }

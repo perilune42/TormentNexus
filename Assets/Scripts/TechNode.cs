@@ -68,7 +68,7 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             faction.RemoveAbility(replacingAbility);
         }
-
+        if (faction.isPlayer) BuildMenu.Instance.UpdateBuildables();
     }
 
     public void Select()

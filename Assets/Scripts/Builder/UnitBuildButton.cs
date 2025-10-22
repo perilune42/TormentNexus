@@ -6,7 +6,13 @@ public class UnitBuildButton : MonoBehaviour
 {
     Unit unitTemplate;
     Button button;
+    [SerializeField] Image icon;
+
     [SerializeField] TMP_Text nameText;
+    [SerializeField] TMP_Text costText;
+
+    [SerializeField] GameObject overlay;
+
 
     private void Awake()
     {
@@ -18,7 +24,7 @@ public class UnitBuildButton : MonoBehaviour
     {
         if (PlayerControl.Instance.SelectedNode != null)
         {
-            button.interactable = PlayerControl.Instance.SelectedNode.Builder.CanBuild(unitTemplate);
+            SetEnabled(PlayerControl.Instance.SelectedNode.Builder.CanBuild(unitTemplate));
         }
     }
 
@@ -26,6 +32,15 @@ public class UnitBuildButton : MonoBehaviour
     {
         unitTemplate = unit;
         nameText.text = unit.Name;
+        icon.sprite = unit.Icon;
+        icon.color = FactionManager.instance.playerFaction.FactionColor;
+        costText.text = unit.Cost.ToString();
+    }
+
+    public void SetEnabled(bool enabled)
+    {
+        button.interactable = enabled;
+        overlay.SetActive(!enabled);
     }
 
     public void Build()
