@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour
         {
             SelectUnit(null);
             SelectNode(null);
-        }
+        } 
     }
 
     public void SelectNode(MapNode node)

@@ -9,13 +9,10 @@ public class FactionManager : MonoBehaviour
     [HideInInspector] public List<Faction> RivalFactions;
     [HideInInspector] public List<Faction> MinorFactions;
 
-
     public static FactionManager instance;
     [HideInInspector] public Faction playerFaction;
 
     [SerializeField] ResourceManager resourceManagerTemplate;
-
-
 
     private void Awake()
     {
@@ -41,6 +38,12 @@ public class FactionManager : MonoBehaviour
         InitFactions();
         
 
+    }
+
+    public void RemoveMajorStatus(Faction faction)
+    {
+        faction.isMajorFaction = false;
+        RivalFactions.Remove(faction);
     }
 
     private void InitFactions()
