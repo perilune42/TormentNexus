@@ -91,7 +91,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         {
             if (Owner.Capital != null)
             {
-                Debug.LogError("Duplicate Capital");
+                Debug.LogError($"Duplicate Capital: {Name}");
             }
             Owner.Capital = this;
         }
