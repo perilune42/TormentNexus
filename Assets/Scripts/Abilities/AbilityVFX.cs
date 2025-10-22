@@ -8,7 +8,7 @@ public class AbilityVFX : MonoBehaviour
 
     [SerializeField] List<SpriteRenderer> frames;
 
-    public void Play()
+    public virtual void Play()
     {
         StartCoroutine(DestroyAfterDelay());
     }
