@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FactionManager : MonoBehaviour
 {
+    public static Faction startingFaction;
+
     [HideInInspector] public List<Faction> Factions;
     [HideInInspector] public List<Faction> RivalFactions;
     [HideInInspector] public List<Faction> MinorFactions;
@@ -18,9 +20,22 @@ public class FactionManager : MonoBehaviour
     {
         instance = this;
 
+
         foreach (var faction in GetComponentsInChildren<Faction>())
         {
             Factions.Add(faction);
+            if (faction.FactionName == startingFaction.FactionName)
+            {
+                faction.isPlayer = true;
+            }
+            else
+            {
+                faction.isPlayer = false;
+            }
+        }
+
+        foreach (var faction in Factions)
+        {
             if (faction.isPlayer)
             {
                 playerFaction = faction;
