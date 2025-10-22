@@ -1,4 +1,5 @@
 using Mono.Cecil;
+using System.Linq;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -11,9 +12,21 @@ public class ResourceManager : MonoBehaviour
 
     public float ResourceAmount = 0;
 
-    public float ResourceGeneration => Faction.AllNodes.Count * ResourcePerNode;
+    
 
-    private const float ResourcePerNode = 0.1f;
+    private const float ResourcePerMilitaryNode = 0.2f;
+    private const float ResourcePerCapital = 1f;
+
+    public float ResourceGeneration()
+    {
+        float gen = 0;
+        if (Faction.AllNodes.Where((node) => node.Type == NodeType.Capital).Count() > 0)
+        {
+            gen += ResourcePerCapital;
+        }
+        gen += Faction.AllNodes.Where((node) => node.Type == NodeType.Military).Count() * ResourcePerMilitaryNode;
+        return gen;
+    } 
 
     private void Awake()
     {
@@ -22,7 +35,7 @@ public class ResourceManager : MonoBehaviour
     }
     private void GenerateResource()
     {
-        ResourceAmount = Mathf.Round((ResourceGeneration + ResourceAmount) * 100f) / 100f;
+        ResourceAmount = Mathf.Round((ResourceGeneration() + ResourceAmount) * 100f) / 100f;
     }
 
     public void ConsumeResource(float amount)

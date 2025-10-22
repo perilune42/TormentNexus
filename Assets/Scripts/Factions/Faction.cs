@@ -7,6 +7,7 @@ public class Faction : MonoBehaviour
     public string FactionName;
     public Color FactionColor;
     public Sprite Flag;
+    public MapNode Capital;
 
     public ResourceManager Resource;
     public List<Unit> BuildableUnits;
@@ -48,6 +49,7 @@ public class Faction : MonoBehaviour
         {
             HateMeter.SetToFaction(this);
         }
+
 
     }
 }

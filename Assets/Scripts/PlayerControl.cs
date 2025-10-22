@@ -48,6 +48,7 @@ public class PlayerControl : MonoBehaviour
             node.ToggleSelectHighlight(true);
             SelectUnit(null);
         }
+        BuildMenu.Instance.UpdateBuildables();
     }
 
 

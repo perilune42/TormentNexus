@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BuildMenu : MonoBehaviour
 {
-    
+    public static BuildMenu Instance;
+
     [SerializeField] UnitBuildButton buttonTemplate;
     [SerializeField] TMP_Text buildProgressText;
 
@@ -12,10 +13,8 @@ public class BuildMenu : MonoBehaviour
 
     private void Awake()
     {
-        foreach (Unit unit in FactionManager.instance.playerFaction.BuildableUnits) 
-        {
-            CreateButtonForUnit(unit);
-        }
+        Instance = this;
+        /*
         GameTick.onTick += () =>
         {
             if (PlayerControl.Instance.SelectedNode != null)
@@ -35,8 +34,28 @@ public class BuildMenu : MonoBehaviour
                 buildProgressText.text = null;
             }
         };
+        */
 
         
+    }
+
+    public void UpdateBuildables()
+    {
+        for (int i = transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+
+        if (PlayerControl.Instance.SelectedNode == null ||
+            PlayerControl.Instance.SelectedNode.Builder.Enabled == false)
+        {
+            return;
+        }
+        foreach (Unit unit in FactionManager.instance.playerFaction.BuildableUnits)
+        {
+            CreateButtonForUnit(unit);
+        }
+
     }
 
     private void CreateButtonForUnit(Unit unit)

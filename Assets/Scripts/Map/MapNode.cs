@@ -6,12 +6,19 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering.Universal;
 
+public enum NodeType
+{
+    Capital, City, Military, Science
+}
+
 public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
     // Info
     public string Name;
     public Faction Owner;
+
+    public NodeType Type;
 
     // Editor Refs
     public List<MapNode> Neighbors;
@@ -43,6 +50,8 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     [SerializeField] ProgressBar garrisonHPBar;
     [SerializeField] ProgressBar infrastructureHPBar;
+
+    [SerializeField] TMP_Text nodeTypeText;
 
     public Action<Unit> onUnitEnter;
 
@@ -77,6 +86,33 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
             Heal();
 
         };
+
+        if (Type == NodeType.Capital)
+        {
+            if (Owner.Capital != null)
+            {
+                Debug.LogError("Duplicate Capital");
+            }
+            Owner.Capital = this;
+        }
+
+        if (Type != NodeType.Military && Type != NodeType.Capital)
+        {
+            Builder.Enabled = false;
+        }
+        if (Type == NodeType.Capital || Type == NodeType.Military)
+        {
+            MaxGarrisonHealth *= 1.5f;
+            GarrisonHealth *= 1.5f;
+        }
+        if (Type == NodeType.City || Type == NodeType.Capital)
+        {
+            MaxInfrastructureHealth *= 2f;
+            InfrastructureHealth *= 2f;
+        }
+
+
+
     }
 
     // TODO - Double draws, fix
@@ -139,6 +175,10 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     {
         lineRenderer = GetComponent<LineRenderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (Type == NodeType.City) nodeTypeText.text = "C";
+        else if (Type == NodeType.Capital) nodeTypeText.text = "*";
+        else if (Type == NodeType.Military) nodeTypeText.text = "M";
+        else nodeTypeText.text = "S";
     }
     public bool IsAdjacent(MapNode neighbor)
     {

@@ -11,6 +11,7 @@ public class UnitBuildButton : MonoBehaviour
     private void Awake()
     {
         button = GetComponent<Button>();
+        button.interactable = false;
     }
 
     private void Update()
