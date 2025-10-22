@@ -11,6 +11,8 @@ public class Map : MonoBehaviour
     // Undirected edges, order doesn't matter for our purposes (but does for the pair structure so check both directions)
     public List<(MapNode, MapNode)> Edges;
 
+    public Sprite CapitalIcon, CityIcon, ScienceIcon, MilitaryIcon;
+
     private void Awake()
     {
         Instance = this;

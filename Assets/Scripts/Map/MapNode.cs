@@ -26,7 +26,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     // Self Refs
     private LineRenderer lineRenderer;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private SpriteRenderer selector;
     [SerializeField] private Light2D colorLight;
 
@@ -135,7 +135,24 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         if (Owner != null)
         {
             SetColor();
-        } 
+        }
+
+        
+        if (Map.Instance != null)
+        {
+            Debug.Log("Setting node icon");
+            switch (Type)
+            {
+                case NodeType.Capital:
+                    spriteRenderer.sprite = Map.Instance.CapitalIcon; break;
+                case NodeType.City:
+                    spriteRenderer.sprite = Map.Instance.CityIcon; break;
+                case NodeType.Military:
+                    spriteRenderer.sprite = Map.Instance.MilitaryIcon; break;
+                case NodeType.Science:
+                    spriteRenderer.sprite = Map.Instance.ScienceIcon; break;
+            }
+        }
             
 
 
@@ -181,7 +198,6 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     private void AssignOwnRefs()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         if (Type == NodeType.City) nodeTypeText.text = "C";
         else if (Type == NodeType.Capital) nodeTypeText.text = "*";
         else if (Type == NodeType.Military) nodeTypeText.text = "M";

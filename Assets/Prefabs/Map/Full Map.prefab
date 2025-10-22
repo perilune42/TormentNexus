@@ -216,6 +216,10 @@ MonoBehaviour:
   - {fileID: 4940040647611181524}
   - {fileID: 2187164449123358108}
   - {fileID: 2390502116929925095}
+  CapitalIcon: {fileID: 0}
+  CityIcon: {fileID: 0}
+  ScienceIcon: {fileID: 0}
+  MilitaryIcon: {fileID: 0}
 --- !u!114 &6265472808212585226
 MonoBehaviour:
   m_ObjectHideFlags: 0
