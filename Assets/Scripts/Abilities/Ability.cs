@@ -5,6 +5,7 @@ public abstract class Ability : MonoBehaviour
     protected Faction owner;
 
     public string Name;
+    public Sprite icon;
 
     public int CurrentCharges;
     public int MaxCharges = 1;

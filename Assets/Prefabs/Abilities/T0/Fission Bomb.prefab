@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Fission Bomb
+  icon: {fileID: -1242187556347939975, guid: 8a5a1f4f26fb809499b5487681b4d094, type: 3}
   CurrentCharges: 0
   MaxCharges: 1
   CurrentCooldown: 0
