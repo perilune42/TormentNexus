@@ -45,6 +45,7 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         button.interactable = false;
         button.GetComponent<Image>().color = Color.green;
         faction.BuildableUnits.Add(unit);
+        //faction.Abilitys.Add(ability);
     }
 
     public void Select()
