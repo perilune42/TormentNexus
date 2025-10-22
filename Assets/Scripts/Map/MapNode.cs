@@ -48,6 +48,9 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     public Builder Builder;
 
+    public static MapNode DummyNode;
+    public bool IsDummyNode = false;
+
     [SerializeField] ProgressBar garrisonHPBar;
     [SerializeField] ProgressBar infrastructureHPBar;
 
@@ -57,7 +60,11 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     private void Awake()
     {
-        
+        if (IsDummyNode) 
+        { 
+            DummyNode = this;
+            return;
+        }
         AssignOwnRefs();
         Owner.AllNodes.Add(this);
         Builder.SetNode(this);
