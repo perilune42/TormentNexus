@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,29 +8,23 @@ public class MainMenu : MonoBehaviour
     public TMP_Text titleText;
     public Button playButton;
     public Button quitButton;
-    public Button mongoliaButton;
-    public Button mingButton;
-    public Button austriaButton;
-    public Button eafButton;
-    public Faction mongoliaFaction;
-    public Faction mingFaction;
-    public Faction austriaFaction;
-    public Faction eafFaction;
+    public Button startButton;
+    public List<FactionButton> factionButtons;
+    public MainMenu instance;
+    public Faction chosen;
 
 
     private void Start()
     {
+        instance = this;
         titleText.gameObject.SetActive(true);
         playButton.gameObject.SetActive(true);
         quitButton.gameObject.SetActive(true);
-        mongoliaButton.gameObject.SetActive(false);
-        austriaButton.gameObject.SetActive(false);
-        mingButton.gameObject.SetActive(false);
-        eafButton.gameObject.SetActive(false);
-        mongoliaButton.GetComponentInChildren<TMP_Text>().text = mongoliaFaction.FactionName;
-        austriaButton.GetComponentInChildren<TMP_Text>().text = austriaFaction.FactionName;
-        mingButton.GetComponentInChildren<TMP_Text>().text = mingFaction.FactionName;
-        eafButton.GetComponentInChildren<TMP_Text>().text = eafFaction.FactionName;
+        foreach (var button in factionButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
+        startButton.gameObject.SetActive(false);
     }
     public void OnPlayClick()
     {
@@ -37,10 +32,10 @@ public class MainMenu : MonoBehaviour
         titleText.gameObject.SetActive(false);
         playButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
-        mongoliaButton.gameObject.SetActive(true);
-        austriaButton.gameObject.SetActive(true);
-        mingButton.gameObject.SetActive(true);
-        eafButton.gameObject.SetActive(true);
+        foreach (var button in factionButtons)
+        {
+            button.gameObject.SetActive(true);
+        }
     }
 
     public void OnQuitClick()
@@ -49,24 +44,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void OnMongoliaClick()
+    public void OnStartClick()
     {
-        Debug.Log("Mongolia Selected");
-
-    }
-
-    public void OnMingClick()
-    {
-        Debug.Log("Ming Selected");
-    }
-
-    public void OnAustriaClick()
-    {
-        Debug.Log("Austria Selected");
-    }
-
-    public void OnEAFClick()
-    {
-        Debug.Log("EAF Selected");
+        Debug.Log("Game Start!");
+        //player.faction = chosen;
     }
 }
