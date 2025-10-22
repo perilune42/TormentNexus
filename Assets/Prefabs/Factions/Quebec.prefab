@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: Flag
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6892426166197294621, guid: bfc007184e154594da0f26c26e63cea9, type: 3}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionName
       value: Quebec
