@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.Universal;
 
 public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -20,6 +21,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     private LineRenderer lineRenderer;
     private SpriteRenderer spriteRenderer;
     [SerializeField] private SpriteRenderer selector;
+    [SerializeField] private Light2D colorLight;
 
     public Unit ContainedUnit = null;
 
@@ -227,6 +229,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     private void SetColor()
     {
         spriteRenderer.color = Owner.FactionColor;
+        colorLight.color = Color.Lerp(Owner.FactionColor, Color.black, 0.4f);
         NameTextMeshPro.color = Color.Lerp(Owner.FactionColor, Color.white, 0.4f);
     }
 }
