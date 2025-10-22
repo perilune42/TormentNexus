@@ -7,13 +7,14 @@ public class MainMenu : MonoBehaviour
     public TMP_Text titleText;
     public Button playButton;
     public Button quitButton;
+    public Button mongoliaButton;
 
     private void Start()
     {
-        GameTick.instance.enabled = false;
         titleText.gameObject.SetActive(true);
         playButton.gameObject.SetActive(true);
         quitButton.gameObject.SetActive(true);
+        mongoliaButton.gameObject.SetActive(false);
     }
     public void OnPlayClick()
     {
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
         titleText.gameObject.SetActive(false);
         playButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
+        mongoliaButton.gameObject.SetActive(true);
     }
 
     public void OnQuitClick()
