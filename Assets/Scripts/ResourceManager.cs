@@ -22,7 +22,7 @@ public class ResourceManager : MonoBehaviour
     }
     private void GenerateResource()
     {
-        ResourceAmount += ResourceGeneration;
+        ResourceAmount = Mathf.Round((ResourceGeneration + ResourceAmount) * 100f) / 100f;
     }
 
     public void ConsumeResource(float amount)
