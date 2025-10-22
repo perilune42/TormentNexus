@@ -79,7 +79,8 @@ public class TechTree : MonoBehaviour
 
         techNodeStatuses[targetNode] = TechNodeStatus.Finished;
 
-        currentlyResearching.progressBar.SetVisible(false);
+        currentlyResearching.progressBar.SetLevel(1);
+        currentlyResearching.progressText.text = $"{currentlyResearching.cost:0.0}/{currentlyResearching.cost}";
 
         foreach (var node in techNodeStatuses.Keys.ToList())
         {
@@ -98,7 +99,11 @@ public class TechTree : MonoBehaviour
             if (allFinished)
             {
                 UnlockNode(node);
-                foreach (var prereq in node.prereqs)
+
+            }
+            foreach (var prereq in node.prereqs)
+            {
+                if (techNodeStatuses[prereq] == TechNodeStatus.Finished)
                 {
                     int siblingIndex = techLineRenderer.transform.GetSiblingIndex();  //Sibling Index of techlinerenderer
 
@@ -132,6 +137,8 @@ public class TechTree : MonoBehaviour
     {
 
         currentlyResearching = targetNode;
+        // stored resech fills up at most half of new research
+        accumulatedPoints = Mathf.Min(currentlyResearching.cost / 2, accumulatedPoints);
         var nodes = GetComponentsInChildren<TechNode>();
         foreach (TechNode node in nodes)
         {
@@ -148,11 +155,7 @@ public class TechTree : MonoBehaviour
 
     public void AddResearchPoints(float points)
     {
-        if (currentlyResearching != null)
-        {
-            accumulatedPoints += points;
-
-        }
+        accumulatedPoints += points;
         if (currentlyResearching != null && accumulatedPoints >= currentlyResearching.cost)
         {
             accumulatedPoints -= currentlyResearching.cost;
@@ -169,6 +172,7 @@ public class TechTree : MonoBehaviour
         {
             //currentlyResearching.progressBar.SetLevel(accumulatedPoints / currentlyResearching.cost);
             currentlyResearching.progressBar.SetLevel(accumulatedPoints / currentlyResearching.cost);
+            currentlyResearching.progressText.text = $"{accumulatedPoints:0.0}/{currentlyResearching.cost}";
         }
     }
 
@@ -184,6 +188,15 @@ public class TechTree : MonoBehaviour
     {
         techNodeStatuses[targetNode] = TechNodeStatus.Locked;
         targetNode.Lock();
+    }
+
+    public float GetCurrentTechProgress()
+    {
+        if (currentlyResearching == null) return -1f;
+        else
+        {
+            return accumulatedPoints / currentlyResearching.cost;
+        }
     }
 
 }

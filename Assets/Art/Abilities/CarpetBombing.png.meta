@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 8c9609f50889ee946ada783677607d0a
+guid: 8a3a939cf28778a48a65209dfea2cc18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6400400424940113141
-    second: Scalable_Item_Frame_0
+      213: 4062818634317250523
+    second: CarpetBombing_0
+  - first:
+      213: 6550005268232622753
+    second: CarpetBombing_1
+  - first:
+      213: -9126204480917321237
+    second: CarpetBombing_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Scalable_Item_Frame_0
+      name: CarpetBombing_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 47
+        y: 47
+        width: 258
+        height: 674
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 64, y: 64, z: 64, w: 64}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fc80d4964ac2d850800000000000000
-      internalID: 6400400424940113141
+      spriteID: bdf315da508026830800000000000000
+      internalID: 4062818634317250523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarpetBombing_1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 175
+        width: 258
+        height: 674
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a251f9861b46ea50800000000000000
+      internalID: 6550005268232622753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarpetBombing_2
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 303
+        width: 258
+        height: 674
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be948579065395180800000000000000
+      internalID: -9126204480917321237
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 765b2fb06c1d97b46a9dabcf7476e387
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Scalable_Item_Frame_0: 6400400424940113141
+      CarpetBombing_0: 4062818634317250523
+      CarpetBombing_1: 6550005268232622753
+      CarpetBombing_2: -9126204480917321237
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

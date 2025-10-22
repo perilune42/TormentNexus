@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 8c9609f50889ee946ada783677607d0a
+guid: f0b58824bb148624e9be12a086bf2ba3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6400400424940113141
-    second: Scalable_Item_Frame_0
+      213: -7257859084147795593
+    second: GasAttack_0
+  - first:
+      213: -7125786875178251561
+    second: GasAttack_1
+  - first:
+      213: -8313461321069962575
+    second: GasAttack_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Scalable_Item_Frame_0
+      name: GasAttack_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 95
+        y: 111
+        width: 418
+        height: 402
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 64, y: 64, z: 64, w: 64}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fc80d4964ac2d850800000000000000
-      internalID: 6400400424940113141
+      spriteID: 7795783ed97e64b90800000000000000
+      internalID: -7257859084147795593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GasAttack_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 415
+        width: 578
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da0cdf479e1c1d90800000000000000
+      internalID: -7125786875178251561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GasAttack_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 79
+        width: 306
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1badcaf99f6a0ac80800000000000000
+      internalID: -8313461321069962575
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 765b2fb06c1d97b46a9dabcf7476e387
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Scalable_Item_Frame_0: 6400400424940113141
+      GasAttack_0: -7257859084147795593
+      GasAttack_1: -7125786875178251561
+      GasAttack_2: -8313461321069962575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

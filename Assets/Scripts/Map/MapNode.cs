@@ -140,7 +140,6 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         
         if (Map.Instance != null)
         {
-            Debug.Log("Setting node icon");
             switch (Type)
             {
                 case NodeType.Capital:

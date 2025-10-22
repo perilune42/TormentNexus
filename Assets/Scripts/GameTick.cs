@@ -53,7 +53,7 @@ public class GameTick : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameUI.instance.ToggleTechTree();
+            GameUI.instance.HideTechTree();
         }
 
 
