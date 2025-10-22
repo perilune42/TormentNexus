@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7073664218950884433
+--- !u!1 &5498475406324181545
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1194547248997744873}
-  - component: {fileID: 7841448690613592598}
+  - component: {fileID: 8318639628387157031}
+  - component: {fileID: 8446680328057840639}
   m_Layer: 0
-  m_Name: Livewire
+  m_Name: LivewireAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1194547248997744873
+--- !u!4 &8318639628387157031
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7073664218950884433}
+  m_GameObject: {fileID: 5498475406324181545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7841448690613592598
+--- !u!114 &8446680328057840639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7073664218950884433}
+  m_GameObject: {fileID: 5498475406324181545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40bc83f265f695244bf577edfbf9d7f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0962dd75a6248f943a9e9127a9097879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Livewire
-  icon: {fileID: 21300000, guid: 4d2447cf8d364f54487c9da8a1ca4f63, type: 3}
-  CurrentCharges: 0
-  MaxCharges: 1
-  CurrentCooldown: 0
-  BuildTime: 100
-  Cost: 50
-  Damage: 80
-  GarrisonDamage: 90
-  InfrastructureDamage: 50
-  HateGeneration: 25
-  IsBuilding: 0
-  effect: {fileID: 8446680328057840639, guid: e737351c7f37ffa46b4cb4bc74010a0f, type: 3}
+  frames: []
+  duration: 10
+  amount: 5
+  wireDelay: 0.1
+  maxWidth: 1
+  wireExpandTime: 0.3
+  wireDuration: 1
+  wireSegment: {fileID: 4583466767391692410, guid: 514532917f4bfdf4da1bed52ca463da4, type: 3}
