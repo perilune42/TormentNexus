@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6256044535248997008
+--- !u!1001 &4665695572273196218
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15,10 +15,18 @@ PrefabInstance:
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Icon
       value: 
-      objectReference: {fileID: 5682351906855582112, guid: cd8126b2565a8de48956f075011ddee5, type: 3}
+      objectReference: {fileID: 1982735283596274820, guid: b5427ce9afaddc3439a3ee10ffe78cec, type: 3}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: Name
+      value: Flame Trooper
+      objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Speed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: GarrisonDamage
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3315886825695000850, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_Name
-      value: Stealth Jet
+      value: Flame Trooper
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

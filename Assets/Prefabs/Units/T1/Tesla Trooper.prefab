@@ -10,23 +10,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Cost
-      value: 130
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Icon
       value: 
-      objectReference: {fileID: -4047491817323079948, guid: a03c438fbdd00d04c8bb82e67e452416, type: 3}
+      objectReference: {fileID: 1982735283596274820, guid: b5427ce9afaddc3439a3ee10ffe78cec, type: 3}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: Name
+      value: Tesla Trooper
+      objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Speed
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-      propertyPath: Health
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
-      propertyPath: MaxHealth
-      value: 150
+      propertyPath: GarrisonDamage
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3315886825695000850, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_Name
-      value: Tank
+      value: Tesla Trooper
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

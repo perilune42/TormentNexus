@@ -54,4 +54,26 @@ public class Faction : MonoBehaviour
 
 
     }
+
+    public void AddAbility(Ability template)
+    {
+        Ability newAbility = Instantiate(template, abilitiesList);
+        Abilities.Add(newAbility);
+        newAbility.GiveToFaction(this);
+        if (isPlayer)
+        {
+            AbilityMenu.Instance.RedrawButtons();
+        }
+    }
+
+    public void RemoveAbility(Ability template)
+    {
+        var toRemove = Abilities.Find((ability) => ability.Name == template.Name);
+        Abilities.Remove(toRemove);
+        Destroy(toRemove.gameObject);
+        if (isPlayer)
+        {
+            AbilityMenu.Instance.RedrawButtons();
+        }
+    }
 }

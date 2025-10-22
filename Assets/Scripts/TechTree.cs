@@ -45,6 +45,7 @@ public class TechTree : MonoBehaviour
         var nodes = GetComponentsInChildren<TechNode>();
         foreach (TechNode node in nodes)
         {
+            node.faction = Faction;
             LockNode(node);
             foreach (var prereq in node.prereqs)
             {

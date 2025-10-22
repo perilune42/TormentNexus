@@ -25,7 +25,7 @@ public class UnitBuildButton : MonoBehaviour
     public void SetUnit(Unit unit)
     {
         unitTemplate = unit;
-        nameText.text = unit.gameObject.name;
+        nameText.text = unit.Name;
     }
 
     public void Build()

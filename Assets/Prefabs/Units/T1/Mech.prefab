@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
+      propertyPath: Name
+      value: Mech
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: Damage
       value: 0.2
       objectReference: {fileID: 0}
@@ -62,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979116406778516904, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: m_Name
-      value: Robot Variant
+      value: Robot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

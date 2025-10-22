@@ -3,6 +3,9 @@ using UnityEngine;
 public abstract class Ability : MonoBehaviour
 {
     protected Faction owner;
+
+    public string Name;
+
     public int CurrentCharges;
     public int MaxCharges = 1;
     public int CurrentCooldown = 0;
@@ -26,6 +29,11 @@ public abstract class Ability : MonoBehaviour
     {
         owner = faction;
         GameTick.onTick += TickCooldown;
+    }
+
+    private void OnDestroy()
+    {
+        GameTick.onTick -= TickCooldown;
     }
 
     public void BuildNew()

@@ -19,7 +19,7 @@ public class AbilityButton : MonoBehaviour
     public void SetAbility(Ability ability)
     {
         this.ability = ability;
-        nameText.text = ability.gameObject.name;
+        nameText.text = ability.Name;
 
     }
 

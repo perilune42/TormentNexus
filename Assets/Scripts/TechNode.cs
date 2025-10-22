@@ -15,6 +15,9 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public float cost;
     public string textToShow;
     public Unit unit;
+    public Unit replacingUnit;
+    public Ability ability;
+    public Ability replacingAbility;
     public Faction faction;
 
     private void Awake()
@@ -25,7 +28,11 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         image = GetComponent<Image>();
         progressBar.SetVisible(false);
         progressBar.SetLevel(0);
-        faction = FactionManager.instance.playerFaction;
+    }
+
+    public void SetFaction(Faction faction)
+    {
+        this.faction = faction;
     }
 
     public void Lock()
@@ -44,8 +51,24 @@ public class TechNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         button.interactable = false;
         button.GetComponent<Image>().color = Color.green;
-        faction.BuildableUnits.Add(unit);
-        //faction.Abilitys.Add(ability);
+        if (unit != null)
+        {
+            faction.BuildableUnits.Add(unit);
+        }
+        if (replacingUnit != null)
+        {
+            Unit old = faction.BuildableUnits.Find((unit) => unit.Name == replacingUnit.Name);
+            faction.BuildableUnits.Remove(old);
+        }
+        if (ability != null)
+        {
+            faction.AddAbility(ability);
+        }
+        if (replacingAbility != null)
+        {
+            faction.RemoveAbility(replacingAbility);
+        }
+
     }
 
     public void Select()
