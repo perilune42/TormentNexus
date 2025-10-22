@@ -11,19 +11,18 @@ public class AbilityVFXNuke : AbilityVFX
     [SerializeField] float flashIntensity;
     [SerializeField] float flashFade;
     [SerializeField] float smokeGrowth;
-    [SerializeField] float shockwaveGrowth;
 
     [Header("Refs")]
     [SerializeField] Light2D blastLight;
     [SerializeField] SpriteRenderer blast;
     [SerializeField] SpriteRenderer centerSmoke;
-    [SerializeField] SpriteRenderer shockwaveRing;
-    [SerializeField] SpriteMask shockwaveRingMask;
+    [SerializeField] GameObject shockwave;
 
     public override void Play()
     {
         StartCoroutine(Blast());
-        StartCoroutine(SmokeAndShockwave());
+        StartCoroutine(Smoke());
+        shockwave.SetActive(true);
         StartCoroutine(Destroy());
     }
     
@@ -42,15 +41,13 @@ public class AbilityVFXNuke : AbilityVFX
         }
     }
 
-    private IEnumerator SmokeAndShockwave()
+    private IEnumerator Smoke()
     {
         while (true)
         {
             centerSmoke.transform.localScale += smokeGrowth * Time.deltaTime * Vector3.one;
             centerSmoke.color -= Time.deltaTime * new Color(0, 0, 0, 0.1f); 
 
-            shockwaveRing.transform.localScale += shockwaveGrowth * Time.deltaTime * Vector3.one;
-            shockwaveRingMask.transform.localScale += 1.1f * shockwaveGrowth * Time.deltaTime * Vector3.one;
             yield return null;
         }
     }
