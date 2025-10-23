@@ -47,23 +47,23 @@ public class TechTree : MonoBehaviour
         {
             node.faction = Faction;
             LockNode(node);
-            //foreach (var prereq in node.prereqs)
-            //{
-            //    TechLineRenderer outline = Instantiate(techLineRenderer, transform, false);
-            //    int siblingIndex = techLineRenderer.transform.GetSiblingIndex();  //Sibling Index of techlinerenderer
-            //    outline.transform.SetSiblingIndex(siblingIndex); //Makes sure it renders before buttons
-            //    outline.CreateLine(node.transform.position, prereq.transform.position, Color.black); 
-            //    RectTransform rt = outline.GetComponent<RectTransform>();
-            //    rt.sizeDelta = new Vector2(1, 16); //Sets line size to be width 16
-            //    outline.name = "Line Outline";
+            foreach (var prereq in node.prereqs)
+            {
+                TechLineRenderer outline = Instantiate(techLineRenderer, transform.GetChild(1).GetChild(0), false);
+                int siblingIndex = techLineRenderer.transform.GetSiblingIndex();  //Sibling Index of techlinerenderer
+                outline.transform.SetSiblingIndex(siblingIndex); //Makes sure it renders before buttons
+                outline.CreateLine(node.transform.position, prereq.transform.position, Color.black);
+                RectTransform rt = outline.GetComponent<RectTransform>();
+                rt.sizeDelta = new Vector2(1, 16); //Sets line size to be width 16
+                outline.name = "Line Outline";
 
 
-            //    TechLineRenderer clone = Instantiate(techLineRenderer, transform, false);
-            //    lineList.Enqueue(clone);
-            //    clone.transform.SetSiblingIndex(siblingIndex+1); //Makes sure it renders before buttons and after outline
-            //    clone.name = "Locked Line";
-            //    clone.CreateLine(node.transform.position, prereq.transform.position, Color.red);
-            //}
+                TechLineRenderer clone = Instantiate(techLineRenderer, transform.GetChild(1).GetChild(0), false);
+                lineList.Enqueue(clone);
+                clone.transform.SetSiblingIndex(siblingIndex + 1); //Makes sure it renders before buttons and after outline
+                clone.name = "Locked Line";
+                clone.CreateLine(node.transform.position, prereq.transform.position, Color.red);
+            }
         }
         foreach (TechNode node in startNodes)
         {
@@ -101,20 +101,20 @@ public class TechTree : MonoBehaviour
                 UnlockNode(node);
 
             }
-            //foreach (var prereq in node.prereqs)
-            //{
-            //    if (techNodeStatuses[prereq] == TechNodeStatus.Finished)
-            //    {
-            //        int siblingIndex = techLineRenderer.transform.GetSiblingIndex();  //Sibling Index of techlinerenderer
+            foreach (var prereq in node.prereqs)
+            {
+                if (techNodeStatuses[prereq] == TechNodeStatus.Finished)
+                {
+                    int siblingIndex = techLineRenderer.transform.GetSiblingIndex();  //Sibling Index of techlinerenderer
 
-            //        TechLineRenderer clone = Instantiate(techLineRenderer, transform, false);
-            //        lineList.Enqueue(clone);
-            //        clone.transform.SetSiblingIndex(siblingIndex + 1); //Makes sure it renders before buttons and after outline
-            //        clone.name = "Unlocked Line";
-            //        Color researchBlueColor = new Color(0.21176470588f, 0.57647058823f, 0.95686274509f); //Blue
-            //        clone.CreateLine(node.transform.position, prereq.transform.position, researchBlueColor);
-            //    }
-            //}
+                    TechLineRenderer clone = Instantiate(techLineRenderer, transform.GetChild(1).GetChild(0), false);
+                    lineList.Enqueue(clone);
+                    clone.transform.SetSiblingIndex(siblingIndex + 1); //Makes sure it renders before buttons and after outline
+                    clone.name = "Unlocked Line";
+                    Color researchBlueColor = new Color(0.21176470588f, 0.57647058823f, 0.95686274509f); //Blue
+                    clone.CreateLine(node.transform.position, prereq.transform.position, researchBlueColor);
+                }
+            }
         }
 
         foreach (TechNode node in startNodes)

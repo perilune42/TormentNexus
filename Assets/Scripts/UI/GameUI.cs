@@ -66,9 +66,9 @@ public class GameUI : MonoBehaviour
             if (techFlashTime <= 0)
             {
                 techTreeButton.image.color = techFlashColor;
-                techFlashTime = 1f;
+                techFlashTime = 0.6f;
             }
-            else if (techFlashTime <= 0.5f)
+            else if (techFlashTime <= 0.3f)
             {
                 techTreeButton.image.color = Color.white;
             }

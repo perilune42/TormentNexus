@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 public class PopulationCounter : MonoBehaviour
 {
     public long CurrentPopulation = 3193447025;
+    public long DeathCount = 0;
 
     public static PopulationCounter Instance;
     [SerializeField] private TMP_Text counterText;
@@ -31,7 +32,8 @@ public class PopulationCounter : MonoBehaviour
 
     public void DealDamage(float infDamage)
     {
-        double populationLost = Mathf.Min(CurrentPopulation * 0.01f, infDamage * 20000);
-        CurrentPopulation -= (long)(populationLost * Random.Range(0.5f, 1.5f));
+        long populationLost = (long)(Mathf.Min(CurrentPopulation * 0.01f, infDamage * 20000) * Random.Range(0.5f, 1.5f));
+        DeathCount += populationLost;
+        CurrentPopulation -= populationLost;
     }
 }
