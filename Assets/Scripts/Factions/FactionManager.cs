@@ -21,17 +21,22 @@ public class FactionManager : MonoBehaviour
         instance = this;
 
 
+
         foreach (var faction in GetComponentsInChildren<Faction>())
         {
             Factions.Add(faction);
-            if (faction.FactionName == startingFaction.FactionName)
+            if (startingFaction != null)
             {
-                faction.isPlayer = true;
+                if (faction.FactionName == startingFaction.FactionName)
+                {
+                    faction.isPlayer = true;
+                }
+                else
+                {
+                    faction.isPlayer = false;
+                }
             }
-            else
-            {
-                faction.isPlayer = false;
-            }
+
         }
 
         foreach (var faction in Factions)
