@@ -9,36 +9,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: -2095041972475615153, guid: 8992f4c658932d34f81b6f558f4805ff, type: 3}
+    - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: Name
-      value: Mech
+      value: Metal Horror
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: Speed
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: Damage
-      value: 0.15
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: Health
-      value: 170
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: MaxHealth
-      value: 170
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: healSpeed
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: GarrisonDamage
-      value: 0.15
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: InfrastructureDamage
-      value: 0.15
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 7839766297816779764, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979116406778516904, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: m_Name
-      value: Mech
+      value: Armor Corps
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
