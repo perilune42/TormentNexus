@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Targeted Singularity
-  icon: {fileID: 21300000, guid: 277d99c3d41bf4c468abfb0dd1f91764, type: 3}
+  icon: {fileID: 21300000, guid: fdfa569969353fe449f08325905a36a8, type: 3}
   Type: 1
   CurrentCharges: 0
   MaxCharges: 2
