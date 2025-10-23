@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1194547248997744873}
   - component: {fileID: 7841448690613592598}
   m_Layer: 0
-  m_Name: Fusion Bomb
+  m_Name: Orbital Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,16 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40bc83f265f695244bf577edfbf9d7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Fusion Bomb
-  icon: {fileID: 21300000, guid: e67fafc43381b3e48a8d4166976ea6dc, type: 3}
+  Name: Orbital Laser
+  icon: {fileID: 21300000, guid: 277d99c3d41bf4c468abfb0dd1f91764, type: 3}
   CurrentCharges: 0
-  MaxCharges: 1
+  MaxCharges: 2
   CurrentCooldown: 0
-  BuildTime: 500
-  Cost: 75
-  Damage: 95
-  GarrisonDamage: 80
-  InfrastructureDamage: 110
-  HateGeneration: 30
+  BuildTime: 300
+  Cost: 50
+  Damage: 65
+  GarrisonDamage: 105
+  InfrastructureDamage: 70
+  HateGeneration: 15
   IsBuilding: 0
-  effect: {fileID: 7773348934293326110, guid: 1b0f306749ff5274482cbfe250748461, type: 3}
+  effect: {fileID: -2016474504335691812, guid: 2ed0f66dee042bf4993e42a1ec5e9f41, type: 3}

@@ -45,15 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Rods From God
-  icon: {fileID: 21300000, guid: 8a3a939cf28778a48a65209dfea2cc18, type: 3}
+  icon: {fileID: 21300000, guid: 562b6527c25874b4eb788245b748e00d, type: 3}
   CurrentCharges: 0
-  MaxCharges: 1
+  MaxCharges: 2
   CurrentCooldown: 0
-  BuildTime: 100
+  BuildTime: 300
   Cost: 50
-  Damage: 80
-  GarrisonDamage: 90
-  InfrastructureDamage: 50
-  HateGeneration: 25
+  Damage: 55
+  GarrisonDamage: 95
+  InfrastructureDamage: 65
+  HateGeneration: 15
   IsBuilding: 0
-  effect: {fileID: 1891880126257775521, guid: f2108182ca8854d4cb6065751c3edc87, type: 3}
+  effect: {fileID: -2016474504335691812, guid: 2ed0f66dee042bf4993e42a1ec5e9f41, type: 3}

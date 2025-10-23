@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1194547248997744873}
   - component: {fileID: 7841448690613592598}
   m_Layer: 0
-  m_Name: Fusion Bomb
+  m_Name: Antimatter Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,16 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40bc83f265f695244bf577edfbf9d7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Fusion Bomb
-  icon: {fileID: 21300000, guid: e67fafc43381b3e48a8d4166976ea6dc, type: 3}
+  Name: Antimatter Bomb
+  icon: {fileID: 21300000, guid: 19902e93c9dd7304893eb1a82124c5bf, type: 3}
   CurrentCharges: 0
   MaxCharges: 1
   CurrentCooldown: 0
   BuildTime: 500
   Cost: 75
-  Damage: 95
-  GarrisonDamage: 80
-  InfrastructureDamage: 110
+  Damage: 120
+  GarrisonDamage: 90
+  InfrastructureDamage: 130
   HateGeneration: 30
   IsBuilding: 0
   effect: {fileID: 7773348934293326110, guid: 1b0f306749ff5274482cbfe250748461, type: 3}
