@@ -26,7 +26,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     // Self Refs
     private LineRenderer lineRenderer;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public SpriteRenderer spriteRenderer;
     [SerializeField] private SpriteRenderer selector;
     [SerializeField] private Light2D colorLight;
 
