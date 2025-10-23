@@ -3,21 +3,32 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UnitDisplay : MonoBehaviour, IPointerDownHandler
+public class UnitDisplay : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
     Unit unit;
 
+    public bool hovered = false;
+
     [SerializeField] Image icon;
+    [SerializeField] Image overlay;
     [SerializeField] Image selector;
     [SerializeField] ProgressBar healthBar;
     [SerializeField] Image moveIndicator;
+
+    
+
+private void Awake()
+    {
+        overlay.gameObject.SetActive(false);
+    }
 
     public void AttachTo(Unit unit)
     {
         this.unit = unit;
         icon.color = unit.Owner.FactionColor;
         icon.sprite = unit.Icon;
+        overlay.sprite = icon.sprite;
         GameTick.onTick += UpdateHealth;
     }
 
@@ -68,5 +79,17 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler
     public void StopMove()
     {
         moveIndicator.enabled = false;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        overlay.gameObject.SetActive(true);
+        hovered = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        overlay.gameObject.SetActive(false);
+        hovered = false;
     }
 }

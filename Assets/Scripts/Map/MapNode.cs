@@ -26,9 +26,10 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     // Self Refs
     private LineRenderer lineRenderer;
-    [SerializeField] public SpriteRenderer spriteRenderer;
-    [SerializeField] private SpriteRenderer selector;
-    [SerializeField] private Light2D colorLight;
+    public SpriteRenderer spriteRenderer;
+    public SpriteRenderer overlay;
+    public SpriteRenderer selector;
+    public Light2D colorLight;
 
     public Unit ContainedUnit = null;
 
@@ -151,6 +152,8 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
                 case NodeType.Science:
                     spriteRenderer.sprite = Map.Instance.ScienceIcon; break;
             }
+            overlay.sprite = spriteRenderer.sprite;
+            overlay.gameObject.SetActive(false);
         }
             
 
@@ -176,6 +179,10 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (ContainedUnit != null && ContainedUnit.Display.hovered)
+        {
+            return;
+        }
         PlayerControl.Instance.HoverNode(this);
     }
 
