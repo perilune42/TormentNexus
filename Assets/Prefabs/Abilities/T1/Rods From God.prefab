@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rods From God
   icon: {fileID: 21300000, guid: 562b6527c25874b4eb788245b748e00d, type: 3}
+  Type: 1
   CurrentCharges: 0
   MaxCharges: 2
   CurrentCooldown: 0

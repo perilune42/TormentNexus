@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Gamma Ray Burst
   icon: {fileID: 21300000, guid: 399e0f2b08bcf8142aeaa3af2621da2a, type: 3}
+  Type: 0
   CurrentCharges: 0
   MaxCharges: 1
   CurrentCooldown: 0
