@@ -41,10 +41,10 @@ public class AbilityVFXGasAttack : AbilityVFX
     {
         float[] rand = { Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100) };
 
-        while (true)
+        while (cloud != null)
         {
-            float noiseX = (1 - Mathf.PerlinNoise(Time.time * noiseSpeed + rand[0], Time.time * noiseSpeed + rand[1]) * 2) * noiseIntensity;
-            float noiseY = (1 - Mathf.PerlinNoise(Time.time * noiseSpeed + rand[2], Time.time * noiseSpeed + rand[3]) * 2) * noiseIntensity;
+            float noiseX = (1 - Mathf.PerlinNoise(Time.time + rand[0] * noiseSpeed, Time.time + rand[1] * noiseSpeed) * 2) * noiseIntensity;
+            float noiseY = (1 - Mathf.PerlinNoise(Time.time + rand[2] * noiseSpeed, Time.time + rand[3] * noiseSpeed) * 2) * noiseIntensity;
             cloud.transform.position = startPos + new Vector3(noiseX, noiseY, 0) * noiseScalingPosition;
             cloud.transform.localScale = maxRadius * Vector3.one + noiseScalingScale * noiseX * Vector3.one;
             yield return null;
@@ -79,6 +79,8 @@ public class AbilityVFXGasAttack : AbilityVFX
             cloud.GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor, t);
             yield return null;
         }
+
+        Destroy(cloud);
     }
 
     private IEnumerator Destroy()
