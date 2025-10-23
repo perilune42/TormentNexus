@@ -23,14 +23,15 @@ public class FactionButton : MonoBehaviour
 
     public void onClick()
     {
-        menu.instance.startButton.gameObject.SetActive(true);
-        foreach (var faction in menu.instance.factionButtons)
+        menu.audioSource.PlayOneShot(menu.UIAccept);
+        menu.startButton.gameObject.SetActive(true);
+        foreach (var faction in menu.factionButtons)
         {
             faction.square.gameObject.SetActive(false);
             faction.lore.gameObject.SetActive(false);
         }
         square.gameObject.SetActive(true);
         lore.gameObject.SetActive(true);
-        menu.instance.chosen = faction; 
+        menu.chosen = faction; 
     }
 }

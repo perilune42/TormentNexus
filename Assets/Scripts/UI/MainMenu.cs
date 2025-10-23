@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -8,6 +10,9 @@ public class MainMenu : MonoBehaviour
 {
     public TMP_Text titleText;
     public Button playButton;
+    public AudioClip UIAccept;
+    public AudioClip UI2;
+    public AudioSource audioSource;
     public Button quitButton;
     public Button startButton;
     public List<FactionButton> factionButtons;
@@ -29,10 +34,11 @@ public class MainMenu : MonoBehaviour
     }
     public void OnPlayClick()
     {
-        Debug.Log("Play Button Clicked");
+        audioSource.PlayOneShot(UIAccept);
         titleText.gameObject.SetActive(false);
         playButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
+        startButton.gameObject.SetActive(true);
         foreach (var button in factionButtons)
         {
             button.gameObject.SetActive(true);
@@ -41,16 +47,14 @@ public class MainMenu : MonoBehaviour
 
     public void OnQuitClick()
     {
-        Debug.Log("Game Quit");
+        audioSource.PlayOneShot(UIAccept);
         Application.Quit();
     }
 
     public void OnStartClick()
     {
+        audioSource.PlayOneShot(UIAccept);
         FactionManager.startingFaction = chosen;
-        Debug.Log("Game Start!");
         SceneManager.LoadScene("World", LoadSceneMode.Single);
-
-        //player.faction = chosen;
     }
 }
