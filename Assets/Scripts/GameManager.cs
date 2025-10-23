@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,17 +12,14 @@ public class GameManager : MonoBehaviour
 
     public void FactionVictory(Faction faction)
     {
-        if (faction == FactionManager.instance.playerFaction)
-        {
-            Debug.Log("Player wins :D");
-        }
-        else
-        {
-            Debug.Log("Player loses :(");
-        }
+        GameTick.instance.SetSpeed(GameSpeed.Paused);
+        GameTick.instance.enabled = false;
 
-        // Do some cool slide in thing with victor's flag???
-        // Show score or time taken I dunno
-        // Exit button or just kick player to main menu
+        GameUI.instance.ShowEndScreen(faction == FactionManager.instance.playerFaction);
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

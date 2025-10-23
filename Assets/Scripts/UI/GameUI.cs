@@ -15,6 +15,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] Color techFlashColor;
 
     [SerializeField] TMP_Text popCountText;
+    [SerializeField] GameObject EndScreen;
 
     private void Awake()
     {
@@ -82,4 +83,16 @@ public class GameUI : MonoBehaviour
         }
     }
 
+    public void ShowEndScreen(bool isVictory)
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
+
+        EndScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = FactionManager.instance.playerFaction.FactionName;
+        EndScreen.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = $"Day {GameTick.instance.GetDays()}";
+        EndScreen.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = $"Deaths {PopulationCounter.Instance.DeathCount}";
+        EndScreen.SetActive(true);
+    }
 }
