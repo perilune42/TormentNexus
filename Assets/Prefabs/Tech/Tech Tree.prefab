@@ -2457,7 +2457,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: unit
       value: 
-      objectReference: {fileID: 4386134815605724348, guid: 2d3db0ef117273d4bb5ff1358b3014a2, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: ability
       value: 
@@ -2469,7 +2469,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: replacingUnit
       value: 
-      objectReference: {fileID: 4386134815605724348, guid: 4ee1a2355bc8e834a849cc72841e61ea, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: replacingAbility
       value: 

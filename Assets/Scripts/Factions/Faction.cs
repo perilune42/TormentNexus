@@ -36,7 +36,7 @@ public class Faction : MonoBehaviour
         AIControl = GetComponentInChildren<AIControl>();
         HateMeter = GetComponentInChildren<HateMeter>();
 
-        if (isPlayer)
+        if (false && isPlayer)
         {
             AIControl.gameObject.SetActive(false);
             HateMeter.gameObject.SetActive(false);
