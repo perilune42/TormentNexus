@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.b
-      value: 0.8962264
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.g
-      value: 0.25787643
+      value: 0.20872642
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.r
-      value: 0.27052838
+      value: 0.26441085
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: isMajorFaction

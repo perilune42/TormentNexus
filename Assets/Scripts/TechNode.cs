@@ -22,6 +22,8 @@ public class TechNode : MonoBehaviour
     public Ability ability;
     public Ability replacingAbility;
     public Faction faction;
+    public AudioSource audioSource;
+    public AudioClip FinishSFX;
 
     [SerializeField] Image unlockIcon;
     [SerializeField] TMP_Text unlockText;
@@ -54,6 +56,10 @@ public class TechNode : MonoBehaviour
 
     public void Finish()
     {
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(FinishSFX);
+        }
         button.interactable = false;
         buttomImage.color = Color.green;
         if (unit != null)
