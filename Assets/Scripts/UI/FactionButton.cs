@@ -16,6 +16,7 @@ public class FactionButton : MonoBehaviour
         //set in inspector
         square.color = faction.FactionColor;
         factionName.text = faction.FactionName;
+        factionName.color = Color.Lerp(faction.FactionColor, Color.white, 0.4f);
         square.gameObject.SetActive(false);
         lore.gameObject.SetActive(false);
     }
