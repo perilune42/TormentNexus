@@ -1779,6 +1779,10 @@ PrefabInstance:
       value: 137.15
       objectReference: {fileID: 0}
     - target: {fileID: 3324852621547462433, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
+      propertyPath: m_text
+      value: Brinksman
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324852621547462433, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
