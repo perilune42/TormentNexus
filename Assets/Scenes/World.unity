@@ -964,7 +964,7 @@ MonoBehaviour:
   primedAbilityText: {fileID: 944439373}
   techTreeButton: {fileID: 894873451}
   techTreeButtonOverlay: {fileID: 599136312}
-  techFlashColor: {r: 0.72820973, g: 1, b: 0.6320754, a: 1}
+  techFlashColor: {r: 0.501405, g: 1, b: 0.3207547, a: 1}
   popCountText: {fileID: 0}
 --- !u!114 &174431219
 MonoBehaviour:
@@ -5731,7 +5731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rifleman
+  m_text: Genetic Amalgamate
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b7e65a499034f5458e71aff84cef542, type: 2}
   m_sharedMaterial: {fileID: -5308744754017145789, guid: 2b7e65a499034f5458e71aff84cef542, type: 2}
@@ -5758,10 +5758,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 23.85
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 32
@@ -5770,11 +5770,11 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -46.9
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -9049,6 +9049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentPopulation: 3193447025
+  DeathCount: 0
   counterText: {fileID: 959203777}
 --- !u!4 &1659943179 stripped
 Transform:

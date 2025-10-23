@@ -53,7 +53,7 @@ public class NodeInfoUI : MonoBehaviour
             garText.text = $"{(int)node.GarrisonHealth}/{(int)node.MaxGarrisonHealth}";
             infText.text = $"{(int)node.InfrastructureHealth}/{(int)node.MaxInfrastructureHealth}";
             garBar.SetLevel(node.GarrisonHealth / node.MaxGarrisonHealth);
-            garBar.SetLevel(node.InfrastructureHealth / node.MaxInfrastructureHealth);
+            infBar.SetLevel(node.InfrastructureHealth / node.MaxInfrastructureHealth);
         }
 
     }

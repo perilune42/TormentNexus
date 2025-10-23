@@ -11,7 +11,7 @@ public class AIControl : MonoBehaviour
     public Faction Faction;
     private Dictionary<Unit, Assignment> unitAssignments = new();
     private int abilityBoostDays;
-
+    private int restDays = 0;
     public void SetToFaction(Faction faction)
     {
         this.Faction = faction;
@@ -47,12 +47,18 @@ public class AIControl : MonoBehaviour
     public void TempAbilityBoost()
     {
         abilityBoostDays = 4;
+        restDays = 0;
     }
 
     private void ReassessStrategy()
     {
-        if (Faction.isMajorFaction)
+        if (restDays > 0)
         {
+            restDays--;
+        }
+        else if (Faction.isMajorFaction)
+        {
+            restDays = Random.Range(3, 8);
             ChooseResearch();
             // chance per day to consider building units
             if (Random.value < 0.2)
@@ -108,6 +114,7 @@ public class AIControl : MonoBehaviour
                     LaunchAbility(targetableFactions.GetRandom(), true);
                 }
             }
+            
         }
 
         SetAssignments();
@@ -211,6 +218,22 @@ public class AIControl : MonoBehaviour
             }
             unitAssignments[unit] = newAssignment;
         }
+
+        if (Random.value < 0.2)
+        {
+            //randomly unassign defenders to reduce lockups
+            foreach (var unit in Faction.AllUnits)
+            {
+                if (unitAssignments[unit] is DefendAssignment)
+                {
+                    if (Random.value < 0.5f)
+                    {
+                        unitAssignments[unit] = null;
+                    }
+                }
+            }
+        }
+
         int defenderQuota = (int)(0.2f * Faction.AllUnits.Count) + 1;
         int currentDefenders = unitAssignments.Values.Where((a) => a is DefendAssignment).Count();
         foreach (Unit unit in Faction.AllUnits.Shuffled())
