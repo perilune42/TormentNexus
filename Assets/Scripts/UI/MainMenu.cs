@@ -26,6 +26,7 @@ public class MainMenu : MonoBehaviour
         titleText.gameObject.SetActive(true);
         playButton.gameObject.SetActive(true);
         quitButton.gameObject.SetActive(true);
+
         foreach (var button in factionButtons)
         {
             button.gameObject.SetActive(false);
@@ -38,7 +39,6 @@ public class MainMenu : MonoBehaviour
         titleText.gameObject.SetActive(false);
         playButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
-        startButton.gameObject.SetActive(true);
         foreach (var button in factionButtons)
         {
             button.gameObject.SetActive(true);
