@@ -13,7 +13,8 @@ public class AbilityVFXGasAttack : AbilityVFX
     [SerializeField] Color endColor;
     [SerializeField] float noiseIntensity = 0.1f;
     [SerializeField] float noiseSpeed = 0.25f;
-    [SerializeField] float noiseScaling = 2f;
+    [SerializeField] float noiseScalingPosition = 2f;
+    [SerializeField] float noiseScalingScale = 1f;
     [SerializeField] int amount = 3;
 
     [SerializeField] GameObject gasCloud;
@@ -24,7 +25,7 @@ public class AbilityVFXGasAttack : AbilityVFX
     {
         startPos = gasCloud.transform.position;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < amount; i++)
         {
             GameObject cloud = Instantiate(gasCloud, transform);
             cloud.transform.localScale = Vector3.one * maxRadius;
@@ -44,8 +45,8 @@ public class AbilityVFXGasAttack : AbilityVFX
         {
             float noiseX = (1 - Mathf.PerlinNoise(Time.time * noiseSpeed + rand[0], Time.time * noiseSpeed + rand[1]) * 2) * noiseIntensity;
             float noiseY = (1 - Mathf.PerlinNoise(Time.time * noiseSpeed + rand[2], Time.time * noiseSpeed + rand[3]) * 2) * noiseIntensity;
-            cloud.transform.position = startPos + new Vector3(noiseX, noiseY, 0) * noiseScaling;
-            cloud.transform.localScale = maxRadius * Vector3.one + noiseX * Vector3.one;
+            cloud.transform.position = startPos + new Vector3(noiseX, noiseY, 0) * noiseScalingPosition;
+            cloud.transform.localScale = maxRadius * Vector3.one + noiseScalingScale * noiseX * Vector3.one;
             yield return null;
         }
     }
