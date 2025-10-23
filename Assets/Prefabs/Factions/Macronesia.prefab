@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.g
-      value: 0.8187744
+      value: 0.9432382
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.r
-      value: 0.3254717
+      value: 0.32549024
       objectReference: {fileID: 0}
     - target: {fileID: 5153060797771955450, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: m_LocalPosition.x
