@@ -421,11 +421,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a000d9169d83b954881124ac7511a067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hovered: 0
   icon: {fileID: 8297553302185771554}
   overlay: {fileID: 3629498344062554242}
   selector: {fileID: 3967578071464595983}
   healthBar: {fileID: 5668844877207727559}
   moveIndicator: {fileID: 4998039300114606058}
+  node: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
 --- !u!61 &5219270819904334853
 BoxCollider2D:
   m_ObjectHideFlags: 0
