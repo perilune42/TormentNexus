@@ -77,6 +77,7 @@ private void Awake()
         float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
         moveIndicator.transform.parent.eulerAngles = new Vector3(0, 0, angle);
         moveIndicator.enabled = true;
+        moveIndicator.color = Color.Lerp(unit.Owner.FactionColor, Color.white,0.2f);
         moveIndicator.rectTransform.sizeDelta = new Vector2(Mathf.Lerp(0.25f, moveDistance, (maxTicks - ticks) / (float)maxTicks), moveIndicator.rectTransform.sizeDelta.y);
     }
 
