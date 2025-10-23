@@ -198,7 +198,7 @@ MonoBehaviour:
   Damage: 0.1
   GarrisonDamage: 0.1
   InfrastructureDamage: 0.1
-  BuildTime: 100
+  BuildTime: 200
   Health: 100
   MaxHealth: 100
   Cost: 5

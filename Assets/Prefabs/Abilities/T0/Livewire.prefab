@@ -47,13 +47,13 @@ MonoBehaviour:
   Name: Livewire
   icon: {fileID: 21300000, guid: 4d2447cf8d364f54487c9da8a1ca4f63, type: 3}
   CurrentCharges: 0
-  MaxCharges: 1
+  MaxCharges: 2
   CurrentCooldown: 0
-  BuildTime: 100
+  BuildTime: 200
   Cost: 50
-  Damage: 80
-  GarrisonDamage: 90
-  InfrastructureDamage: 50
+  Damage: 30
+  GarrisonDamage: 20
+  InfrastructureDamage: 60
   HateGeneration: 25
   IsBuilding: 0
   effect: {fileID: 8446680328057840639, guid: e737351c7f37ffa46b4cb4bc74010a0f, type: 3}

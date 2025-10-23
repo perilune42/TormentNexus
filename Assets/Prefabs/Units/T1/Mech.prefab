@@ -13,16 +13,32 @@ PrefabInstance:
       value: Mech
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
+      propertyPath: Speed
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: Damage
-      value: 0.2
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
+      propertyPath: Health
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
+      propertyPath: MaxHealth
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
+      propertyPath: healSpeed
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: GarrisonDamage
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: InfrastructureDamage
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7839766297816779764, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979116406778516904, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: m_Name
-      value: Robot
+      value: Mech
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

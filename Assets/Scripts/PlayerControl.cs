@@ -61,6 +61,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (SelectedUnit != null) 
         {
+            if (SelectedUnit.Owner != FactionManager.instance.playerFaction) return;
+
             if (node == SelectedUnit.CurrentNode || UnitController.Instance.IsValidMove(SelectedUnit, node, ignoreOccupied:true))
             {
                 UnitController.Instance.MoveUnit(SelectedUnit, node);

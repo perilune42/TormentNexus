@@ -49,11 +49,11 @@ MonoBehaviour:
   CurrentCharges: 0
   MaxCharges: 1
   CurrentCooldown: 0
-  BuildTime: 100
-  Cost: 50
-  Damage: 80
-  GarrisonDamage: 90
-  InfrastructureDamage: 50
-  HateGeneration: 25
+  BuildTime: 500
+  Cost: 75
+  Damage: 75
+  GarrisonDamage: 70
+  InfrastructureDamage: 90
+  HateGeneration: 30
   IsBuilding: 0
   effect: {fileID: 7773348934293326110, guid: 1b0f306749ff5274482cbfe250748461, type: 3}

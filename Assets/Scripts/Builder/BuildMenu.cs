@@ -47,7 +47,8 @@ public class BuildMenu : MonoBehaviour
         }
 
         if (PlayerControl.Instance.SelectedNode == null ||
-            PlayerControl.Instance.SelectedNode.Builder.Enabled == false)
+            PlayerControl.Instance.SelectedNode.Builder.Enabled == false ||
+            PlayerControl.Instance.SelectedNode.Owner != FactionManager.instance.playerFaction)
         {
             return;
         }

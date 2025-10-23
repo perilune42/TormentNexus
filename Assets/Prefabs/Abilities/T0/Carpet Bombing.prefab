@@ -47,13 +47,13 @@ MonoBehaviour:
   Name: Carpet Bombing
   icon: {fileID: 21300000, guid: 8a3a939cf28778a48a65209dfea2cc18, type: 3}
   CurrentCharges: 0
-  MaxCharges: 1
+  MaxCharges: 2
   CurrentCooldown: 0
-  BuildTime: 100
+  BuildTime: 300
   Cost: 50
-  Damage: 80
-  GarrisonDamage: 90
+  Damage: 40
+  GarrisonDamage: 80
   InfrastructureDamage: 50
-  HateGeneration: 25
+  HateGeneration: 15
   IsBuilding: 0
   effect: {fileID: -2016474504335691812, guid: 2ed0f66dee042bf4993e42a1ec5e9f41, type: 3}
