@@ -54,7 +54,17 @@ public class PlayerControl : MonoBehaviour
 
     public void HoverNode(MapNode node)
     {
+        if (node == null)
+        {
+            if (HoveredNode != null)
+            {
+                HoveredNode.overlay.gameObject.SetActive(false);
+                HoveredNode = null;
+            }
+            return;
+        }
         HoveredNode = node;
+        node.overlay.gameObject.SetActive(true);
     }
 
     public void RClickNode(MapNode node)
