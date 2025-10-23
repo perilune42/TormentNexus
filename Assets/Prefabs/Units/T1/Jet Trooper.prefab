@@ -13,6 +13,10 @@ PrefabInstance:
       value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 3679742538100190471, guid: 08c439aba73fcd44e976a1790197b43b, type: 3}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Name
       value: Jet Trooper
       objectReference: {fileID: 0}

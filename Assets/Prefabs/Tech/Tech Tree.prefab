@@ -351,7 +351,7 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4047491817323079948, guid: a03c438fbdd00d04c8bb82e67e452416, type: 3}
+      objectReference: {fileID: 8446026816936511432, guid: 788a3950463b0604fbfc3e7f4033c349, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -522,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_text
-      value: Mech
+      value: Combat Automadroid
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
@@ -1079,6 +1079,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3441268667553277769}
     m_Modifications:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3334700611060416230, guid: 3b8ccf6acf6503c4c8bd19882af475af, type: 3}
+    - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -1230,7 +1234,7 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3059999014066875662, guid: 5c67c08ca6c23b849958e5b35fe4269f, type: 3}
+      objectReference: {fileID: 7742033372175937678, guid: 9b9246c03facfcd41a8b4f9eea768d66, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1329,7 +1333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_text
-      value: Howitzer
+      value: Railway Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
@@ -1395,7 +1399,7 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -831281450299974449, guid: daf8d55249715af4f8b8838c195d083a, type: 3}
+      objectReference: {fileID: 3679742538100190471, guid: 08c439aba73fcd44e976a1790197b43b, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
