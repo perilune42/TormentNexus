@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -85,11 +86,18 @@ private void Awake()
     {
         overlay.gameObject.SetActive(true);
         hovered = true;
+        MapNode node = GetComponentInParent<MapNode>();
+        node.overlay.gameObject.SetActive(false);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         overlay.gameObject.SetActive(false);
         hovered = false;
+        MapNode node = GetComponentInParent<MapNode>();
+        if (PlayerControl.Instance.HoveredNode != null)
+        {
+            node.overlay.gameObject.SetActive(true);
+        }
     }
 }
