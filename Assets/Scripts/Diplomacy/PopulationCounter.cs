@@ -26,7 +26,7 @@ public class PopulationCounter : MonoBehaviour
 
     private void ShowPop()
     {
-        counterText.text = CurrentPopulation.ToString();
+        counterText.text = CurrentPopulation.ToString("N0");
     }
 
     public void DealDamage(float infDamage)
