@@ -63,6 +63,10 @@ private void Awake()
         {
             PlayerControl.Instance.SelectUnit(unit);
         }
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            PlayerControl.Instance.RClickNode(unit.CurrentNode);
+        }
     }
 
     public void DisplayMove(MapNode target, int ticks, int maxTicks)
