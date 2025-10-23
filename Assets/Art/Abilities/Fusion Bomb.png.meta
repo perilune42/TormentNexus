@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 8a5a1f4f26fb809499b5487681b4d094
+guid: e67fafc43381b3e48a8d4166976ea6dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1242187556347939975
-    second: Nuke_0
+      213: -3354836819441684224
+    second: Fusion Bomb_0
+  - first:
+      213: -6499874730307215302
+    second: Fusion Bomb_1
+  - first:
+      213: -1840942023539526931
+    second: Fusion Bomb_2
+  - first:
+      213: -8995382856631025234
+    second: Fusion Bomb_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nuke_0
+      name: Fusion Bomb_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 127
-        width: 834
-        height: 834
+        x: 95
+        y: 527
+        width: 386
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9737877bffcd2cee0800000000000000
-      internalID: -1242187556347939975
+      spriteID: 001f6c9ffa93171d0800000000000000
+      internalID: -3354836819441684224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fusion Bomb_1
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 431
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30208fde5ecbc5a0800000000000000
+      internalID: -6499874730307215302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fusion Bomb_2
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 527
+        width: 386
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de276dabbf8a376e0800000000000000
+      internalID: -1840942023539526931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fusion Bomb_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 79
+        width: 418
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea18ed393faf92380800000000000000
+      internalID: -8995382856631025234
       vertices: []
       indices: 
       edges: []
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Nuke_0: -1242187556347939975
+      Fusion Bomb_0: -3354836819441684224
+      Fusion Bomb_1: -6499874730307215302
+      Fusion Bomb_2: -1840942023539526931
+      Fusion Bomb_3: -8995382856631025234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
