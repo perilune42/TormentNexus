@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 10fd93353d74bf84b8f0298bfa59480a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7492660913810194243
+    second: Nanite Swarm_0
+  - first:
+      213: 5274669232519393911
+    second: Nanite Swarm_1
+  - first:
+      213: 1564896600744365687
+    second: Nanite Swarm_2
+  - first:
+      213: -3031153971333629328
+    second: Nanite Swarm_3
+  - first:
+      213: -1261335729313946857
+    second: Nanite Swarm_4
+  - first:
+      213: -1004404751586946272
+    second: Nanite Swarm_5
+  - first:
+      213: -524867427687718836
+    second: Nanite Swarm_6
+  - first:
+      213: -5508617292552723459
+    second: Nanite Swarm_7
+  - first:
+      213: 6941623297941776394
+    second: Nanite Swarm_8
+  - first:
+      213: -466366929891492642
+    second: Nanite Swarm_9
+  - first:
+      213: -8031465317428300745
+    second: Nanite Swarm_10
+  - first:
+      213: 5462785393274000424
+    second: Nanite Swarm_11
+  - first:
+      213: -6860061197483355652
+    second: Nanite Swarm_12
+  - first:
+      213: -5745819775805117160
+    second: Nanite Swarm_13
+  - first:
+      213: 1473914124626558868
+    second: Nanite Swarm_14
+  - first:
+      213: -1143064278805758786
+    second: Nanite Swarm_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nanite Swarm_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 671
+        width: 193
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0c3e1c898b40890800000000000000
+      internalID: -7492660913810194243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 783
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772300878b3633940800000000000000
+      internalID: 5274669232519393911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_2
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 591
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e859dca21a7b510800000000000000
+      internalID: 1564896600744365687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_3
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 783
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07af427d58d2fe5d0800000000000000
+      internalID: -3031153971333629328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_4
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 575
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713ebb746d5de7ee0800000000000000
+      internalID: -1261335729313946857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_5
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 751
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02312f23333af02f0800000000000000
+      internalID: -1004404751586946272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 463
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40208afadb47b8f0800000000000000
+      internalID: -524867427687718836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_7
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 415
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df322d122c57d83b0800000000000000
+      internalID: -5508617292552723459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_8
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 335
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0825667c99955060800000000000000
+      internalID: 6941623297941776394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_9
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 527
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcf3d88fb12789f0800000000000000
+      internalID: -466366929891492642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_10
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 207
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734f0d8a8d08a8090800000000000000
+      internalID: -8031465317428300745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_11
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 223
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8241a424f56bfcb40800000000000000
+      internalID: 5462785393274000424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_12
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 127
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf15092efaa2cc0a0800000000000000
+      internalID: -6860061197483355652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_13
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 79
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81da8b74b5fb240b0800000000000000
+      internalID: -5745819775805117160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_14
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 239
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ffbc35615647410800000000000000
+      internalID: 1473914124626558868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanite Swarm_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 15
+        width: 194
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc385a38150320f0800000000000000
+      internalID: -1143064278805758786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Nanite Swarm_0: -7492660913810194243
+      Nanite Swarm_1: 5274669232519393911
+      Nanite Swarm_10: -8031465317428300745
+      Nanite Swarm_11: 5462785393274000424
+      Nanite Swarm_12: -6860061197483355652
+      Nanite Swarm_13: -5745819775805117160
+      Nanite Swarm_14: 1473914124626558868
+      Nanite Swarm_15: -1143064278805758786
+      Nanite Swarm_2: 1564896600744365687
+      Nanite Swarm_3: -3031153971333629328
+      Nanite Swarm_4: -1261335729313946857
+      Nanite Swarm_5: -1004404751586946272
+      Nanite Swarm_6: -524867427687718836
+      Nanite Swarm_7: -5508617292552723459
+      Nanite Swarm_8: 6941623297941776394
+      Nanite Swarm_9: -466366929891492642
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

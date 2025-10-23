@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Insanity Emitter
-  icon: {fileID: 21300000, guid: dcf9dc4b5e72f4b49b642997dcd0b8c4, type: 3}
+  icon: {fileID: 21300000, guid: 552268b23b5826342ae8ec74fdc26e5f, type: 3}
   Type: 3
   CurrentCharges: 0
   MaxCharges: 2

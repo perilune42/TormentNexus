@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Reality Disruptor
-  icon: {fileID: 21300000, guid: 19902e93c9dd7304893eb1a82124c5bf, type: 3}
+  icon: {fileID: 21300000, guid: 7db189ca606b65a47adace76f3451d9e, type: 3}
   Type: 2
   CurrentCharges: 0
   MaxCharges: 1
