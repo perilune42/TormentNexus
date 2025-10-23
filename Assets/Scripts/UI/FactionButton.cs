@@ -23,7 +23,7 @@ public class FactionButton : MonoBehaviour
 
     public void onClick()
     {
-        menu.audioSource.PlayOneShot(menu.UI2);
+        menu.audioSource.PlayOneShot(menu.UIButtonSFX);
         menu.startButton.gameObject.SetActive(true);
         foreach (var faction in menu.factionButtons)
         {

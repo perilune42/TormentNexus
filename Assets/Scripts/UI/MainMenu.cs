@@ -10,14 +10,14 @@ public class MainMenu : MonoBehaviour
 {
     public TMP_Text titleText;
     public Button playButton;
-    public AudioClip UIAccept;
-    public AudioClip UI2;
-    public AudioSource audioSource;
     public Button quitButton;
     public Button startButton;
     public List<FactionButton> factionButtons;
     public MainMenu instance;
     public Faction chosen;
+    public AudioSource audioSource;
+    public AudioClip UIButtonSFX;
+    public AudioClip UIAcceptSFX;
 
 
     private void Start()
@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OnPlayClick()
     {
-        audioSource.PlayOneShot(UIAccept);
+        audioSource.PlayOneShot(UIButtonSFX);
         titleText.gameObject.SetActive(false);
         playButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
@@ -47,13 +47,13 @@ public class MainMenu : MonoBehaviour
 
     public void OnQuitClick()
     {
-        audioSource.PlayOneShot(UIAccept);
+        audioSource.PlayOneShot(UIButtonSFX);
         Application.Quit();
     }
 
     public void OnStartClick()
     {
-        audioSource.PlayOneShot(UIAccept);
+        audioSource.PlayOneShot(UIAcceptSFX);
         FactionManager.startingFaction = chosen;
         SceneManager.LoadScene("World", LoadSceneMode.Single);
     }
