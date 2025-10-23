@@ -43,6 +43,8 @@ public class CameraController : MonoBehaviour
     
     private void Update()
     {
+        if (GameUI.instance.techTreeCanvas.enabled) return;
+
         leftCam.orthographicSize = Camera.main.orthographicSize;
         rightCam.orthographicSize = Camera.main.orthographicSize;
 

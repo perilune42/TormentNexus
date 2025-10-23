@@ -1711,10 +1711,10 @@ RectTransform:
   - {fileID: 1812791461}
   m_Father: {fileID: 174431216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &340232699
 Canvas:
@@ -1892,6 +1892,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372544729}
   m_CullTransparentMesh: 1
+--- !u!224 &381123581 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2565161022066190004, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+  m_PrefabInstance: {fileID: 2040621444608776790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &381728040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,6 +2560,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 340232698}
     m_Modifications:
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100163214085589250, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100163214085589250, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4050517043296975677, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: Faction
       value: 
@@ -2563,9 +2592,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bioengineering
       objectReference: {fileID: 0}
+    - target: {fileID: 5016102295730999527, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016102295730999527, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6370317357180250591, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Nuclear Rearmament
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Pivot.x
@@ -2593,11 +2642,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1820.0001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 980
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2650,6 +2699,14 @@ PrefabInstance:
     - target: {fileID: 8203764495529688915, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Tech Tree (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091047934118089644, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091047934118089644, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9222,6 +9279,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 340232698}
     m_Modifications:
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100163214085589250, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100163214085589250, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4050517043296975677, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: Faction
       value: 
@@ -9230,9 +9311,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bioengineering
       objectReference: {fileID: 0}
+    - target: {fileID: 5016102295730999527, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016102295730999527, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6370317357180250591, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Nuclear Rearmament
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Pivot.x
@@ -9260,11 +9361,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1820.0001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 980
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9317,6 +9418,14 @@ PrefabInstance:
     - target: {fileID: 8203764495529688915, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Tech Tree (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091047934118089644, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091047934118089644, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9712,6 +9821,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 340232698}
     m_Modifications:
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100163214085589250, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100163214085589250, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4050517043296975677, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: Faction
       value: 
@@ -9720,9 +9853,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bioengineering
       objectReference: {fileID: 0}
+    - target: {fileID: 5016102295730999527, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016102295730999527, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6370317357180250591, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Nuclear Rearmament
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Pivot.x
@@ -9750,11 +9903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1820.0001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 980
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9807,6 +9960,14 @@ PrefabInstance:
     - target: {fileID: 8203764495529688915, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Tech Tree (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091047934118089644, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091047934118089644, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16248,17 +16409,65 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 340232698}
     m_Modifications:
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533229314157374425, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100163214085589250, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100163214085589250, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4050517043296975677, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: Faction
       value: 
       objectReference: {fileID: 1255958408}
+    - target: {fileID: 4050517043296975677, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: content
+      value: 
+      objectReference: {fileID: 381123581}
     - target: {fileID: 4350084004524739973, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Bioengineering
       objectReference: {fileID: 0}
+    - target: {fileID: 5016102295730999527, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016102295730999527, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6370317357180250591, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Nuclear Rearmament
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133645250314370492, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Pivot.x
@@ -16286,11 +16495,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1820.0001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 980
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120306276605151779, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16343,6 +16552,14 @@ PrefabInstance:
     - target: {fileID: 8203764495529688915, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
       propertyPath: m_Name
       value: Tech Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091047934118089644, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091047934118089644, guid: 45196201272382c40bf2d0da68c6afd7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
