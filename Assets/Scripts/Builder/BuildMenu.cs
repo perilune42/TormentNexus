@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -52,6 +53,8 @@ public class BuildMenu : MonoBehaviour
         {
             return;
         }
+
+
         foreach (Unit unit in FactionManager.instance.playerFaction.BuildableUnits)
         {
             CreateButtonForUnit(unit);

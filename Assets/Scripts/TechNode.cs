@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Analytics;
@@ -72,7 +73,11 @@ public class TechNode : MonoBehaviour
         {
             faction.RemoveAbility(replacingAbility);
         }
-        if (faction.isPlayer) BuildMenu.Instance.UpdateBuildables();
+        if (faction.isPlayer)
+        {
+            faction.BuildableUnits = faction.BuildableUnits.OrderBy(u => u.Type).ToList();
+            BuildMenu.Instance.UpdateBuildables();
+        }
     }
 
     public void Select()

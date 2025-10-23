@@ -14,6 +14,8 @@ public class GameUI : MonoBehaviour
     float techFlashTime;
     [SerializeField] Color techFlashColor;
 
+    [SerializeField] TMP_Text popCountText;
+
     private void Awake()
     {
         instance = this;
@@ -30,6 +32,7 @@ public class GameUI : MonoBehaviour
             }
         };
         // techTreeCanvas.enabled = false;
+
     }
 
     private void Update()
@@ -41,6 +44,7 @@ public class GameUI : MonoBehaviour
     {
         techTreeCanvas.enabled = false;
     }
+
 
     public void HideTechTree()
     {
@@ -77,4 +81,5 @@ public class GameUI : MonoBehaviour
             techTreeButtonOverlay.fillAmount = 1 - progress;
         }
     }
+
 }

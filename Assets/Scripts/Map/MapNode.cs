@@ -233,6 +233,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     public void TakeInfrastructureDamage(float damage)
     {
+        PopulationCounter.Instance.DealDamage(damage);
         InfrastructureHealth -= damage;
         healTimer = healCooldown;
         if (InfrastructureHealth < 0) InfrastructureHealth = 0;
