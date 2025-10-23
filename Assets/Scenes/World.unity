@@ -479,10 +479,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: 52edc7bc9873d414e9169c9d5659de8e, type: 3}
-      propertyPath: FactionName
-      value: Kazakh SSR
-      objectReference: {fileID: 0}
     - target: {fileID: 5885198832859442436, guid: 52edc7bc9873d414e9169c9d5659de8e, type: 3}
       propertyPath: m_Name
       value: USSR
@@ -1001,10 +997,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: d831abd11cdeaf7438462e1de593d0bc, type: 3}
-      propertyPath: FactionName
-      value: United Kingdoms of Iberia, Brazil, and the Algarves
-      objectReference: {fileID: 0}
     - target: {fileID: 5885198832859442436, guid: d831abd11cdeaf7438462e1de593d0bc, type: 3}
       propertyPath: m_Name
       value: United Kingdoms
@@ -6078,10 +6070,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1174395486675350062, guid: ea122521230c8524cadd989cf6e6e3a4, type: 3}
-      propertyPath: FactionName
-      value: New Mongol Khanate
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: ea122521230c8524cadd989cf6e6e3a4, type: 3}
       propertyPath: isMajorFaction
       value: 1
       objectReference: {fileID: 0}
@@ -6161,10 +6149,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: ce34184ead69fae4485bbd19a7682dee, type: 3}
-      propertyPath: FactionName
-      value: Union of Macronesia
-      objectReference: {fileID: 0}
     - target: {fileID: 1174395486675350062, guid: ce34184ead69fae4485bbd19a7682dee, type: 3}
       propertyPath: FactionColor.b
       value: 1
@@ -7972,10 +7956,6 @@ PrefabInstance:
       propertyPath: Flag
       value: 
       objectReference: {fileID: 3919726936396377183, guid: 7d18c75c17b4c3a49a8a2a327156c0a4, type: 3}
-    - target: {fileID: 1174395486675350062, guid: 66104fac51611cc41b0405613822e676, type: 3}
-      propertyPath: FactionName
-      value: Ming-Aztec Dynasty
-      objectReference: {fileID: 0}
     - target: {fileID: 1174395486675350062, guid: 66104fac51611cc41b0405613822e676, type: 3}
       propertyPath: FactionColor.b
       value: 0.49160194

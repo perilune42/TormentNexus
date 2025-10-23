@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: -3092479205755908199, guid: 6a1733cb9e391724788374aaa4c43a5a, type: 3}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionName
-      value: USSR
+      value: Kazakh SSR
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.b

@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: -7715400776964640214, guid: 53319e2c3cbb47247a2982b73e14eb65, type: 3}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionName
-      value: Macronesia
+      value: Union of Macronesia
       objectReference: {fileID: 0}
     - target: {fileID: 3369451331672903658, guid: 11d45f481563fa0439081572df0e7409, type: 3}
       propertyPath: FactionColor.b
