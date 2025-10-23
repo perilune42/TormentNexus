@@ -91,7 +91,7 @@ public class GameUI : MonoBehaviour
             transform.GetChild(i).gameObject.SetActive(false);
         }
         EndScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = FactionManager.instance.playerFaction.FactionName;
-        EndScreen.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = $"Day {GameTick.instance.GetDays()}";
+        EndScreen.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = $"Day {(int)GameTick.instance.GetDays()}";
         EndScreen.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = $"Lives Lost {PopulationCounter.Instance.DeathCount:N0}";
         EndScreen.SetActive(true);
     }

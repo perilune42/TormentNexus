@@ -58,7 +58,7 @@ public class AIControl : MonoBehaviour
         }
         else if (Faction.isMajorFaction)
         {
-            restDays = Random.Range(3, 8);
+            restDays = Random.Range(1, 6);
             ChooseResearch();
             // chance per day to consider building units
             if (Random.value < 0.2)
@@ -102,10 +102,10 @@ public class AIControl : MonoBehaviour
 
 
                 // chance to consider launching an ability at a random enemy
-                float launchChance = 0.005f;
+                float launchChance = 0.03f;
                 if (WorldTension.Instance.CurrentTension > 0.1f)
                 {
-                    launchChance += Mathf.InverseLerp(0.1f, WorldTension.MaxTension, WorldTension.Instance.CurrentTension) * 0.2f;
+                    launchChance += Mathf.InverseLerp(0.1f, WorldTension.MaxTension, WorldTension.Instance.CurrentTension) * 0.3f;
                 }
                 if (Random.value < launchChance)
                 {
@@ -219,7 +219,7 @@ public class AIControl : MonoBehaviour
             unitAssignments[unit] = newAssignment;
         }
 
-        if (Random.value < 0.2)
+        if (Random.value < 0.3)
         {
             //randomly unassign defenders to reduce lockups
             foreach (var unit in Faction.AllUnits)
@@ -234,7 +234,7 @@ public class AIControl : MonoBehaviour
             }
         }
 
-        int defenderQuota = (int)(0.2f * Faction.AllUnits.Count) + 1;
+        int defenderQuota = (int)(0.2f * Faction.AllUnits.Count) + Random.Range(-1, 2);
         int currentDefenders = unitAssignments.Values.Where((a) => a is DefendAssignment).Count();
         foreach (Unit unit in Faction.AllUnits.Shuffled())
         {

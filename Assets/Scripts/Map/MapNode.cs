@@ -70,30 +70,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         Owner.AllNodes.Add(this);
         Builder.SetNode(this);
 
-        GameTick.onTick += () =>
-        {
-            if (GarrisonHealth >= MaxGarrisonHealth)
-            {
-                garrisonHPBar.SetVisible(false);
-            }
-            else
-            {
-                garrisonHPBar.SetVisible(true);
-                garrisonHPBar.SetLevel(GarrisonHealth / MaxGarrisonHealth);
-            }
-            if (InfrastructureHealth >= MaxInfrastructureHealth)
-            {
-                infrastructureHPBar.SetVisible(false);
-            }
-            else
-            {
-                infrastructureHPBar.SetVisible(true);
-                infrastructureHPBar.SetLevel(InfrastructureHealth / MaxInfrastructureHealth);
-            }
-            DamageAttackers();
-            Heal();
-
-        };
+        GameTick.onTick += Tick;
 
         if (Type == NodeType.Capital)
         {
@@ -121,6 +98,35 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
 
 
+    }
+
+    private void OnDestroy()
+    {
+        GameTick.onTick -= Tick;
+    }
+    private void Tick()
+    {
+
+        if (GarrisonHealth >= MaxGarrisonHealth)
+        {
+            garrisonHPBar.SetVisible(false);
+        }
+        else
+        {
+            garrisonHPBar.SetVisible(true);
+            garrisonHPBar.SetLevel(GarrisonHealth / MaxGarrisonHealth);
+        }
+        if (InfrastructureHealth >= MaxInfrastructureHealth)
+        {
+            infrastructureHPBar.SetVisible(false);
+        }
+        else
+        {
+            infrastructureHPBar.SetVisible(true);
+            infrastructureHPBar.SetLevel(InfrastructureHealth / MaxInfrastructureHealth);
+        }
+        DamageAttackers();
+        Heal();
     }
 
     // TODO - Double draws, fix

@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum GameSpeed
@@ -31,6 +32,8 @@ public class GameTick : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        onTick = null;
+        onDay = null;
     }
 
     private void Update()
