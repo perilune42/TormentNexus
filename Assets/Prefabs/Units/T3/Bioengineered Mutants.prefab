@@ -10,39 +10,47 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Cost
-      value: 110
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Icon
       value: 
-      objectReference: {fileID: 7742033372175937678, guid: 9b9246c03facfcd41a8b4f9eea768d66, type: 3}
+      objectReference: {fileID: 6007521621183207249, guid: 19109a4abfd2b7248820e04f0614815a, type: 3}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Name
-      value: Railway Cannon
+      value: Bioengineered Mutants
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Type
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Speed
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: Damage
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Health
-      value: 110
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: MaxHealth
-      value: 110
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: healSpeed
-      value: 0.04
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: GarrisonDamage
-      value: 0.3
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: InfrastructureDamage
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3203062699953366862, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_LocalPosition.x
@@ -86,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3315886825695000850, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_Name
-      value: Railway Cannon
+      value: Bioengineered Mutants
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

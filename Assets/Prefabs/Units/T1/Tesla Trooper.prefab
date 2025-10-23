@@ -15,10 +15,14 @@ PrefabInstance:
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Icon
       value: 
-      objectReference: {fileID: 1982735283596274820, guid: b5427ce9afaddc3439a3ee10ffe78cec, type: 3}
+      objectReference: {fileID: 2073728110839816199, guid: 39ae1f0859c5e5f4894987e190b8758d, type: 3}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Name
-      value: Flame Trooper
+      value: Tesla Trooper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: Type
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Speed
