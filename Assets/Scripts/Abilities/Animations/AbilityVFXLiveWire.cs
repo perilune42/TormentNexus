@@ -14,8 +14,9 @@ public class AbilityVFXLiveWire : AbilityVFX
 
     [SerializeField] GameObject wireSegment;
 
-    public override void Play()
+    public override void Play(Faction attacker)
     {
+        base.Play(attacker);
         StartCoroutine(SpawnWires());
         StartCoroutine(Destroy());
     }

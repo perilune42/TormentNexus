@@ -1329,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_text
-      value: Artillery
+      value: Howitzer
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled

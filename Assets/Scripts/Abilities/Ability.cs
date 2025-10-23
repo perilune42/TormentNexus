@@ -53,7 +53,7 @@ public abstract class Ability : MonoBehaviour
     public virtual void Launch(MapNode target)
     {
         CurrentCharges--;
-        Instantiate(effect, target.transform).Play();
+        Instantiate(effect, target.transform).Play(owner);
         if (target.Owner.HateMeter != null && owner.isPlayer)
         {
             target.Owner.HateMeter.AddHate(HateGeneration, true);

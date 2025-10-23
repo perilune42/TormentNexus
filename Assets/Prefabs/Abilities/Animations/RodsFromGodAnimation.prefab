@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1c09176edce5d4cba636ddf013947b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frames: []
+  AttackerCanvasPrefab: {fileID: 2885921046883162875, guid: 0a485e52d35228e4a91c0061111253a6, type: 3}
   duration: 10
   rod: {fileID: 6164686595367316835}
   startScale: 0.3
-  endScale: 0.01
+  endScale: 0
   dropTime: 1
   shockwave: {fileID: 8728020363838897774}
   shockwaveScale: 2
