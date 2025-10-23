@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Fission Missile
   icon: {fileID: 21300000, guid: 6b047479ebd19c148b725a500c450982, type: 3}
+  Type: 2
   CurrentCharges: 0
   MaxCharges: 1
   CurrentCooldown: 0

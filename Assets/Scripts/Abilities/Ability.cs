@@ -1,11 +1,17 @@
 using UnityEngine;
 
+public enum AbilityType
+{
+    Land, Air, Missile, Bioweapon
+}
+
 public abstract class Ability : MonoBehaviour
 {
     protected Faction owner;
 
     public string Name;
     public Sprite icon;
+    public AbilityType Type;
 
     public int CurrentCharges;
     public int MaxCharges = 1;

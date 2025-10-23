@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Carpet Bombing
   icon: {fileID: 21300000, guid: 8a3a939cf28778a48a65209dfea2cc18, type: 3}
+  Type: 1
   CurrentCharges: 0
   MaxCharges: 2
   CurrentCooldown: 0

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Fusion Bomb
   icon: {fileID: 21300000, guid: e67fafc43381b3e48a8d4166976ea6dc, type: 3}
+  Type: 2
   CurrentCharges: 0
   MaxCharges: 1
   CurrentCooldown: 0

@@ -77,6 +77,7 @@ public class TechNode : MonoBehaviour
         {
             faction.BuildableUnits = faction.BuildableUnits.OrderBy(u => u.Type).ToList();
             BuildMenu.Instance.UpdateBuildables();
+
         }
     }
 
