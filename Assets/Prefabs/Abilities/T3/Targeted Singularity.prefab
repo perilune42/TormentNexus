@@ -56,4 +56,4 @@ MonoBehaviour:
   InfrastructureDamage: 90
   HateGeneration: 15
   IsBuilding: 0
-  effect: {fileID: -2016474504335691812, guid: 2ed0f66dee042bf4993e42a1ec5e9f41, type: 3}
+  effect: {fileID: -6463563868373685533, guid: 0fa1ee191c43d2e4db26c71765e59c0e, type: 3}

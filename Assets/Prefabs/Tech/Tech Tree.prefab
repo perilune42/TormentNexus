@@ -713,6 +713,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3441268667553277769}
     m_Modifications:
+    - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dcf9dc4b5e72f4b49b642997dcd0b8c4, type: 3}
+    - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2134307983742120912, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -805,14 +813,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deconceptualization
       objectReference: {fileID: 0}
+    - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_text
+      value: Insanity Emitter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: cost
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: ability
+      value: 
+      objectReference: {fileID: 7841448690613592598, guid: 03402209faa36a1408e52aba0b99360e, type: 3}
+    - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Deconceptualization
       objectReference: {fileID: 0}
+    - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: replacingAbility
+      value: 
+      objectReference: {fileID: 7841448690613592598, guid: 9bc578201d8c2ae43b7c46172935d0c2, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: prereqs.Array.size
       value: 1
@@ -857,7 +881,7 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8a3a939cf28778a48a65209dfea2cc18, type: 3}
+      objectReference: {fileID: 21300000, guid: 562b6527c25874b4eb788245b748e00d, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1019,6 +1043,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3441268667553277769}
     m_Modifications:
+    - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 19902e93c9dd7304893eb1a82124c5bf, type: 3}
+    - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2134307983742120912, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1111,14 +1143,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unreality
       objectReference: {fileID: 0}
+    - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_text
+      value: Reality Disruptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: cost
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: ability
+      value: 
+      objectReference: {fileID: 7841448690613592598, guid: 9ad6350c9bbf7b64c94a229779e32659, type: 3}
+    - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Unreality
       objectReference: {fileID: 0}
+    - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: replacingAbility
+      value: 
+      objectReference: {fileID: 7841448690613592598, guid: 2a3321a5e38182446a943ede25711b75, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: prereqs.Array.size
       value: 4
@@ -1160,7 +1208,7 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6b047479ebd19c148b725a500c450982, type: 3}
+      objectReference: {fileID: 21300000, guid: e67fafc43381b3e48a8d4166976ea6dc, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1494,10 +1542,10 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0b58824bb148624e9be12a086bf2ba3, type: 3}
+      objectReference: {fileID: 21300000, guid: dcf9dc4b5e72f4b49b642997dcd0b8c4, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2134307983742120912, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Pivot.x
@@ -1593,11 +1641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_text
-      value: Drone Swarm
+      value: Engineered Plague
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: cost
@@ -1606,7 +1654,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: ability
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7841448690613592598, guid: 9bc578201d8c2ae43b7c46172935d0c2, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Genome Assembly
@@ -1614,7 +1662,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: replacingAbility
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7841448690613592598, guid: efc39d628e5b09348bd8db3c2309cd12, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: prereqs.Array.size
       value: 1
@@ -1985,7 +2033,7 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2095041972475615153, guid: 8992f4c658932d34f81b6f558f4805ff, type: 3}
+      objectReference: {fileID: 21300000, guid: 399e0f2b08bcf8142aeaa3af2621da2a, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2084,7 +2132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_text
-      value: Metal Horror
+      value: Nanite Swarm
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
@@ -2099,6 +2147,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4386134815605724348, guid: 2d3db0ef117273d4bb5ff1358b3014a2, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: ability
+      value: 
+      objectReference: {fileID: 7841448690613592598, guid: 600f307ae2cd0374d9e6d6479d393ae1, type: 3}
+    - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Micromachinery
       objectReference: {fileID: 0}
@@ -2106,6 +2158,10 @@ PrefabInstance:
       propertyPath: replacingUnit
       value: 
       objectReference: {fileID: 4386134815605724348, guid: 4ee1a2355bc8e834a849cc72841e61ea, type: 3}
+    - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: replacingAbility
+      value: 
+      objectReference: {fileID: 7841448690613592598, guid: 7d42ef5afef9b164e94483687f88f6b3, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: prereqs.Array.size
       value: 1
@@ -2803,10 +2859,10 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0b58824bb148624e9be12a086bf2ba3, type: 3}
+      objectReference: {fileID: 21300000, guid: 19902e93c9dd7304893eb1a82124c5bf, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2134307983742120912, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Pivot.x
@@ -2902,11 +2958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_text
-      value: Drone Swarm
+      value: Antimatter Bomb
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: cost
@@ -2915,7 +2971,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: ability
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7841448690613592598, guid: 2a3321a5e38182446a943ede25711b75, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Antimatter Synthesis
@@ -2923,7 +2979,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: replacingAbility
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7841448690613592598, guid: 10f2228c02819fc45a5dbf855bba3fbe, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: prereqs.Array.size
       value: 2
@@ -2968,10 +3024,10 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0b58824bb148624e9be12a086bf2ba3, type: 3}
+      objectReference: {fileID: 21300000, guid: 399e0f2b08bcf8142aeaa3af2621da2a, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2134307983742120912, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Pivot.x
@@ -3067,11 +3123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_text
-      value: Drone Swarm
+      value: Gamma Ray Burst
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: cost
@@ -3080,7 +3136,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: ability
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7841448690613592598, guid: 7d42ef5afef9b164e94483687f88f6b3, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Radiation Amplifiers
@@ -3088,7 +3144,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: replacingAbility
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7841448690613592598, guid: d16e4da9857ddbf41a63f6ade81745ab, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: prereqs.Array.size
       value: 1
@@ -3129,7 +3185,7 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0b58824bb148624e9be12a086bf2ba3, type: 3}
+      objectReference: {fileID: 21300000, guid: a22ace6258af2564b9ac93b307ce462d, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3449,6 +3505,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3441268667553277769}
     m_Modifications:
+    - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 277d99c3d41bf4c468abfb0dd1f91764, type: 3}
+    - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2134307983742120912, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3541,14 +3605,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gravitational Manipulation
       objectReference: {fileID: 0}
+    - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_text
+      value: Targeted Singularity
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: cost
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: ability
+      value: 
+      objectReference: {fileID: 7841448690613592598, guid: 88ba3518139cf84468ac7243b25776a5, type: 3}
+    - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Gravitational Manipulation
       objectReference: {fileID: 0}
+    - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+      propertyPath: replacingAbility
+      value: 
+      objectReference: {fileID: 7841448690613592598, guid: 317f0579f9b2797428834259fcf51eea, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: prereqs.Array.size
       value: 1
@@ -3593,10 +3673,10 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0b58824bb148624e9be12a086bf2ba3, type: 3}
+      objectReference: {fileID: 21300000, guid: 277d99c3d41bf4c468abfb0dd1f91764, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2134307983742120912, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Pivot.x
@@ -3692,11 +3772,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_text
-      value: Drone Swarm
+      value: Orbital Laser
       objectReference: {fileID: 0}
     - target: {fileID: 5118369939983960465, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: cost
@@ -3705,7 +3785,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: ability
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7841448690613592598, guid: 317f0579f9b2797428834259fcf51eea, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: textToShow
       value: Light Concentration
@@ -3713,7 +3793,7 @@ PrefabInstance:
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: replacingAbility
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7841448690613592598, guid: debef2676820f9443a47fc6ea84c170a, type: 3}
     - target: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: prereqs.Array.size
       value: 1
@@ -4246,7 +4326,7 @@ PrefabInstance:
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4d2447cf8d364f54487c9da8a1ca4f63, type: 3}
+      objectReference: {fileID: 21300000, guid: fab217b00b4d4004d852e83b17970509, type: 3}
     - target: {fileID: 1707719203507614718, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
       propertyPath: m_Enabled
       value: 1
