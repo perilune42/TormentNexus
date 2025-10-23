@@ -15,6 +15,7 @@ public class TechTree : MonoBehaviour
 
     public Dictionary<TechNode, TechNodeStatus> techNodeStatuses = new();
     public List<TechNode> startNodes;
+    public TechNode finalNode;
     public TechLineRenderer techLineRenderer;
 
     Queue<TechLineRenderer> lineList = new();

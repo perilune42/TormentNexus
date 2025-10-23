@@ -393,6 +393,7 @@ MonoBehaviour:
   - {fileID: 6443935043278813713}
   - {fileID: 1194841385479888308}
   - {fileID: 4241135768359176287}
+  finalNode: {fileID: 8590186166993879171}
   techLineRenderer: {fileID: 0}
   currentlyResearching: {fileID: 0}
   accumulatedPoints: 0
@@ -1437,6 +1438,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2134307983742120912, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
   m_PrefabInstance: {fileID: 2105071665535347011}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8590186166993879171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7638332878528211392, guid: 65a546fc610913343a6ca72bafa613dc, type: 3}
+  m_PrefabInstance: {fileID: 2105071665535347011}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766f2f71b4fd00e4595caf63d564d8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2210512157263466542
 PrefabInstance:
   m_ObjectHideFlags: 0

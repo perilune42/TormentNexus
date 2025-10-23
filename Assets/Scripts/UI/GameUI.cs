@@ -65,16 +65,24 @@ public class GameUI : MonoBehaviour
         if (progress < 0)
         {
             techTreeButtonOverlay.enabled = false;
-            if (techFlashTime <= 0)
-            {
-                techTreeButton.image.color = techFlashColor;
-                techFlashTime = 0.6f;
-            }
-            else if (techFlashTime <= 0.3f)
+
+            if (playerTechTree.techNodeStatuses[playerTechTree.finalNode] == TechNodeStatus.Finished)
             {
                 techTreeButton.image.color = Color.white;
             }
-            techFlashTime -= Time.deltaTime;
+            else
+            {
+                if (techFlashTime <= 0)
+                {
+                    techTreeButton.image.color = techFlashColor;
+                    techFlashTime = 0.6f;
+                }
+                else if (techFlashTime <= 0.3f)
+                {
+                    techTreeButton.image.color = Color.white;
+                }
+                techFlashTime -= Time.deltaTime;
+            }
         }
         else
         {
