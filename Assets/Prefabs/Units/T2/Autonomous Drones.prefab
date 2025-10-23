@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Icon
       value: 
-      objectReference: {fileID: 3334700611060416230, guid: 3b8ccf6acf6503c4c8bd19882af475af, type: 3}
+      objectReference: {fileID: -7358201313433916705, guid: f69843991cc792446961b92e64d5216d, type: 3}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Name
       value: Autonomous Drones
@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3315886825695000850, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: m_Name
-      value: Stealth Jet
+      value: Autonomous Drones
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
