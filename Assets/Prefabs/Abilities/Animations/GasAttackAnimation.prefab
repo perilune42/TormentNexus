@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd02c008762e8304db226f0f0decf1a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frames: []
+  AttackerCanvasPrefab: {fileID: 2885921046883162875, guid: 0a485e52d35228e4a91c0061111253a6, type: 3}
   duration: 10
   maxRadius: 1
   growthDecayTime: 1.5
@@ -141,6 +141,7 @@ MonoBehaviour:
   endColor: {r: 0.5294118, g: 0.5137255, b: 0.11372549, a: 0}
   noiseIntensity: 0.2
   noiseSpeed: 0.3
-  noiseScaling: 2
+  noiseScalingPosition: 2
+  noiseScalingScale: 1
   amount: 5
   gasCloud: {fileID: 65676291912628569}

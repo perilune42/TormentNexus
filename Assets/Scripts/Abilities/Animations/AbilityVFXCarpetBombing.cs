@@ -11,8 +11,9 @@ public class AbilityVFXCarpetBombing : AbilityVFX
 
     [SerializeField] GameObject bombPrefab;
 
-    public override void Play()
+    public override void Play(Faction attacker)
     {
+        base.Play(attacker);
         StartCoroutine(CarpetBomb());
         StartCoroutine(Destroy());
     }

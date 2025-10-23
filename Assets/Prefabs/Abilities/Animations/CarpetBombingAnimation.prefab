@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b7b91155f43e04399f4f11c0d13102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frames: []
+  AttackerCanvasPrefab: {fileID: 2885921046883162875, guid: 0a485e52d35228e4a91c0061111253a6, type: 3}
   duration: 10
   bombCount: 50
   bombRadius: 0.4

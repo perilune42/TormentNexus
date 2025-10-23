@@ -21,8 +21,9 @@ public class AbilityVFXGasAttack : AbilityVFX
 
     private Vector3 startPos;
 
-    public override void Play()
+    public override void Play(Faction attacker)
     {
+        base.Play(attacker);
         startPos = gasCloud.transform.position;
 
         for (int i = 0; i < amount; i++)

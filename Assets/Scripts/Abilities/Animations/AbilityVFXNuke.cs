@@ -18,8 +18,9 @@ public class AbilityVFXNuke : AbilityVFX
     [SerializeField] SpriteRenderer centerSmoke;
     [SerializeField] GameObject shockwave;
 
-    public override void Play()
+    public override void Play(Faction attacker)
     {
+        base.Play(attacker);
         StartCoroutine(Blast());
         StartCoroutine(Smoke());
         shockwave.SetActive(true);

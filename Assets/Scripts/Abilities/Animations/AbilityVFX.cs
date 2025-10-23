@@ -1,21 +1,35 @@
 using System.Collections;
-using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AbilityVFX : MonoBehaviour
 {
+    [SerializeField] GameObject AttackerCanvasPrefab;
+    private GameObject canvas;
+    private Image attackerFlag;
+    private Image border;
 
-    [SerializeField] List<SpriteRenderer> frames;
-
-    public virtual void Play()
+    public virtual void Play(Faction attacker)
     {
-        StartCoroutine(DestroyAfterDelay());
+        canvas = Instantiate(AttackerCanvasPrefab, transform);
+        border = canvas.transform.GetChild(0).GetComponent<Image>();
+        attackerFlag = canvas.transform.GetChild(0).GetChild(0).GetComponent<Image>();
+
+        border.color = attacker.FactionColor;
+        attackerFlag.sprite = attacker.Flag;
+
+        StartCoroutine(FadeAndDestroyAfterDelay());
     }
     
-    private IEnumerator DestroyAfterDelay()
+    private IEnumerator FadeAndDestroyAfterDelay()
     {
-        yield return new WaitForSeconds(3f);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(2f);
+        while (attackerFlag.color.a > 0)
+        {
+            attackerFlag.color -= new Color(0, 0, 0, Time.deltaTime * 1.5f);
+            border.color -= new Color(0, 0, 0, Time.deltaTime * 1.5f);
+            yield return null;
+        }
+        Destroy(canvas);
     }
 }

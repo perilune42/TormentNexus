@@ -12956,6 +12956,10 @@ PrefabInstance:
       value: Chicagou
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 1554053910}
@@ -14048,6 +14052,10 @@ PrefabInstance:
       value: Panay
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 1262096336}
@@ -14964,6 +14972,10 @@ PrefabInstance:
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Name
       value: Riyadh
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
@@ -17023,6 +17035,10 @@ PrefabInstance:
       value: Benguela
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 2038939930}
@@ -17274,6 +17290,10 @@ PrefabInstance:
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Name
       value: Summit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
@@ -18888,6 +18908,10 @@ PrefabInstance:
       value: Dominica
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 1759482240}
@@ -19384,6 +19408,10 @@ PrefabInstance:
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Name
       value: Pyay
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
@@ -22413,6 +22441,10 @@ PrefabInstance:
       value: Cairo
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 1237754135}
@@ -24288,6 +24320,10 @@ PrefabInstance:
       value: Reykjavik
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 55266885}
@@ -25358,6 +25394,10 @@ PrefabInstance:
       value: Montreal
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 1554053910}
@@ -25926,6 +25966,10 @@ PrefabInstance:
       value: Delhi
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 291431846}
@@ -26470,6 +26514,10 @@ PrefabInstance:
       value: Georgia
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 66086848}
@@ -26749,6 +26797,10 @@ PrefabInstance:
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Name
       value: Sahara
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
@@ -27323,6 +27375,10 @@ PrefabInstance:
       value: Picchu
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
       value: 
       objectReference: {fileID: 1759482240}
@@ -27562,6 +27618,10 @@ PrefabInstance:
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Name
       value: Fiji
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
@@ -28068,6 +28128,10 @@ PrefabInstance:
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Name
       value: Brasilia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
@@ -28590,6 +28654,10 @@ PrefabInstance:
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Name
       value: Orenburg
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner
@@ -29397,6 +29465,10 @@ PrefabInstance:
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Name
       value: Eko
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+      propertyPath: Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
       propertyPath: Owner

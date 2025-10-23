@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd636196c6d13fb4d9d4cbb1701466c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frames: []
+  AttackerCanvasPrefab: {fileID: 2885921046883162875, guid: 0a485e52d35228e4a91c0061111253a6, type: 3}
   nukeDuration: 10
   flashIntensity: 10
   flashFade: 2
