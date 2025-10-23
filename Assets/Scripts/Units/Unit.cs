@@ -174,6 +174,10 @@ public class Unit : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (CurrentNode.InfrastructureHealth <= 0f)
+        {
+            damage *= 1.5f;
+        }
         Health -= damage;
         healTimer = healCooldown;
         if (Health <= 0)

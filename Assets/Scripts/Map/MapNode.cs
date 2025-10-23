@@ -219,7 +219,11 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     public void TakeGarrisonDamage(float damage)
     {
         if (ContainedUnit != null) damage *= 0.5f;
-        if (InfrastructureHealth <= 0.5f * MaxInfrastructureHealth)
+        if (InfrastructureHealth <= 0f)
+        {
+            damage *= 3f;
+        }
+        else if (InfrastructureHealth <= 0.5f * MaxInfrastructureHealth)
         {
             damage *= 2f;
         }
