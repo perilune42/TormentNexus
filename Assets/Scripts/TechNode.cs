@@ -35,6 +35,20 @@ public class TechNode : MonoBehaviour
         progressBar.SetLevel(0);
         progressText.text = $"0/{cost}";
         ShowUnlocks();
+
+
+    }
+
+    private void Start()
+    {
+        if (unit != null && UnitInfoStrings.Infos != null && UnitInfoStrings.Infos.ContainsKey(unit.Type))
+        {
+            unlockText.color = UnitInfoStrings.Infos[unit.Type].Color;
+        }
+        else
+        {
+            unlockText.color = Color.white;
+        }
     }
 
     public void SetFaction(Faction faction)
