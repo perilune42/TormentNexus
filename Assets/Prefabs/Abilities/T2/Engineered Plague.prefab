@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Engineered Plague
   icon: {fileID: 21300000, guid: dcf9dc4b5e72f4b49b642997dcd0b8c4, type: 3}
+  Type: 3
   CurrentCharges: 0
   MaxCharges: 2
   CurrentCooldown: 0
@@ -56,4 +57,4 @@ MonoBehaviour:
   InfrastructureDamage: 150
   HateGeneration: 25
   IsBuilding: 0
-  effect: {fileID: 8446680328057840639, guid: e737351c7f37ffa46b4cb4bc74010a0f, type: 3}
+  effect: {fileID: 1901689732755117765, guid: 25ff5f157eefe844194d050f1910aa84, type: 3}

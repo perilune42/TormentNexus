@@ -31,6 +31,7 @@ public class Faction : MonoBehaviour
         {
             ability.GiveToFaction(this);
         }
+        Abilities = Abilities.OrderBy(u => u.Type).ToList();
 
         AIControl = GetComponentInChildren<AIControl>();
         HateMeter = GetComponentInChildren<HateMeter>();
@@ -60,6 +61,7 @@ public class Faction : MonoBehaviour
         Ability newAbility = Instantiate(template, abilitiesList);
         Abilities.Add(newAbility);
         newAbility.GiveToFaction(this);
+        Abilities = Abilities.OrderBy(u => u.Type).ToList();
         if (isPlayer)
         {
             AbilityMenu.Instance.RedrawButtons();
@@ -71,6 +73,7 @@ public class Faction : MonoBehaviour
         var toRemove = Abilities.Find((ability) => ability.Name == template.Name);
         Abilities.Remove(toRemove);
         Destroy(toRemove.gameObject);
+        Abilities = Abilities.OrderBy(u => u.Type).ToList();
         if (isPlayer)
         {
             AbilityMenu.Instance.RedrawButtons();

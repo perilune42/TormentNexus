@@ -30,7 +30,7 @@ public class AbilityButton : MonoBehaviour
 
     private void Update()
     {
-        chargeText.text = $"{ability.CurrentCharges}";
+        chargeText.text = $"{ability.CurrentCharges}/{ability.MaxCharges}";
         //cooldownText.text = ability.CurrentCooldown.ToString();
         buildProgressBar.SetLevel(Mathf.Max(0, 1 - (float)ability.CurrentCooldown / ability.BuildTime));
         buildProgressBar.SetVisible(ability.IsBuilding);
