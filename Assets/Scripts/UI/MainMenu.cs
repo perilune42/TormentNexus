@@ -19,6 +19,8 @@ public class MainMenu : MonoBehaviour
     public AudioClip UIButtonSFX;
     public AudioClip UIAcceptSFX;
 
+    public GameObject FactionSelectScreen;
+
 
     private void Start()
     {
@@ -43,6 +45,7 @@ public class MainMenu : MonoBehaviour
         {
             button.gameObject.SetActive(true);
         }
+        FactionSelectScreen.SetActive(true);
     }
 
     public void OnQuitClick()

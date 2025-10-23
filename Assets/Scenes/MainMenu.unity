@@ -493,6 +493,43 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5261870255710490897, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
   m_PrefabInstance: {fileID: 2086039917}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &618220795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618220796}
+  m_Layer: 0
+  m_Name: Select Screen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &618220796
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618220795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 725687052}
+  - {fileID: 1762032143}
+  m_Father: {fileID: 594478781}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688896432 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4308476632394633602, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
@@ -504,6 +541,142 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266a6146036c26346a7946b35193a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &725687051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725687052}
+  - component: {fileID: 725687054}
+  - component: {fileID: 725687053}
+  m_Layer: 0
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &725687052
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725687051}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 618220796}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 475.12946}
+  m_SizeDelta: {x: 1400, y: 150.25891}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &725687053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725687051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: October 22, 1975
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5a798b393daf60744af626c4fa2be09c, type: 2}
+  m_sharedMaterial: {fileID: -5308744754017145789, guid: 5a798b393daf60744af626c4fa2be09c, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 190
+  m_fontSizeBase: 190
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 32
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &725687054
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725687051}
+  m_CullTransparentMesh: 1
 --- !u!1 &903956795
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,10 +837,10 @@ PrefabInstance:
       propertyPath: m_text
       value: During one of their expeditions, the Ming Dynasty set up a colony in
         California. They traded with the Aztecs for supplies, and over time, an alliance
-        was formed. When they were later asked by the Aztecs to assist them in a
-        war with the Spanish, they agreed. Their combined might drove the Spanish
-        back, but both sides sustained heavy losses. To prevent further losses, they
-        decided to join together, creating the Ming-Aztec Federation.
+        was formed. Their combined might drove Spanish colonization back, and eventually
+        united as the Ming-Aztec Dynasty. With the mainland fallen to the Mongol
+        Horde, the Dynasty would hold the sole claim to the Mandate of Heaven for
+        centuries to come.
       objectReference: {fileID: 0}
     - target: {fileID: 5574690791629108016, guid: 05f85dcb164665740a23f2e8cf2dedbd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -948,6 +1121,142 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec1da2686d56f449200ce8ea4b17f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1762032142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1762032143}
+  - component: {fileID: 1762032145}
+  - component: {fileID: 1762032144}
+  m_Layer: 0
+  m_Name: Text (TMP) (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1762032143
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762032142}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 618220796}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 415.12946}
+  m_SizeDelta: {x: 1400, y: 150.25891}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1762032144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762032142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'World Popluation: 3193447025'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c9104fccfdd14b543a1c6ed81a021d30, type: 2}
+  m_sharedMaterial: {fileID: 3649417120091247981, guid: c9104fccfdd14b543a1c6ed81a021d30, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290230199
+  m_fontColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 32
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1762032145
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762032142}
+  m_CullTransparentMesh: 1
 --- !u!1 &1882284073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,12 +1358,13 @@ PrefabInstance:
       objectReference: {fileID: 1174395486675350062, guid: 6a9a3917067fa904f94ed50fddbf34ef, type: 3}
     - target: {fileID: 2848762065873916052, guid: 05f85dcb164665740a23f2e8cf2dedbd, type: 3}
       propertyPath: m_text
-      value: After winning World War I, the Austro-Hungarian Empire spread its influence
-        , consuming the whole of Europe.  After several decades of corruption, the
-        empire splintered into many smaller states.  Seizing the opportunity, the
-        Soviet Union seized the opportunity and attacked, capturing the entire eastern
-        part of the former empire. The invasion was only repelled when the Austro-Hungarian
-        Empire reformed, intent on taking back its lost homeland.
+      value: As the victor of the First World War, Austria-Hungary grew to encompass
+        most of Europe, but was left in ruin.  Amidst the chaos, the Kazakh SSR seized
+        the opportunity and attacked, but on the brink of defeat Austrai-Hungary
+        joined forces with the Byzantine Empire and repelled the invasion, eventually
+        supplanting the Kazakh as the sole European superpower. Since its victory,
+        the Byzantine empire was incorporated into Austria-Hungary's territory towards
+        a shared future.
       objectReference: {fileID: 0}
     - target: {fileID: 5994199925671719590, guid: 05f85dcb164665740a23f2e8cf2dedbd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1070,7 +1380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994199925671719590, guid: 05f85dcb164665740a23f2e8cf2dedbd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000022411
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 6407635190072573237, guid: 05f85dcb164665740a23f2e8cf2dedbd, type: 3}
       propertyPath: m_Pivot.x
@@ -1883,6 +2193,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1174395486675350062, guid: ea122521230c8524cadd989cf6e6e3a4, type: 3}
     - target: {fileID: 4308476632394633602, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
+      propertyPath: FactionSelectScreen
+      value: 
+      objectReference: {fileID: 618220795}
+    - target: {fileID: 4308476632394633602, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
       propertyPath: factionButtons.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -2039,6 +2353,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5261870255710490897, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2044514698}
+    - targetCorrespondingSourceObject: {fileID: 5261870255710490897, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 618220796}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d84d471a68a3fcf469488da21e7b0188, type: 3}
 --- !u!1660057539 &9223372036854775807

@@ -387,10 +387,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: 6fd91351d92b4204b9366109e112c3b7, type: 3}
-      propertyPath: Flag
-      value: 
-      objectReference: {fileID: -806858046552541595, guid: faec740dddbcb2e4fb081644cc13facd, type: 3}
     - target: {fileID: 5885198832859442436, guid: 6fd91351d92b4204b9366109e112c3b7, type: 3}
       propertyPath: m_Name
       value: United Nations
@@ -1221,10 +1217,10 @@ RectTransform:
   - {fileID: 2002724494}
   m_Father: {fileID: 280957292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -40}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 150, y: 0}
+  m_SizeDelta: {x: 75, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &197517351
 MonoBehaviour:
@@ -1554,18 +1550,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: 7e09f0cefcecf3c4fa96b73f813d7009, type: 3}
-      propertyPath: FactionColor.b
-      value: 0.8509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 7e09f0cefcecf3c4fa96b73f813d7009, type: 3}
-      propertyPath: FactionColor.g
-      value: 0.2745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 7e09f0cefcecf3c4fa96b73f813d7009, type: 3}
-      propertyPath: FactionColor.r
-      value: 0.7024797
-      objectReference: {fileID: 0}
     - target: {fileID: 5885198832859442436, guid: 7e09f0cefcecf3c4fa96b73f813d7009, type: 3}
       propertyPath: m_Name
       value: Mughal Sultanate
@@ -2263,18 +2247,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: 6a9a3917067fa904f94ed50fddbf34ef, type: 3}
-      propertyPath: FactionColor.b
-      value: 0.8244927
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 6a9a3917067fa904f94ed50fddbf34ef, type: 3}
-      propertyPath: FactionColor.g
-      value: 0.84642994
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 6a9a3917067fa904f94ed50fddbf34ef, type: 3}
-      propertyPath: FactionColor.r
-      value: 0.9056604
-      objectReference: {fileID: 0}
     - target: {fileID: 5885198832859442436, guid: 6a9a3917067fa904f94ed50fddbf34ef, type: 3}
       propertyPath: m_Name
       value: Austro-Hungarian Empire
@@ -7036,18 +7008,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: ce34184ead69fae4485bbd19a7682dee, type: 3}
-      propertyPath: FactionColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: ce34184ead69fae4485bbd19a7682dee, type: 3}
-      propertyPath: FactionColor.g
-      value: 0.9432382
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: ce34184ead69fae4485bbd19a7682dee, type: 3}
-      propertyPath: FactionColor.r
-      value: 0.32549024
-      objectReference: {fileID: 0}
     - target: {fileID: 5885198832859442436, guid: ce34184ead69fae4485bbd19a7682dee, type: 3}
       propertyPath: m_Name
       value: Macronesia
@@ -9185,18 +9145,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: f13cf2339b8eee347b27f268ff3f28a6, type: 3}
-      propertyPath: FactionColor.b
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: f13cf2339b8eee347b27f268ff3f28a6, type: 3}
-      propertyPath: FactionColor.g
-      value: 0.20872642
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: f13cf2339b8eee347b27f268ff3f28a6, type: 3}
-      propertyPath: FactionColor.r
-      value: 0.26441085
-      objectReference: {fileID: 0}
     - target: {fileID: 5885198832859442436, guid: f13cf2339b8eee347b27f268ff3f28a6, type: 3}
       propertyPath: m_Name
       value: East African Federation
@@ -9340,18 +9288,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3919726936396377183, guid: 7d18c75c17b4c3a49a8a2a327156c0a4, type: 3}
     - target: {fileID: 1174395486675350062, guid: 66104fac51611cc41b0405613822e676, type: 3}
-      propertyPath: FactionColor.b
-      value: 0.49160194
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 66104fac51611cc41b0405613822e676, type: 3}
-      propertyPath: FactionColor.g
-      value: 0.8301887
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 66104fac51611cc41b0405613822e676, type: 3}
-      propertyPath: FactionColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 66104fac51611cc41b0405613822e676, type: 3}
       propertyPath: isMajorFaction
       value: 1
       objectReference: {fileID: 0}
@@ -9431,22 +9367,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1402489961}
     m_Modifications:
-    - target: {fileID: 1174395486675350062, guid: 421c07b22ec7a2b439c74d8c3265797b, type: 3}
-      propertyPath: Flag
-      value: 
-      objectReference: {fileID: 4626278984602133542, guid: 766db0614ae0e64458da0ff7fbd86b2d, type: 3}
-    - target: {fileID: 1174395486675350062, guid: 421c07b22ec7a2b439c74d8c3265797b, type: 3}
-      propertyPath: FactionColor.b
-      value: 0.32835302
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 421c07b22ec7a2b439c74d8c3265797b, type: 3}
-      propertyPath: FactionColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174395486675350062, guid: 421c07b22ec7a2b439c74d8c3265797b, type: 3}
-      propertyPath: FactionColor.r
-      value: 0.74509805
-      objectReference: {fileID: 0}
     - target: {fileID: 5885198832859442436, guid: 421c07b22ec7a2b439c74d8c3265797b, type: 3}
       propertyPath: m_Name
       value: Antarctic Tsardom
@@ -10211,10 +10131,10 @@ RectTransform:
   - {fileID: 1461073119}
   m_Father: {fileID: 1037629711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -40}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 150, y: 0}
+  m_SizeDelta: {x: 75, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1596959633
 MonoBehaviour:
