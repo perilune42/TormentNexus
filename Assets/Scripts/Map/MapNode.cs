@@ -138,23 +138,20 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
             SetColor();
         }
 
-        
-        if (Map.Instance != null)
+        Map map = FindFirstObjectByType<Map>();
+        switch (Type)
         {
-            switch (Type)
-            {
-                case NodeType.Capital:
-                    spriteRenderer.sprite = Map.Instance.CapitalIcon; break;
-                case NodeType.City:
-                    spriteRenderer.sprite = Map.Instance.CityIcon; break;
-                case NodeType.Military:
-                    spriteRenderer.sprite = Map.Instance.MilitaryIcon; break;
-                case NodeType.Science:
-                    spriteRenderer.sprite = Map.Instance.ScienceIcon; break;
-            }
-            overlay.sprite = spriteRenderer.sprite;
-            overlay.gameObject.SetActive(false);
+            case NodeType.Capital:
+                spriteRenderer.sprite = map.CapitalIcon; break;
+            case NodeType.City:
+                spriteRenderer.sprite = map.CityIcon; break;
+            case NodeType.Military:
+                spriteRenderer.sprite = map.MilitaryIcon; break;
+            case NodeType.Science:
+                spriteRenderer.sprite = map.ScienceIcon; break;
         }
+        overlay.sprite = spriteRenderer.sprite;
+        overlay.gameObject.SetActive(false);
             
 
 
