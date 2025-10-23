@@ -10,6 +10,7 @@ public class UnitBuildButton : MonoBehaviour
 
     [SerializeField] TMP_Text nameText;
     [SerializeField] TMP_Text costText;
+    [SerializeField] TMP_Text infoText;
 
     [SerializeField] GameObject overlay;
 
@@ -35,6 +36,8 @@ public class UnitBuildButton : MonoBehaviour
         icon.sprite = unit.Icon;
         icon.color = FactionManager.instance.playerFaction.FactionColor;
         costText.text = unit.Cost.ToString();
+        infoText.text = UnitInfoStrings.Infos[unit.Type].Desc;
+        infoText.color = UnitInfoStrings.Infos[unit.Type].Color;
     }
 
     public void SetEnabled(bool enabled)

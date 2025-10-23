@@ -28,7 +28,7 @@ public class UnitInfoUI : MonoBehaviour
             flagImage.sprite = unit.Owner.Flag;
             unitIcon.sprite = unit.Icon;
             unitIcon.color = unit.Owner.FactionColor;
-            unitNameText.text = unit.gameObject.name;
+            unitNameText.text = unit.Name;
             unitHealthBar.SetLevel(unit.Health / unit.MaxHealth);
             unitHealthText.text = $"{(int)unit.Health}/{(int)unit.MaxHealth}";
         }

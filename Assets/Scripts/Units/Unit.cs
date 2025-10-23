@@ -8,6 +8,10 @@ using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 using Random = UnityEngine.Random;
 
+public enum UnitType
+{
+    Infantry, Armor, Airforce, Artillery, Terror
+}
 public class Unit : MonoBehaviour
 {
     public Faction Owner;
@@ -16,6 +20,7 @@ public class Unit : MonoBehaviour
 
     public string Name;
     public Sprite Icon;
+    public UnitType Type;
 
     public float Damage = 0.1f; // damage per tick   
     public float GarrisonDamage = 0.1f;

@@ -21,6 +21,10 @@ PrefabInstance:
       value: Flame Trooper
       objectReference: {fileID: 0}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
+      propertyPath: Type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Speed
       value: 2
       objectReference: {fileID: 0}
