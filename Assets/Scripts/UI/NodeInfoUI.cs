@@ -10,6 +10,7 @@ public class NodeInfoUI : MonoBehaviour
     [SerializeField] TMP_Text nodeNameText;
 
     [SerializeField] Image nodeFlagImage;
+    [SerializeField] TMP_Text factionNameText;
 
     [SerializeField] TMP_Text nodeTypeText;
     [SerializeField] Image nodeTypeImage;
@@ -43,6 +44,8 @@ public class NodeInfoUI : MonoBehaviour
         {
             nodeNameText.text = node.Name;
             nodeFlagImage.sprite = node.Owner.Flag;
+            factionNameText.text = node.Owner.FactionName;
+            factionNameText.color = Color.Lerp(node.Owner.FactionColor, Color.white, 0.4f);
             nodeTypeImage.sprite = node.spriteRenderer.sprite;
             nodeTypeImage.color = node.Owner.FactionColor;
             nodeTypeText.color = Color.Lerp(node.Owner.FactionColor,Color.white,0.4f) ;
