@@ -39,6 +39,7 @@ public class GameUI : MonoBehaviour
     private void Update()
     {
         ShowResearchProgress();
+        // if (Input.GetKeyDown(KeyCode.W)) ShowEndScreen(true);
     }
 
     private void Start()
@@ -89,10 +90,9 @@ public class GameUI : MonoBehaviour
         {
             transform.GetChild(i).gameObject.SetActive(false);
         }
-
         EndScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = FactionManager.instance.playerFaction.FactionName;
         EndScreen.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = $"Day {GameTick.instance.GetDays()}";
-        EndScreen.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = $"Deaths {PopulationCounter.Instance.DeathCount}";
+        EndScreen.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = $"Lives Lost {PopulationCounter.Instance.DeathCount:N0}";
         EndScreen.SetActive(true);
     }
 }

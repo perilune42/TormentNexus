@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: Icon
       value: 
-      objectReference: {fileID: 8446026816936511432, guid: 788a3950463b0604fbfc3e7f4033c349, type: 3}
+      objectReference: {fileID: -6700441212385134646, guid: 2745b0e2f0dfca44a8a4a6927fa3f549, type: 3}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: Name
       value: Armored Corps
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979116406778516904, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: m_Name
-      value: Armor Corps
+      value: Armored Corps
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

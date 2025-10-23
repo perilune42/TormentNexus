@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Icon
       value: 
-      objectReference: {fileID: 1982735283596274820, guid: b5427ce9afaddc3439a3ee10ffe78cec, type: 3}
+      objectReference: {fileID: 6152170308572982707, guid: dda0322e36ec8a24f87ce4487fcca1dd, type: 3}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Name
       value: Flame Trooper
