@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Icon
       value: 
-      objectReference: {fileID: 3059999014066875662, guid: 5c67c08ca6c23b849958e5b35fe4269f, type: 3}
+      objectReference: {fileID: 6449988120267872584, guid: 909ec64f95763454a8b9e06b65e0986d, type: 3}
     - target: {fileID: 1559537040362805027, guid: d7d81e613669c0041a03a0c4e7deb345, type: 3}
       propertyPath: Name
       value: Howitzer
