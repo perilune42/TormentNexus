@@ -1,53 +1,6 @@
-// using UnityEngine;
-// using UnityEngine.EventSystems;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
-<<<<<<< HEAD
-// public class UISound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, ISubmitHandler
-// {
-//     [SerializeField] AudioSource sfx;          // drag UIAudio AudioSource here
-//     [SerializeField] AudioClip hoverClip;      // assign hover .wav
-//     [SerializeField] AudioClip clickClip;      // assign click .wav
-//     [SerializeField] float hoverVol = 1f;
-//     [SerializeField] float clickVol = 1f;
-
-//     private const float cooldownTime = 0.6f;     // ⏱ global 1-second cooldown
-//     private static float lastSoundTime = -10f; // shared across ALL UISound instances
-
-//     void Reset()
-//     {
-//         if (!sfx)
-//             sfx = GameObject.Find("UIAudio")?.GetComponent<AudioSource>();
-//     }
-
-//     public void OnPointerEnter(PointerEventData e)
-//     {
-//         // prevent hover spam across all UI elements
-//         if (Time.unscaledTime - lastSoundTime >= cooldownTime)
-//         {
-//             Play(hoverClip, hoverVol);
-//             lastSoundTime = Time.unscaledTime;
-//         }
-//     }
-
-//     public void OnPointerClick(PointerEventData e)
-//     {
-//         // still respects the same cooldown
-//         if (Time.unscaledTime - lastSoundTime >= cooldownTime)
-//         {
-//             Play(clickClip, clickVol);
-//             lastSoundTime = Time.unscaledTime;
-//         }
-//     }
-
-//     public void OnSubmit(BaseEventData e)
-//     {
-//         if (Time.unscaledTime - lastSoundTime >= cooldownTime)
-//         {
-//             Play(clickClip, clickVol);
-//             lastSoundTime = Time.unscaledTime;
-//         }
-//     }
-=======
 public class UISound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, ISubmitHandler
 {
     [SerializeField] AudioSource sfx;          // drag your shared UIAudio AudioSource here
@@ -70,6 +23,7 @@ public class UISound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     // ---------------- events ----------------
     public void OnPointerEnter(PointerEventData e)
     {
+        return;
         // play only if we're outside global cooldown
         if (Time.unscaledTime - s_lastSoundTime >= GlobalCooldown)
         {
@@ -119,11 +73,10 @@ public class UISound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
         // else: inside cooldown triggered by another node or by a previous click → suppress
     }
->>>>>>> 9b6cb9b (UI audio updates)
 
-//     void Play(AudioClip clip, float vol)
-//     {
-//         if (clip && sfx)
-//             sfx.PlayOneShot(clip, vol);
-//     }
-// }
+    void Play(AudioClip clip, float vol)
+    {
+        if (clip && sfx)
+            sfx.PlayOneShot(clip, vol);
+    }
+}
