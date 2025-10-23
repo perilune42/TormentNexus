@@ -1359,11 +1359,11 @@ PrefabInstance:
     - target: {fileID: 2848762065873916052, guid: 05f85dcb164665740a23f2e8cf2dedbd, type: 3}
       propertyPath: m_text
       value: As the victor of the First World War, Austria-Hungary grew to encompass
-        most of Europe, but was left in ruin.  Amidst the chaos, the Kazakh SSR seized
-        the opportunity and attacked, but on the brink of defeat Austrai-Hungary
+        most of Europe, but was left in ruin. Amidst the chaos, the Kazakh SSR seized
+        the opportunity and attacked, but on the brink of defeat Austria-Hungary
         joined forces with the Byzantine Empire and repelled the invasion, eventually
         supplanting the Kazakh as the sole European superpower. Since its victory,
-        the Byzantine empire was incorporated into Austria-Hungary's territory towards
+        the Byzantine Empire was incorporated into Austria-Hungary's territory towards
         a shared future.
       objectReference: {fileID: 0}
     - target: {fileID: 5994199925671719590, guid: 05f85dcb164665740a23f2e8cf2dedbd, type: 3}
