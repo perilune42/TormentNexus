@@ -21,6 +21,7 @@ public class Map : MonoBehaviour
 
     private void Start()
     {
+        Nodes = GetComponentsInChildren<MapNode>().ToList();
         foreach (MapNode node in Nodes)
         {
             foreach (MapNode neighbor in node.Neighbors)
@@ -44,9 +45,8 @@ public class Map : MonoBehaviour
         }
     }
 
-    private void OnValidate()
-    {
-        Nodes = GetComponentsInChildren<MapNode>().ToList();
-        DrawMap();
-    }
+    // private void OnValidate()
+    // {
+    //     DrawMap();
+    // }
 }
