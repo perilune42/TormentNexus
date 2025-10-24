@@ -10,7 +10,7 @@ public class AbilityVFXRodsFromGod : AbilityVFX
     [SerializeField] float endScale;
     [SerializeField] float dropTime;
     [SerializeField] GameObject shockwave;
-    [SerializeField] float shockwaveScale = 2.0f;
+    [SerializeField] float shockwaveScale;
 
     public override void Play(Faction attacker)
     {

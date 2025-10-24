@@ -111,11 +111,6 @@ public class TechNode : MonoBehaviour
         }
         progressBar.SetVisible(true);
         TechTree.PlayerTechTree.StartResearch(this);
-        if (audioSource != null && faction == FactionManager.instance.playerFaction)
-        {
-            audioSource.volume = 0.5f;
-            audioSource.PlayOneShot(ClickSFX);
-        }
         /*
         buttonText.rectTransform.Translate(Vector3.down * 13);
         StartCoroutine(RaiseButton());
@@ -127,9 +122,15 @@ public class TechNode : MonoBehaviour
     public void OnPointerDown()
     {
         if (button.interactable == false || TechTree.PlayerTechTree.currentlyResearching != null) {
+            AudioManager.instance.Play(AudioManager.instance.UIDecline);
             return;
-        }; //Play error sound?
+        };
         buttonText.rectTransform.Translate(Vector3.down * 13);
+        if (audioSource != null && faction == FactionManager.instance.playerFaction)
+        {
+            audioSource.volume = 0.5f;
+            audioSource.PlayOneShot(ClickSFX);
+        }
     }
 
 

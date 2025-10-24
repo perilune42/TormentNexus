@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UnitBuildButton : MonoBehaviour
+public class UnitBuildButton : MonoBehaviour, IPointerDownHandler
 {
     Unit unitTemplate;
     Button button;
@@ -48,6 +49,15 @@ public class UnitBuildButton : MonoBehaviour
 
     public void Build()
     {
+        AudioManager.instance.Play(AudioManager.instance.CoinsSFX);
         PlayerControl.Instance.BuildUnit(unitTemplate);
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (button.interactable == false)
+        {
+            AudioManager.instance.Play(AudioManager.instance.UIDecline);
+        }
     }
 }

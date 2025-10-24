@@ -57,6 +57,7 @@ private void Awake()
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        AudioManager.instance.Play(AudioManager.instance.softClick);
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             PlayerControl.Instance.SelectUnit(unit);

@@ -191,6 +191,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        AudioManager.instance.Play(AudioManager.instance.MapNodeClick);
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             PlayerControl.Instance.SelectNode(this);

@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class AbilityButton : MonoBehaviour
+public class AbilityButton : MonoBehaviour, IPointerDownHandler
 {
     Ability ability;
     [SerializeField] Image icon;
@@ -43,11 +44,21 @@ public class AbilityButton : MonoBehaviour
 
     public void Build()
     {
+        AudioManager.instance.Play(AudioManager.instance.CoinsSFX);
         ability.BuildNew();
     }
 
     public void Launch()
     {
+        AudioManager.instance.Play(AudioManager.instance.softClick);
         PlayerControl.Instance.PrimeAbility(ability);
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (buildButton.interactable == false)
+        {
+            AudioManager.instance.Play(AudioManager.instance.UIDecline);
+        }
     }
 }
