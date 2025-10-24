@@ -27,6 +27,7 @@ public class UnitController : MonoBehaviour
         {
             unit.StartMove(destination);
         }
+        unit.CancelPath();
     }
 
     public bool IsValidMove(Unit unit, MapNode destination, bool ignoreOccupied = false)

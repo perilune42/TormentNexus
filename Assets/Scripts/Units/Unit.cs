@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 using Random = UnityEngine.Random;
 
 public enum UnitType
@@ -33,6 +34,8 @@ public class Unit : MonoBehaviour
     private int moveTicks => (int)(baseMoveTicks / Speed);
 
     public MapNode MoveOrder;
+    public MapNode Waypoint;
+
     [HideInInspector] public int MoveTicksRemaining = -1;
 
     List<Action> onTickActions;
@@ -218,6 +221,39 @@ public class Unit : MonoBehaviour
         Display.DisplayMove(target, MoveTicksRemaining, moveTicks);
     }
 
+    public void StartPath(MapNode target)
+    {
+        Waypoint = target;
+        ContinuePath();
+    }
+
+    public void CancelPath()
+    {
+        Waypoint = null;
+    }
+
+    private void ContinuePath()
+    {
+        if (Waypoint == null) return;
+        if (CurrentNode == Waypoint)
+        {
+            Waypoint = null;
+            return;
+        }
+
+        // try to avoid blocking units unless no path found
+        var nextMove = Util.Pathfind(this, Waypoint, avoidFriendlyCollision:false);
+        if (nextMove == null) nextMove = Util.Pathfind(this, Waypoint, avoidFriendlyCollision: false);
+        if (nextMove == null)
+        {
+            Debug.LogError("Pathfinding failed");
+            // failed to find a path
+            Waypoint = null;
+            return;
+        }
+        StartMove(nextMove);
+    }
+
     private void TickMove()
     {
         if (MoveOrder == null) return;
@@ -227,6 +263,7 @@ public class Unit : MonoBehaviour
             if (UnitController.Instance.IsValidMove(this, MoveOrder) && (MoveOrder.Owner == Owner || MoveOrder.IsCapturable()))
             {
                 FinishMove();
+
             }
             else if (MoveOrder.ContainedUnit != null && MoveOrder.ContainedUnit.Owner == Owner 
                 && MoveOrder.ContainedUnit.MoveOrder == CurrentNode && MoveOrder.ContainedUnit.MoveTicksRemaining <= 1)
@@ -234,7 +271,7 @@ public class Unit : MonoBehaviour
                 MapNode originalDest = MoveOrder;
                 Unit toSwap = MoveOrder.ContainedUnit;
                 MoveOrder = MapNode.DummyNode;
-                FinishMove();
+                FinishMove(false);
                 toSwap.FinishMove();
                 MoveOrder = originalDest;
                 FinishMove();
@@ -260,7 +297,7 @@ public class Unit : MonoBehaviour
         Display.StopMove();
     }
 
-    public void FinishMove()
+    public void FinishMove(bool updatePathfinding = true)
     {
         var order = MoveOrder;
         CancelMove();
@@ -269,6 +306,10 @@ public class Unit : MonoBehaviour
             order.Capture(Owner);
         }
         Move(order);
+        if (updatePathfinding)
+        {
+            ContinuePath();
+        }
     }
 
     public void StartAttacking(MapNode node)
