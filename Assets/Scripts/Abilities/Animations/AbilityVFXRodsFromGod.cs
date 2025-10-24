@@ -14,6 +14,10 @@ public class AbilityVFXRodsFromGod : AbilityVFX
 
     public override void Play(Faction attacker)
     {
+        if (attacker == FactionManager.instance.playerFaction)
+        {
+            AudioManager.instance.Play(AudioManager.instance.ExplosionHeavyThud);
+        }
         base.Play(attacker);
         rod.transform.localScale = Vector3.one * startScale;
         StartCoroutine(Drop());

@@ -18,6 +18,10 @@ public class AbilityVFXNuke : AbilityVFX
 
     public override void Play(Faction attacker)
     {
+        if (attacker == FactionManager.instance.playerFaction)
+        {
+            AudioManager.instance.Play(AudioManager.instance.ExplosionDisintegrate);
+        }
         base.Play(attacker);
         StartCoroutine(Blast());
         StartCoroutine(Smoke());
