@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UISound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, ISubmitHandler
+public class UISound : MonoBehaviour, IPointerClickHandler, ISubmitHandler
 {
     [SerializeField] AudioSource sfx;          // drag your shared UIAudio AudioSource here
     [SerializeField] AudioClip hoverClip;      // hover SFX
@@ -21,19 +21,6 @@ public class UISound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     void Reset()  { if (!sfx) sfx = GameObject.Find("UIAudio")?.GetComponent<AudioSource>(); }
 
     // ---------------- events ----------------
-    public void OnPointerEnter(PointerEventData e)
-    {
-        return;
-        // play only if we're outside global cooldown
-        if (Time.unscaledTime - s_lastSoundTime >= GlobalCooldown)
-        {
-            Play(hoverClip, hoverVol);
-            s_lastSoundTime = Time.unscaledTime;
-            s_lastNodeId    = _id;
-            s_lastWasHover  = true;
-        }
-        // else: within cooldown → suppress hover (prevents spam across nodes)
-    }
 
     public void OnPointerClick(PointerEventData e)
     {

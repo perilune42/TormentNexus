@@ -24,6 +24,7 @@ public class TechNode : MonoBehaviour
     public Faction faction;
     public AudioSource audioSource;
     public AudioClip FinishSFX;
+    public AudioClip ClickSFX;
 
     [SerializeField] Image unlockIcon;
     [SerializeField] TMP_Text unlockText;
@@ -70,8 +71,9 @@ public class TechNode : MonoBehaviour
 
     public void Finish()
     {
-        if (audioSource != null)
+        if (audioSource != null && faction == FactionManager.instance.playerFaction)
         {
+            audioSource.volume = 1f;
             audioSource.PlayOneShot(FinishSFX);
         }
         button.interactable = false;
@@ -109,6 +111,11 @@ public class TechNode : MonoBehaviour
         }
         progressBar.SetVisible(true);
         TechTree.PlayerTechTree.StartResearch(this);
+        if (audioSource != null && faction == FactionManager.instance.playerFaction)
+        {
+            audioSource.volume = 0.5f;
+            audioSource.PlayOneShot(ClickSFX);
+        }
         /*
         buttonText.rectTransform.Translate(Vector3.down * 13);
         StartCoroutine(RaiseButton());

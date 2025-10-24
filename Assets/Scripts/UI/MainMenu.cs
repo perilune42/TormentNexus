@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public TMP_Text titleText;
+    public Image title;
     public Button playButton;
     public Button quitButton;
     public Button startButton;
@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         instance = this;
-        titleText.gameObject.SetActive(true);
+        title.gameObject.SetActive(true);
         playButton.gameObject.SetActive(true);
         quitButton.gameObject.SetActive(true);
 
@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour
     public void OnPlayClick()
     {
         audioSource.PlayOneShot(UIButtonSFX);
-        titleText.gameObject.SetActive(false);
+        title.gameObject.SetActive(false);
         playButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
         foreach (var button in factionButtons)

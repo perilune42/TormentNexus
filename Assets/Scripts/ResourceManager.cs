@@ -49,7 +49,7 @@ public class ResourceManager : MonoBehaviour
 
     public void ConsumeResource(float amount)
     {
-        ResourceAmount -= amount;
+        ResourceAmount = Mathf.Round((ResourceAmount - amount) * 100f) / 100f;
     }
 
     private void GainResearchPoint()
