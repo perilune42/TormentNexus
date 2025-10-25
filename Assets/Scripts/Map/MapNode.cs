@@ -303,6 +303,8 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
             if (oldOwner == FactionManager.instance.playerFaction)
             {
                 GameManager.instance.FactionVictory(newOwner);
+                Debug.Log("Player Lose");
+                
             }
             else
             {
@@ -311,6 +313,7 @@ public class MapNode : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
                 if (FactionManager.instance.RivalFactions.Count <= 0)
                 {
                     GameManager.instance.FactionVictory(FactionManager.instance.playerFaction);
+                    Debug.Log("Player Win");
                 }
             }
 
