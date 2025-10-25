@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using TMPro;
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public Image title;
+    public GameObject TitleScreen;
     public Button playButton;
     public Button quitButton;
     public Button startButton;
@@ -21,26 +22,27 @@ public class MainMenu : MonoBehaviour
 
     public GameObject FactionSelectScreen;
 
+    public Image TitleBG;
+    public List<Sprite> titleSprites;
+    bool onTitleScreen = true;
+    int frame = 0;
 
     private void Start()
     {
         instance = this;
-        title.gameObject.SetActive(true);
-        playButton.gameObject.SetActive(true);
-        quitButton.gameObject.SetActive(true);
+        TitleScreen.SetActive(true);
 
         foreach (var button in factionButtons)
         {
             button.gameObject.SetActive(false);
         }
         startButton.gameObject.SetActive(false);
+        StartCoroutine(TitleAnimation());
     }
     public void OnPlayClick()
     {
         audioSource.PlayOneShot(UIButtonSFX);
-        title.gameObject.SetActive(false);
-        playButton.gameObject.SetActive(false);
-        quitButton.gameObject.SetActive(false);
+        TitleScreen.gameObject.SetActive(false);
         foreach (var button in factionButtons)
         {
             button.gameObject.SetActive(true);
@@ -59,5 +61,15 @@ public class MainMenu : MonoBehaviour
         audioSource.PlayOneShot(UIAcceptSFX);
         FactionManager.startingFaction = chosen;
         SceneManager.LoadScene("World", LoadSceneMode.Single);
+    }
+
+    IEnumerator TitleAnimation()
+    {
+        while (onTitleScreen)
+        {
+            TitleBG.sprite = titleSprites[frame];
+            frame = (frame + 1) % 2;
+            yield return new WaitForSeconds(0.4f);
+        }
     }
 }

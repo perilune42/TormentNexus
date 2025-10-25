@@ -8,7 +8,7 @@ public class UnitInfoUI : MonoBehaviour
     [SerializeField] Image flagImage, unitIcon;
     [SerializeField] TMP_Text factionNameText, unitNameText;
     [SerializeField] ProgressBar unitHealthBar;
-    [SerializeField] TMP_Text unitHealthText, descText;
+    [SerializeField] TMP_Text unitHealthText, descText, damageText;
 
     private void Awake()
     {
@@ -32,8 +32,9 @@ public class UnitInfoUI : MonoBehaviour
             unitNameText.text = unit.Name;
             unitHealthBar.SetLevel(unit.Health / unit.MaxHealth);
             unitHealthText.text = $"{(int)unit.Health}/{(int)unit.MaxHealth}";
-            descText.text = UnitInfoStrings.Infos[unit.Type].Desc;
+            descText.text = $"Lv.{unit.TechTier} " + UnitInfoStrings.Infos[unit.Type].Desc;
             descText.color = UnitInfoStrings.Infos[unit.Type].Color;
+            damageText.text = "DMG: " + GameUI.instance.FormatDamageString(unit.Damage, unit.GarrisonDamage, unit.InfrastructureDamage, true);
         }
     }
 }

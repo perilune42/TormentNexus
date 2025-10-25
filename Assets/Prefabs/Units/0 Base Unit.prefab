@@ -195,6 +195,7 @@ MonoBehaviour:
   Display: {fileID: 0}
   Name: 
   Icon: {fileID: -831281450299974449, guid: daf8d55249715af4f8b8838c195d083a, type: 3}
+  Type: 0
   Damage: 0.1
   GarrisonDamage: 0.1
   InfrastructureDamage: 0.1
@@ -203,7 +204,9 @@ MonoBehaviour:
   MaxHealth: 100
   Cost: 5
   Speed: 1
+  TechTier: 0
   MoveOrder: {fileID: 0}
+  Waypoint: {fileID: 0}
   MoveTicksRemaining: -1
   AttackingNode: {fileID: 0}
   DefendingAgainstNodes: []
@@ -427,7 +430,7 @@ MonoBehaviour:
   selector: {fileID: 3967578071464595983}
   healthBar: {fileID: 5668844877207727559}
   moveIndicator: {fileID: 4998039300114606058}
-  node: {fileID: 3872270174182457116, guid: ad4f5522d1963274cb075bcfb381d8fb, type: 3}
+  tierIndicator: {fileID: 0}
 --- !u!61 &5219270819904334853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -492,7 +495,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 1186503993
   m_SortingOrder: 0

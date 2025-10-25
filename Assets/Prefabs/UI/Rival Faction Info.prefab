@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flagImage: {fileID: 429300498322602546}
   hateBar: {fileID: 4924087222376902498}
+  eliminatedColor: {r: 0.24705882, g: 0.15686275, b: 0.15686275, a: 0.7176471}
 --- !u!1 &8990735438756494963
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3092479205755908199, guid: 6a1733cb9e391724788374aaa4c43a5a, type: 3}
+  m_Sprite: {fileID: 3919726936396377183, guid: 7d18c75c17b4c3a49a8a2a327156c0a4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

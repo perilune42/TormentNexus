@@ -37,7 +37,7 @@ public class UnitBuildButton : MonoBehaviour, IPointerDownHandler
         icon.sprite = unit.Icon;
         icon.color = FactionManager.instance.playerFaction.FactionColor;
         costText.text = unit.Cost.ToString();
-        infoText.text = UnitInfoStrings.Infos[unit.Type].Desc;
+        infoText.text = $"Lv.{unit.TechTier} " + UnitInfoStrings.Infos[unit.Type].Desc;
         infoText.color = UnitInfoStrings.Infos[unit.Type].Color;
     }
 

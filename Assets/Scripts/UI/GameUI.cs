@@ -1,4 +1,6 @@
+using JetBrains.Annotations;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +9,7 @@ public class GameUI : MonoBehaviour
     public static GameUI instance;
     public Canvas techTreeCanvas;
     public TMP_Text primedAbilityText;
+    public TMP_Text primedSubtitle;
 
     [SerializeField] Button techTreeButton;
     [SerializeField] Image techTreeButtonOverlay;
@@ -14,8 +17,11 @@ public class GameUI : MonoBehaviour
     float techFlashTime;
     [SerializeField] Color techFlashColor;
 
-    [SerializeField] TMP_Text popCountText;
     [SerializeField] GameObject EndScreen;
+
+    [SerializeField] TMP_Text researchAvailableText;
+
+    [SerializeField] Color hpColor, garColor, infColor;
 
     private void Awake()
     {
@@ -25,13 +31,18 @@ public class GameUI : MonoBehaviour
         {
             if (a != null)
             {
-                primedAbilityText.text = $"Primed {a.gameObject.name}";
+                primedAbilityText.text = $"Primed {a.Name}";
+                primedSubtitle.text = FormatDamageString(a.Damage, a.GarrisonDamage, a.InfrastructureDamage);
             }
             else
             {
                 primedAbilityText.text = "";
+                primedSubtitle.text = "";
             }
         };
+
+        primedAbilityText.text = "";
+        primedSubtitle.text = "";
         // techTreeCanvas.enabled = false;
 
     }
@@ -65,6 +76,7 @@ public class GameUI : MonoBehaviour
         if (progress < 0)
         {
             techTreeButtonOverlay.enabled = false;
+            researchAvailableText.enabled = false;
 
             if (playerTechTree.techNodeStatuses[playerTechTree.finalNode] == TechNodeStatus.Finished)
             {
@@ -72,6 +84,7 @@ public class GameUI : MonoBehaviour
             }
             else
             {
+                researchAvailableText.enabled = true;
                 if (techFlashTime <= 0)
                 {
                     techTreeButton.image.color = techFlashColor;
@@ -86,6 +99,7 @@ public class GameUI : MonoBehaviour
         }
         else
         {
+            researchAvailableText.enabled = false;
             techTreeButton.image.color = Color.white;
             techTreeButtonOverlay.enabled = true;
             techTreeButtonOverlay.fillAmount = 1 - progress;
@@ -103,4 +117,21 @@ public class GameUI : MonoBehaviour
         EndScreen.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = $"Lives Lost {PopulationCounter.Instance.DeathCount:N0}";
         EndScreen.SetActive(true);
     }
+
+    public string FormatDamageString(float dmg, float garDmg, float infDmg, bool perDay = false)
+    {
+        if (perDay) 
+        {
+            dmg *= 20;
+            garDmg *= 20;
+            infDmg *= 20;
+            return $"<color=#{hpColor.ToHexString()}>{dmg:0.0}</color> | <color=#{garColor.ToHexString()}>{garDmg:0.0}</color> | <color=#{infColor.ToHexString()}>{infDmg:0.0}</color>";
+        }
+        else
+        {
+            return $"<color=#{hpColor.ToHexString()}>{(int)dmg}</color> | <color=#{garColor.ToHexString()}>{(int)garDmg}</color> | <color=#{infColor.ToHexString()}>{(int)infDmg}</color>";
+        }
+        
+    }
+
 }

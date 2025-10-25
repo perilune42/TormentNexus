@@ -29,6 +29,10 @@ PrefabInstance:
       value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
+      propertyPath: TechTier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132627034705722265, guid: be3bae4eed9ee754db52ebea8437ae18, type: 3}
       propertyPath: MaxHealth
       value: 250
       objectReference: {fileID: 0}

@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
         {
             SelectUnit(null);
             SelectNode(null);
+            PrimeAbility(null);
         } 
     }
 

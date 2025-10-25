@@ -30,6 +30,8 @@ public class Unit : MonoBehaviour
     public float Cost = 5f;
     public float Speed = 1.0f; // speed 1.0 = 100 ticks to move 1 node
 
+    public int TechTier = 0;
+
     private const int baseMoveTicks = 100;
     private int moveTicks => (int)(baseMoveTicks / Speed);
 

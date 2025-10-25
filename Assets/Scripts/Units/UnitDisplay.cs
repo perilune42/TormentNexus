@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,7 +15,6 @@ public class UnitDisplay : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     [SerializeField] Image selector;
     [SerializeField] ProgressBar healthBar;
     [SerializeField] Image moveIndicator;
-
     
 
 private void Awake()
