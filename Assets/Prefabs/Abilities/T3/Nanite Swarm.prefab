@@ -53,8 +53,8 @@ MonoBehaviour:
   BuildTime: 300
   Cost: 60
   Damage: 100
-  GarrisonDamage: 45
-  InfrastructureDamage: 120
+  GarrisonDamage: 60
+  InfrastructureDamage: 200
   HateGeneration: 30
   IsBuilding: 0
   effect: {fileID: 1901689732755117765, guid: a5a3385c0a7f94d4f88a5ada4ada3fa9, type: 3}

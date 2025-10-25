@@ -16,5 +16,9 @@ public class RelationshipInfo : MonoBehaviour
     private void Update()
     {
         hateBar.SetLevel(faction.HateMeter.CurrentHate / HateMeter.MaxHate);
+        // if (!FactionManager.instance.RivalFactions.Contains(faction) && !FactionManager.instance.MinorFactions.Contains(faction))
+        // {
+        //     flagImage.color = Color.gray;
+        // }
     }
 }

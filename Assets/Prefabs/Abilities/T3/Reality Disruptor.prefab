@@ -54,7 +54,7 @@ MonoBehaviour:
   Cost: 75
   Damage: 180
   GarrisonDamage: 120
-  InfrastructureDamage: 160
+  InfrastructureDamage: 400
   HateGeneration: 30
   IsBuilding: 0
   effect: {fileID: -6463563868373685533, guid: 0fa1ee191c43d2e4db26c71765e59c0e, type: 3}
