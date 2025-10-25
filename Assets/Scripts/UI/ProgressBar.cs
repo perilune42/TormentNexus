@@ -30,6 +30,7 @@ public class ProgressBar : MonoBehaviour
 
     public void SetLevel(float level)
     {
+        if (bar == null) return;
         bar.fillAmount = level;
     }
 }
