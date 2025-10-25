@@ -76,6 +76,11 @@ public class PlayerControl : MonoBehaviour
             {
                 UnitController.Instance.MoveUnit(SelectedUnit, node);
             }
+            // pathfind to a node that is not a neighbor
+            else if (node != null)
+            {
+                SelectedUnit.StartPath(node);
+            }
         }
     }
 

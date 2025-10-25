@@ -25,14 +25,14 @@ public static class Util
 
 
     // shamelessly written by AI
-    public static MapNode Pathfind(Unit fromUnit, MapNode to, Func<MapNode, bool> blacklist = null)
+    public static MapNode Pathfind(Unit fromUnit, MapNode to, Func<MapNode, bool> blacklist = null, bool avoidFriendlyCollision = true)
     {
-        return PathfindConditional(fromUnit, (node) => node == to, blacklist);
+        return PathfindConditional(fromUnit, (node) => node == to, blacklist, avoidFriendlyCollision);
     }
 
 
 
-    public static MapNode PathfindConditional(Unit fromUnit, Func<MapNode, bool> condition, Func<MapNode, bool> blacklist = null)
+    public static MapNode PathfindConditional(Unit fromUnit, Func<MapNode, bool> condition, Func<MapNode, bool> blacklist = null, bool avoidFriendlyCollision = true)
     {
         MapNode from = fromUnit.CurrentNode;
 
@@ -57,7 +57,11 @@ public static class Util
                 if (blacklist != null && blacklist(neighbor)) continue;
 
                 // avoid friendly collisions
-                if (neighbor.ContainedUnit != null && neighbor.ContainedUnit.Owner == fromUnit.Owner) continue;
+                if (avoidFriendlyCollision)
+                {
+                    if (neighbor.ContainedUnit != null && neighbor.ContainedUnit.Owner == fromUnit.Owner) continue;
+                }
+                
 
                 if (visited.Contains(neighbor))
                     continue;

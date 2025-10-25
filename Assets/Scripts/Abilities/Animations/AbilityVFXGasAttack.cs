@@ -23,6 +23,10 @@ public class AbilityVFXGasAttack : AbilityVFX
 
     public override void Play(Faction attacker)
     {
+        if (attacker == FactionManager.instance.playerFaction)
+        {
+            AudioManager.instance.Play(AudioManager.instance.ExplosionLaser);
+        }
         base.Play(attacker);
         startPos = gasCloud.transform.position;
 

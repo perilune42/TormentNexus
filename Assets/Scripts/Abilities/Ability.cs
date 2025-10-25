@@ -65,7 +65,7 @@ public abstract class Ability : MonoBehaviour
             target.Owner.HateMeter.AddHate(HateGeneration, true);
         }
         WorldTension.Instance.AddTension(HateGeneration);
-        Debug.Log($"{owner.FactionName} launching: {name} to {target.Name}");
+        //Debug.Log($"{owner.FactionName} launching: {name} to {target.Name}");
     }
 
     public bool CanLaunch()

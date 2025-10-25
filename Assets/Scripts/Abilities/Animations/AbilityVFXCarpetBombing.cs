@@ -13,6 +13,10 @@ public class AbilityVFXCarpetBombing : AbilityVFX
 
     public override void Play(Faction attacker)
     {
+        if (attacker == FactionManager.instance.playerFaction)
+        {
+            AudioManager.instance.Play(AudioManager.instance.ExplosionHeavyThud);
+        }
         base.Play(attacker);
         StartCoroutine(CarpetBomb());
         StartCoroutine(Destroy());

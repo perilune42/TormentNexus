@@ -16,6 +16,10 @@ public class AbilityVFXLiveWire : AbilityVFX
 
     public override void Play(Faction attacker)
     {
+        if (attacker == FactionManager.instance.playerFaction)
+        {
+            AudioManager.instance.Play(AudioManager.instance.ExplosionLaser);
+        }
         base.Play(attacker);
         StartCoroutine(SpawnWires());
         StartCoroutine(Destroy());

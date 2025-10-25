@@ -10,10 +10,14 @@ public class AbilityVFXRodsFromGod : AbilityVFX
     [SerializeField] float endScale;
     [SerializeField] float dropTime;
     [SerializeField] GameObject shockwave;
-    [SerializeField] float shockwaveScale = 2.0f;
+    [SerializeField] float shockwaveScale;
 
     public override void Play(Faction attacker)
     {
+        if (attacker == FactionManager.instance.playerFaction)
+        {
+            AudioManager.instance.Play(AudioManager.instance.ExplosionHeavyThud);
+        }
         base.Play(attacker);
         rod.transform.localScale = Vector3.one * startScale;
         StartCoroutine(Drop());
